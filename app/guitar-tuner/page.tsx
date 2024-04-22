@@ -1,5 +1,7 @@
 export default function Home() {
   return (
-    <p>Guitar Tuner</p>
+    <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+      Guitar Tuner
+    </h1>
   );
 }

@@ -27,23 +27,24 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav class="flex w-full gap-4 p-4">
-      <ul class="flex">
-        <li class="mr-6">
+    <nav class="flex justify-between p-4">
+      {/* Left Items */}
+      <ul class="flex gap-4">
+        <li>
           <Link href="/">
             <Button variant="ghost" className="font-bold">
               Kody Deda
             </Button>
           </Link>
         </li>
-        <li class="mr-6">
+        <li>
           <Link href="/peg-puzzle-classic">
             <Button variant="ghost">
               Peg Puzzle Classic
             </Button>
           </Link>
         </li>
-        <li class="mr-6">
+        <li>
           <Link href="/guitar-tuner">
             <Button variant="ghost">
               Guitar Tuner
@@ -52,8 +53,15 @@ export default function Navbar() {
         </li>
       </ul>
 
-      <ModeToggle />
-      <SheetDemo />
+      {/* Right Items */}
+      <ul class="flex gap-4">
+        <li>
+          <ModeToggle />
+        </li>
+        <li>
+          <SheetDemo />
+        </li>
+      </ul>
     </nav>
   )
 }
