@@ -75,7 +75,7 @@ export function CardWithForm() {
     <Card className="w-[350px]">
       <CardHeader>
         <CardTitle>iOS Developer - PocketRadar</CardTitle>
-        <CardDescription>Deploy your new project in one-click.</CardDescription>
+        <CardDescription>May 2022 - Present</CardDescription>
       </CardHeader>
       <CardContent>
         <form>

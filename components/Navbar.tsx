@@ -27,12 +27,11 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <div className="flex flex-row gap-4 p-4">
-
+    <nav class="flex w-full gap-4 p-4">
       <ul class="flex">
         <li class="mr-6">
           <Link href="/">
-            <Button variant="ghost">
+            <Button variant="ghost" className="font-bold">
               Kody Deda
             </Button>
           </Link>
@@ -55,7 +54,7 @@ export default function Navbar() {
 
       <ModeToggle />
       <SheetDemo />
-    </div>
+    </nav>
   )
 }
 
