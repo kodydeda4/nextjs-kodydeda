@@ -18,15 +18,6 @@ import {
 } from "@/components/ui/card"
 import { Github } from "lucide-react"
 import { Apple } from "lucide-react"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select"
 
 
 export default function Home() {
@@ -49,7 +40,7 @@ export default function Home() {
               Welcome to my portfolio!
             </h2>
             <p className="text-xl text-neutral-400">
-              This is a description of my software development skills and stuff, especially related to SwiftUI.
+              {"This is a description of my software development skills and stuff, especially related to SwiftUI."}
             </p>
 
             <div className="flex gap-4">
@@ -80,7 +71,7 @@ const SectionHeader: React.FC<{ caption: string; title: string; description: str
   );
 };
 
-export function CardWithForm() {
+function CardWithForm() {
   return (
     <Card>
       <CardHeader>
