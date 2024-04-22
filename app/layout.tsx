@@ -5,6 +5,7 @@ import { Inter as FontSans } from "next/font/google"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { ThemeProvider } from "@/components/theme-provider"
+import Navbar from "@/components/Navbar"
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -36,6 +37,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <>
+            <Navbar />
             {children}
           </>
         </ThemeProvider>
