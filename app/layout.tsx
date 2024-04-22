@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Inter as FontSans } from "next/font/google"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
+import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -28,9 +29,16 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <>
-          {children}
-        </>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <>
+            {children}
+          </>
+        </ThemeProvider>
       </body>
     </html>
   );
