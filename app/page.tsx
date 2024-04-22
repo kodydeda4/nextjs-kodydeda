@@ -43,7 +43,7 @@ export default function Home() {
 
           <div className="flex flex-col gap-2 pb-8">
             <h1 className="text-3xl font-extrabold">
-              Hi, I'm Kody Deda
+              {"Hi, I'm Kody Deda"}
             </h1>
             <h2 className="text-3xl font-extrabold">
               Welcome to my portfolio!
