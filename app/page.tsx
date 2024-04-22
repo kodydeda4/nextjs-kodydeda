@@ -16,6 +16,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { Github } from "lucide-react"
+import { Apple } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import {
@@ -49,6 +51,11 @@ export default function Home() {
             <p className="text-xl text-neutral-400">
               This is a description of my software development skills and stuff, especially related to SwiftUI.
             </p>
+
+            <div className="flex gap-4">
+              <Button className="w-full">Contact Me</Button>
+              <Button variant="outline" className="w-full">Resume PDF</Button>
+            </div>
           </div>
 
           <SectionHeader
@@ -75,20 +82,21 @@ const SectionHeader: React.FC<{ caption: string; title: string; description: str
 
 export function CardWithForm() {
   return (
-    <Card className="w-[350px]">
+    <Card>
       <CardHeader>
-        <CardTitle>iOS Developer - PocketRadar</CardTitle>
-        <CardDescription>May 2022 - Present</CardDescription>
+        <CardTitle>Peg Puzzle Classic</CardTitle>
+        <CardDescription>Game</CardDescription>
       </CardHeader>
       <CardContent>
-        <form>
-          <div className="grid w-full items-center gap-4">
-          </div>
-        </form>
+        <p>Content goes here</p>
       </CardContent>
-      <CardFooter className="flex justify-between">
-        <Button variant="outline">Cancel</Button>
-        <Button>Deploy</Button>
+      <CardFooter className="flex gap-4">
+        <Button variant="default" className="w-full">
+          <Apple className="mr-2 h-4 w-4" /> App Store
+        </Button>
+        <Button variant="outline" className="w-full">
+          <Github className="mr-2 h-4 w-4" /> Github
+        </Button>
       </CardFooter>
     </Card>
   )
