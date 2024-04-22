@@ -30,14 +30,14 @@ export default function RootLayout({
 function NavigationBar() {
   return (
     <>
-      <ul>
-        <li>
+      <ul class="flex">
+        <li class="mr-6">
           <Link href="/">Home</Link>
         </li>
-        <li>
+        <li class="mr-6">
           <Link href="/peg-puzzle-classic">Peg Puzzle Classic</Link>
         </li>
-        <li>
+        <li class="mr-6">
           <Link href="/guitar-tuner">Guitar Tuner</Link>
         </li>
       </ul>
