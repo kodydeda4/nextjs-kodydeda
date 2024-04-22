@@ -38,22 +38,25 @@ export default function Home() {
           </Avatar>
         </div>
 
-        <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-          Hi, I'm Kody Deda
-        </h1>
-        <h2 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-          Welcome to my portfolio!
-        </h2>
+        <div className="flex flex-col gap-2">
+          <h1 className="text-3xl font-extrabold">
+            Hi, I'm Kody Deda
+          </h1>
+          <h2 className="text-3xl font-extrabold">
+            Welcome to my portfolio!
+          </h2>
+          <p className="text-xl font-neutral-400">
+            This is a description of my software development skills and stuff, especially related to SwiftUI.
+          </p>
+        </div>
 
-        <p className="leading-7 [&:not(:first-child)]:mt-6">
-          This is a description of my software development skills and stuff, especially related to SwiftUI.
-        </p>
-
-        <SectionHeader
-          caption="Professional Experience"
-          title="🍎 3 Years of Professional Experience"
-          description="I've worked on a few apps in my day. Feel free to take a look!"
-        />
+        <div className="py-4">
+          <SectionHeader
+            caption="Professional Experience"
+            title="🍎 3 Years of Professional Experience"
+            description="I've worked on a few apps in my day. Feel free to take a look!"
+          />
+        </div>
         <CardWithForm />
       </div>
     </>
@@ -62,10 +65,14 @@ export default function Home() {
 
 const SectionHeader: React.FC<{ caption: string; title: string; description: string }> = ({ caption, title, description }) => {
   return (
-    <div>
-      <p>{caption}</p>
-      <h2>{title}</h2>
-      <h3>{description}</h3>
+    <div className="flex flex-col gap-2">
+      <p className="text-sm text-blue-500 font-bold">
+        {caption}
+      </p>
+      <h2 className="text-2xl font-bold">
+        {title}
+      </h2>
+      <p className="text-base font-medium">{description}</p>
     </div>
   );
 };
