@@ -26,7 +26,6 @@ export default function Home() {
   );
 }
 
-
 const SectionHeader: React.FC<{ caption: string; title: string; description: string }> = ({ caption, title, description }) => {
   return (
     <div>
