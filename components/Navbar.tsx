@@ -10,9 +10,7 @@ import {
   SheetFooter,
   SheetHeader,
   SheetTitle,
-  SheetTrigger,
 } from "@/components/ui/sheet"
-import * as React from "react"
 import { Moon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
 import {
@@ -21,50 +19,99 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { ChevronRight } from "lucide-react"
 import { AlignJustify } from "lucide-react"
-import Link from "next/link";
+import * as React from "react"
+import Link from "next/link"
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+} from "@/components/ui/navigation-menu"
+import { FaGithub as Github } from "react-icons/fa";
+import { FaLinkedinIn as LinkedIn } from "react-icons/fa";
 
 export default function Navbar() {
   return (
-    <nav class="flex justify-between p-4">
-      {/* Left Items */}
-      <ul class="flex gap-4">
-        <li>
-          <Link href="/">
-            <Button variant="ghost" className="font-bold">
-              Kody Deda
-            </Button>
-          </Link>
-        </li>
-        <li>
-          <Link href="/peg-puzzle-classic">
-            <Button variant="ghost">
-              Peg Puzzle Classic
-            </Button>
-          </Link>
-        </li>
-        <li>
-          <Link href="/guitar-tuner">
-            <Button variant="ghost">
-              Guitar Tuner
-            </Button>
-          </Link>
-        </li>
-      </ul>
+    <nav className="sticky top-0 z-10 backdrop-filter backdrop-blur-lg border-b bg-white bg-opacity-70 dark:bg-background dark:bg-opacity-80">
+      <div className="max-w-4xl mx-auto px-4">
+        < div className="flex items-center justify-between h-16" >
+          <NavigationMenu>
+            <NavigationMenuList>
 
-      {/* Right Items */}
-      <ul class="flex gap-4">
-        <li>
-          <ModeToggle />
-        </li>
-        <li>
-          <SheetDemo />
-        </li>
-      </ul>
-    </nav>
+              {/* <NavigationMenuItem> */}
+              {/*   <SheetDemo /> */}
+              {/* </NavigationMenuItem> */}
+
+              <NavigationMenuItem>
+                <Link href="/" legacyBehavior passHref>
+                  <NavigationMenuLink>
+                    <Button variant="ghost" className="font-extrabold">
+                      Kody Deda
+                    </Button>
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <Link href="/guitar-tuner" legacyBehavior passHref>
+                  <NavigationMenuLink>
+                    <Button variant="ghost" className="text-muted-foreground">
+                      Guitar Tuner
+                    </Button>
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <Link href="/peg-puzzle-classic" legacyBehavior passHref>
+                  <NavigationMenuLink>
+                    <Button variant="ghost" className="text-muted-foreground">
+                      Peg Puzzle Classic
+                    </Button>
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+
+            </NavigationMenuList>
+          </NavigationMenu>
+          <NavigationMenu>
+            <NavigationMenuList>
+
+              <NavigationMenuItem>
+                <Link href="https://www.linkedin.com/in/kodydeda4/" rel="noopener noreferrer" target="_blank">
+                  <NavigationMenuLink>
+                    <Button variant="ghost" size="icon">
+                      <LinkedIn className="h-[1.2rem] w-[1.2rem]" />
+                    </Button>
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+
+
+              <NavigationMenuItem>
+                <Link href="https://github.com/kodydeda4" rel="noopener noreferrer" target="_blank">
+                  <NavigationMenuLink>
+                    <Button variant="ghost" size="icon">
+                      <Github className="h-[1.2rem] w-[1.2rem]" />
+                    </Button>
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+
+
+              {/* <NavigationMenuItem> */}
+              {/*   <ModeToggle /> */}
+              {/* </NavigationMenuItem> */}
+
+            </NavigationMenuList>
+          </NavigationMenu>
+        </div >
+      </div >
+    </nav >
   )
 }
+
 
 function SheetDemo() {
   const [open, setOpen] = React.useState(false);
@@ -75,7 +122,7 @@ function SheetDemo() {
 
   return (
     <>
-      <Button onClick={handleClick} variant="outline" size="icon">
+      <Button onClick={handleClick} variant="ghost" size="icon">
         <AlignJustify className="h-4 w-4" />
       </Button>
       <Sheet open={open} onOpenChange={setOpen}>
@@ -83,7 +130,7 @@ function SheetDemo() {
           <SheetHeader>
             <SheetTitle>Edit profile</SheetTitle>
             <SheetDescription>
-              Make changes to your profile here. Click save when you're done.
+              {"Make changes to your profile here. Click save when you're done."}
             </SheetDescription>
           </SheetHeader>
           <div className="grid gap-4 py-4">
@@ -111,14 +158,13 @@ function SheetDemo() {
   )
 }
 
-
-export function ModeToggle() {
+function ModeToggle() {
   const { setTheme } = useTheme()
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="icon">
+        <Button variant="ghost" size="icon">
           <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
           <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
           <span className="sr-only">Toggle theme</span>
