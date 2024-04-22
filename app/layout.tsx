@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -15,7 +16,31 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <>
+          <NavigationBar />
+          {children}
+        </>
+      </body>
     </html>
   );
+}
+
+
+function NavigationBar() {
+  return (
+    <>
+      <ul>
+        <li>
+          <Link href="/">Home</Link>
+        </li>
+        <li>
+          <Link href="/peg-puzzle-classic">Peg Puzzle Classic</Link>
+        </li>
+        <li>
+          <Link href="/guitar-tuner">Guitar Tuner</Link>
+        </li>
+      </ul>
+    </>
+  )
 }
