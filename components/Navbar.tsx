@@ -38,9 +38,9 @@ import {
 
 export default function Navbar() {
   return (
-    <nav className="sticky top-0 z-10 backdrop-filter backdrop-blur-lg border-b">
+    <nav className="sticky top-0 z-10 backdrop-filter backdrop-blur-lg border-b bg-white bg-opacity-70 dark:bg-slate-900 dark:bg-opacity-70">
       <div className="max-w-4xl mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        < div className="flex items-center justify-between h-16" >
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
@@ -82,8 +82,8 @@ export default function Navbar() {
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
-        </div>
-      </div>
+        </div >
+      </div >
     </nav >
   )
 }

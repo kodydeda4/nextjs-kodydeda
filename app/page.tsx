@@ -109,16 +109,18 @@ const education: EducationCardProps[] = [
 export default function Home() {
   return (
     <main className="max-w-3xl mx-auto px-8 my-8 pt-4 mb-24 px-4">
-      <div className="flex flex-col gap-12">
-        <div className="flex justify-center w-full">
-          <Image
-            src="/avatar.png"
-            width={125}
-            height={125}
-            alt="Screenshots of the dashboard project showing desktop version"
-          />
+      <div className="flex flex-col gap-16">
+        <div className="flex flex-col gap-4">
+          <div className="flex justify-center w-full">
+            <Image
+              src="/avatar.png"
+              width={125}
+              height={125}
+              alt="Screenshots of the dashboard project showing desktop version"
+            />
+          </div>
+          <Header />
         </div>
-        <Header />
 
         <div>
           <SectionHeader
@@ -139,7 +141,7 @@ export default function Home() {
             title="🛠️ Apps I've Made"
             description="I've worked on a few apps in my day. Feel free to take a look!"
           />
-          <div className="flex flex-row gap-4 w-full">
+          <div className="flex flex-col sm:flex-row gap-4 w-full">
             {apps.map((value, index) => (
               <PersonalProjectCard key={index} {...value} />
             ))}
@@ -216,33 +218,41 @@ type ProfessionalExperienceCardProps = {
 const ProfessionalExperienceCard: React.FC<ProfessionalExperienceCardProps> = (props) => {
   return (
     <Card className="w-full">
-      <CardHeader>
-        <div className="flex gap-4">
-          <Image
-            src={props.appIconSrc}
-            width={50}
-            height={50}
-            alt="Screenshots of the dashboard project showing desktop version"
-            className="rounded-lg"
-          />
-          <div className="flex flex-col gap-1">
-            <CardTitle>{props.title}</CardTitle>
-            <CardDescription>{props.description}</CardDescription>
-          </div>
-        </div>
-      </CardHeader>
-
       <CardContent>
-        <p>{props.responsibilities}</p>
-      </CardContent>
+        <div className="flex flex-col gap-4">
+          <div className="flex flex-row justify-start gap-4 pt-6">
+            <div className="justify-start relative">
+              <Image
+                src={props.appIconSrc}
+                width={50}
+                height={50}
+                alt="Hero image"
+                className="rounded-lg"
+              />
+            </div>
+            <div className="flex flex-col gap-1">
+              <p className="font-semibold line-clamp-1">{props.title}</p>
+              <p className="text-sm text-muted-foreground line-clamp-1">{props.description}</p>
+            </div>
+          </div>
 
-      {/* <CardFooter className="flex gap-4"> */}
-      {/* <Link href={props.appStoreURL} className="w-full"> */}
-      {/*   <Button variant="default" className="w-full"> */}
-      {/*     <Apple className="mr-2 h-4 w-4" /> App Store */}
-      {/*   </Button> */}
-      {/* </Link> */}
-      {/* </CardFooter> */}
+          <p className="border-t pt-4">{props.responsibilities}</p>
+
+          {/* <div className="flex gap-4"> */}
+          {/*   <Image */}
+          {/*     src={props.appIconSrc} */}
+          {/*     width={50} */}
+          {/*     height={50} */}
+          {/*     alt="Screenshots of the dashboard project showing desktop version" */}
+          {/*     className="rounded-lg" */}
+          {/*   /> */}
+          {/*   <div className="flex flex-col gap-1"> */}
+          {/*     <CardTitle>{props.title}</CardTitle> */}
+          {/*     <CardDescription>{props.description}</CardDescription> */}
+          {/*   </div> */}
+          {/* </div> */}
+        </div>
+      </CardContent>
     </Card>
   );
 };
