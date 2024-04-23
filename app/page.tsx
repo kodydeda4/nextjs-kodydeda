@@ -16,9 +16,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { Github } from "lucide-react"
-import { Apple } from "lucide-react"
-
+import { FaGithub as Github } from "react-icons/fa";
+import { FaApple as Apple } from "react-icons/fa";
 
 export default function Home() {
   return (
