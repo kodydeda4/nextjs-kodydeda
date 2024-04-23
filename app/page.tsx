@@ -307,7 +307,7 @@ const PersonalProjectCard: React.FC<PersonalProjectCardProps> = (props) => {
             </div>
           </div>
 
-          <div className="flex flex-col pt-4 gap-3 w-full">
+          <div className="flex flex-row sm:flex-col pt-6 sm:pt-4 gap-3 w-full">
             <Link href={props.appStoreURL} className="w-full">
               <Button variant="default" className="w-full">
                 <Apple className="mr-2 h-4 w-4" /> App Store
