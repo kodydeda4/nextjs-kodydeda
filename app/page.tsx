@@ -20,7 +20,7 @@ const personalProjects: PersonalProjectCardProps[] = [
     description: "Game",
     appIconSrc: "/peg-puzzle-classic.png",
     appStoreURL: "https://apps.apple.com/us/app/peg-puzzle-classic/id6469359729",
-    githubURL: "https://github.com/kodydeda4/PegPuzzleClassic"
+    githubURL: "https://github.com/kodydeda4/PegPuzzleClassic",
   }
 ]
 
@@ -29,13 +29,15 @@ const personalExperience: ProfessionalExperienceCardProps[] = [
     title: "Pocket Radar",
     description: "Speed and Video Analysis",
     appIconSrc: "/pocket-radar.png",
-    appStoreURL: "https://apps.apple.com/us/app/pocket-radar-sports/id1576214627"
+    appStoreURL: "https://apps.apple.com/us/app/pocket-radar-sports/id1576214627",
+    responsibilities: "Learned how to write a for-each loop in Python.",
   },
   {
     title: "Dealerware",
     description: "Fleet Management",
     appIconSrc: "/dealerware.png",
-    appStoreURL: "https://apps.apple.com/us/app/dealerware/id1168703299"
+    appStoreURL: "https://apps.apple.com/us/app/dealerware/id1168703299",
+    responsibilities: "Learned how to write a for-each loop in Python.",
   }
 ]
 
@@ -44,32 +46,7 @@ export default function Home() {
     <main className="max-w-3xl mx-auto px-4">
       <div className="flex flex-col gap-8">
         <div className="px-4 gap-8">
-          <div className="flex justify-center w-full mt-8">
-            <Image
-              src="/avatar.png"
-              width={125}
-              height={125}
-              alt="Screenshots of the dashboard project showing desktop version"
-              className="rounded-lg"
-            />
-          </div>
-
-          <div className="flex flex-col gap-2 pb-8">
-            <h1 className="text-3xl font-extrabold">
-              {"Hi, I'm Kody Deda"}
-            </h1>
-            <h2 className="text-3xl font-extrabold">
-              Welcome to my portfolio!
-            </h2>
-            <p className="text-xl text-neutral-400">
-              {"This is a description of my software development skills and stuff, especially related to SwiftUI."}
-            </p>
-
-            <div className="flex gap-4">
-              <Button className="w-full">Contact Me</Button>
-              <Button variant="outline" className="w-full">Resume PDF</Button>
-            </div>
-          </div>
+          <Header />
 
           <SectionHeader
             caption="Professional Experience"
@@ -80,8 +57,6 @@ export default function Home() {
             {personalExperience.map((value, index) => (
               <ProfessionalExperienceCard key={index} {...value} />
             ))}
-          </div>
-          <div className="flex flex-col gap-4 w-full">
           </div>
 
           <SectionHeader
@@ -100,6 +75,37 @@ export default function Home() {
   );
 }
 
+const Header: React.FC = () => (
+  <div>
+    <div className="flex justify-center w-full mt-8">
+      <Image
+        src="/avatar.png"
+        width={125}
+        height={125}
+        alt="Screenshots of the dashboard project showing desktop version"
+        className="rounded-lg"
+      />
+    </div>
+
+    <div className="flex flex-col gap-2 pb-8">
+      <h1 className="text-3xl font-extrabold">
+        {"Hi, I'm Kody Deda"}
+      </h1>
+      <h2 className="text-3xl font-extrabold">
+        Welcome to my portfolio!
+      </h2>
+      <p className="text-xl text-neutral-400">
+        {"This is a description of my software development skills and stuff, especially related to SwiftUI."}
+      </p>
+
+      <div className="flex gap-4">
+        <Button className="w-full">Contact Me</Button>
+        <Button variant="outline" className="w-full">Resume PDF</Button>
+      </div>
+    </div>
+  </div>
+);
+
 const SectionHeader: React.FC<{ caption: string; title: string; description: string }> = ({ caption, title, description }) => {
   return (
     <div className="flex flex-col gap-2 py-4">
@@ -115,6 +121,7 @@ type ProfessionalExperienceCardProps = {
   description: string
   appIconSrc: string
   appStoreURL: string
+  responsibilities: string
 }
 
 const ProfessionalExperienceCard: React.FC<ProfessionalExperienceCardProps> = (props) => {
@@ -137,7 +144,7 @@ const ProfessionalExperienceCard: React.FC<ProfessionalExperienceCardProps> = (p
       </CardHeader>
 
       <CardContent>
-        <p>content</p>
+        <p>{props.responsibilities}</p>
       </CardContent>
 
       <CardFooter className="flex gap-4">
@@ -163,7 +170,7 @@ const PersonalProjectCard: React.FC<PersonalProjectCardProps> = (props) => {
   return (
     <Card className="w-full" >
       <CardContent>
-        <p>content</p>
+        <p>Hello World</p>
       </CardContent>
 
       <CardHeader>
