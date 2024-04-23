@@ -19,6 +19,17 @@ import {
 import { FaGithub as Github } from "react-icons/fa";
 import { FaApple as Apple } from "react-icons/fa";
 
+const apps: AppProjectCardProps[] = [
+  {
+    id: "peg-puzzle-classic",
+    title: "Peg Puzzle Classic",
+    description: "Game",
+    appIconSrc: "/peg-puzzle-classic.png",
+    appStoreURL: "https://apps.apple.com/us/app/peg-puzzle-classic/id6469359729",
+    githubURL: "https://github.com/kodydeda4/PegPuzzleClassic"
+  }
+]
+
 export default function Home() {
   return (
     <main className="max-w-3xl mx-auto px-4">
@@ -58,25 +69,34 @@ export default function Home() {
           />
           <div className="flex flex-col gap-4 w-full">
             <ExperienceCard
-              title="Peg Puzzle Classic"
-              description="Game"
-              appIconSrc="/peg-puzzle-classic.png"
-              appStoreURL="https://apps.apple.com/us/app/peg-puzzle-classic/id6469359729"
-              githubURL="https://github.com/kodydeda4/PegPuzzleClassic"
+              title="Pocket Radar"
+              description="Speed and Video Analysis"
+              appIconSrc="/pocket-radar.png"
+              appStoreURL="https://apps.apple.com/us/app/pocket-radar-sports/id1576214627"
             />
             <ExperienceCard
-              title="Guitar Tuner"
-              description="Music Education"
-              appIconSrc="/guitar-tuner.png"
-              appStoreURL="https://apps.apple.com/us/app/accutune-guitar-tuner/id6472688914"
-              githubURL="https://github.com/kodydeda4/GuitarTuner"
+              title="Dealerware"
+              description="Fleet Management"
+              appIconSrc="/dealerware.png"
+              appStoreURL="https://apps.apple.com/us/app/dealerware/id1168703299"
             />
           </div>
-          <div className="flex flex-col gap-2 py-4">
-            {Array(50).fill(1).map((_) => (
-              <CardView />
+
+          <SectionHeader
+            caption="Personal Projects"
+            title="🛠️ Apps I've Made"
+            description="I've worked on a few apps in my day. Feel free to take a look!"
+          />
+          <div className="flex flex-col gap-4 w-full">
+            {apps.map((app) => (
+              <AppProjectCard key={app.id} props={app} />
             ))}
           </div>
+          {/* <div className="flex flex-col gap-2 py-4"> */}
+          {/*   {Array(50).fill(1).map((_) => ( */}
+          {/*     <CardView /> */}
+          {/*   ))} */}
+          {/* </div> */}
         </div>
       </div>
     </main>
@@ -99,11 +119,54 @@ type ExperienceCardProps = {
   description: string
   appIconSrc: string
   appStoreURL: string
-  githubURL: string
 }
 
 const ExperienceCard = ({ ...props }: ExperienceCardProps) => (
   <Card className="w-full">
+    <CardHeader>
+      <div className="flex gap-4">
+        <Image
+          src={props.appIconSrc}
+          width={50}
+          height={50}
+          alt="Screenshots of the dashboard project showing desktop version"
+          className="rounded-lg"
+        />
+        <div className="flex flex-col gap-1">
+          <CardTitle>{props.title}</CardTitle>
+          <CardDescription>{props.description}</CardDescription>
+        </div>
+      </div>
+    </CardHeader>
+
+    <CardContent>
+      <p>content</p>
+    </CardContent>
+
+
+    <CardFooter className="flex gap-4">
+      <Link href={props.appStoreURL} className="w-full">
+        <Button variant="default" className="w-full">
+          <Apple className="mr-2 h-4 w-4" /> App Store
+        </Button>
+      </Link>
+    </CardFooter>
+  </Card>
+)
+
+type AppProjectCardProps = {
+  id: string
+  title: string
+  description: string
+  href: string
+  appIconSrc: string
+  appStoreURL: string
+  githubURL: string
+}
+
+const AppProjectCard = ({ props }: AppProjectCardProps) => (
+  <Card className="w-full" >
+
     <CardContent>
       <p>content</p>
     </CardContent>
@@ -124,7 +187,6 @@ const ExperienceCard = ({ ...props }: ExperienceCardProps) => (
       </div>
     </CardHeader>
 
-
     <CardFooter className="flex gap-4">
       <Link href={props.appStoreURL} className="w-full">
         <Button variant="default" className="w-full">
@@ -137,7 +199,7 @@ const ExperienceCard = ({ ...props }: ExperienceCardProps) => (
         </Button>
       </Link>
     </CardFooter>
-  </Card>
+  </Card >
 )
 
 function CardView() {
