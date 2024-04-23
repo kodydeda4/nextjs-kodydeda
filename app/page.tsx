@@ -24,11 +24,14 @@ export default function Home() {
     <main className="max-w-3xl mx-auto px-4">
       <div className="flex flex-col gap-8">
         <div className="px-4 gap-8">
-          <div className="flex justify-center w-full">
-            <Avatar className="w-32 h-32 mt-8">
-              <AvatarImage src="https://live.staticflickr.com/65535/51904519089_c6ef9deaff_o.png" alt="@kodydeda" />
-              <AvatarFallback>KD</AvatarFallback>
-            </Avatar>
+          <div className="flex justify-center w-full mt-8">
+            <Image
+              src="/avatar.png"
+              width={125}
+              height={125}
+              alt="Screenshots of the dashboard project showing desktop version"
+              className="rounded-lg"
+            />
           </div>
 
           <div className="flex flex-col gap-2 pb-8">
@@ -53,7 +56,7 @@ export default function Home() {
             title="🍎 3 Years of Professional Experience"
             description="I've worked on a few apps in my day. Feel free to take a look!"
           />
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 w-full">
             <ExperienceCard
               title="Peg Puzzle Classic"
               description="Game"
@@ -100,7 +103,7 @@ type ExperienceCardProps = {
 }
 
 const ExperienceCard = ({ ...props }: ExperienceCardProps) => (
-  <Card>
+  <Card className="w-full">
     <CardContent>
       <p>content</p>
     </CardContent>
