@@ -76,30 +76,35 @@ const components: { title: string; href: string; description: string }[] = [
 
 export default function NavigationMenuDemo() {
   return (
-    <nav className="sticky top-0 z-10 bg-gray-400 backdrop-filter backdrop-blur-lg bg-opacity-30 border-b border-gray-200">
+    <nav className="sticky top-0 z-10 bg-gray-400 backdrop-filter backdrop-blur-lg bg-opacity-5 border-b border-gray-700">
       <div className="max-w-5xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
                 <Link href="/" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Kody Deda
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <Link href="/peg-puzzle-classic" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Peg Puzzle Classic
+                  <NavigationMenuLink>
+                    <Button variant="ghost">
+                      Kody Deda
+                    </Button>
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <Link href="/guitar-tuner" legacyBehavior passHref>
-                  {/* <NavigationMenuLink className={navigationMenuTriggerStyle()}> */}
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Guitar Tuner
+                  <NavigationMenuLink>
+                    <Button variant="ghost">
+                      Guitar Tuner
+                    </Button>
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link href="/peg-puzzle-classic" legacyBehavior passHref>
+                  <NavigationMenuLink>
+                    <Button variant="ghost">
+                      Peg Puzzle Classic
+                    </Button>
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
