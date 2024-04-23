@@ -69,7 +69,7 @@ export default function Home() {
 const SectionHeader: React.FC<{ caption: string; title: string; description: string }> = ({ caption, title, description }) => {
   return (
     <div className="flex flex-col gap-2 py-4">
-      <p className="text-sm text-blue-500 font-bold">{caption}</p>
+      <p className="text-sm text-accent-foreground font-bold">{caption}</p>
       <h2 className="text-2xl font-bold">{title}</h2>
       <p className="text-lg text-neutral-400 font-medium">{description}</p>
     </div>
