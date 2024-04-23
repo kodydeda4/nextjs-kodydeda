@@ -34,7 +34,7 @@ const apps: PersonalProjectCardProps[] = [
     description: "Game",
     appIconSrc: "/peg-puzzle-classic.png",
     heroSrc: "/peg-puzzle-classic-hero-2.png",
-    appStoreURL: "https://apps.apple.com/us/app/accutune-guitar-tuner/id6472688914",
+    appStoreURL: "https://apps.apple.com/us/app/peg-puzzle-classic/id6469359729",
     githubURL: "https://github.com/kodydeda4/PegPuzzleClassic",
   },
   {
@@ -42,7 +42,7 @@ const apps: PersonalProjectCardProps[] = [
     description: "Music Education",
     appIconSrc: "/guitar-tuner.png",
     heroSrc: "/guitar-tuner-hero-2.png",
-    appStoreURL: "https://apps.apple.com/us/app/peg-puzzle-classic/id6469359729",
+    appStoreURL: "https://apps.apple.com/us/app/accutune-guitar-tuner/id6472688914",
     githubURL: "https://github.com/kodydeda4/GuitarTuner",
   },
 ]
