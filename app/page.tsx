@@ -22,7 +22,7 @@ import { Apple } from "lucide-react"
 
 export default function Home() {
   return (
-    <main>
+    <main className="max-w-3xl mx-auto px-4">
       <div className="flex flex-col gap-8">
         <div className="px-4 gap-8">
           <div className="flex justify-center w-full">
