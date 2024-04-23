@@ -1,10 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/components/ui/avatar"
 import * as React from "react"
 
 import { Button } from "@/components/ui/button"
@@ -115,7 +110,6 @@ const SectionHeader: React.FC<{ caption: string; title: string; description: str
   );
 };
 
-
 type ProfessionalExperienceCardProps = {
   title: string
   description: string
@@ -157,7 +151,6 @@ const ProfessionalExperienceCard: React.FC<ProfessionalExperienceCardProps> = (p
   );
 };
 
-
 type PersonalProjectCardProps = {
   title: string
   description: string
@@ -165,7 +158,6 @@ type PersonalProjectCardProps = {
   appStoreURL: string
   githubURL: string
 }
-
 
 const PersonalProjectCard: React.FC<PersonalProjectCardProps> = (props) => {
   return (
@@ -205,21 +197,3 @@ const PersonalProjectCard: React.FC<PersonalProjectCardProps> = (props) => {
     </Card >
   );
 };
-
-function CardView() {
-  return (
-    <Card>
-      <CardHeader>
-
-        <CardTitle>Title</CardTitle>
-        <CardDescription>Description</CardDescription>
-      </CardHeader>
-      <CardContent>
-        <p>Content</p>
-      </CardContent>
-      <CardFooter className="flex gap-4">
-        <p>Footer</p>
-      </CardFooter>
-    </Card>
-  )
-}
