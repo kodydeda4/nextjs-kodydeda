@@ -22,7 +22,7 @@ import { Apple } from "lucide-react"
 
 export default function Home() {
   return (
-    <>
+    <main>
       <div className="flex flex-col gap-8">
         <div className="px-4 gap-8">
           <div className="flex justify-center w-full">
@@ -54,10 +54,16 @@ export default function Home() {
             title="🍎 3 Years of Professional Experience"
             description="I've worked on a few apps in my day. Feel free to take a look!"
           />
-          <CardWithForm />
+          <ExperienceCard />
+
+          <div className="flex flex-col gap-2 py-4">
+            {Array(50).fill(1).map((_) => (
+              <CardView />
+            ))}
+          </div>
         </div>
       </div>
-    </>
+    </main>
   );
 }
 
@@ -71,7 +77,7 @@ const SectionHeader: React.FC<{ caption: string; title: string; description: str
   );
 };
 
-function CardWithForm() {
+function ExperienceCard() {
   return (
     <Card>
       <CardHeader>
@@ -88,6 +94,23 @@ function CardWithForm() {
         <Button variant="outline" className="w-full">
           <Github className="mr-2 h-4 w-4" /> Github
         </Button>
+      </CardFooter>
+    </Card>
+  )
+}
+
+function CardView() {
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle>Title</CardTitle>
+        <CardDescription>Description</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <p>Content</p>
+      </CardContent>
+      <CardFooter className="flex gap-4">
+        <p>Footer</p>
       </CardFooter>
     </Card>
   )

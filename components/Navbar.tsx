@@ -27,41 +27,49 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav class="flex justify-between p-4">
-      {/* Left Items */}
-      <ul class="flex gap-4">
-        <li>
-          <Link href="/">
-            <Button variant="ghost" className="font-bold">
-              Kody Deda
-            </Button>
-          </Link>
-        </li>
-        <li>
-          <Link href="/peg-puzzle-classic">
-            <Button variant="ghost">
-              Peg Puzzle Classic
-            </Button>
-          </Link>
-        </li>
-        <li>
-          <Link href="/guitar-tuner">
-            <Button variant="ghost">
-              Guitar Tuner
-            </Button>
-          </Link>
-        </li>
-      </ul>
+    <nav className="sticky top-0 z-10 bg-gray-400 backdrop-filter backdrop-blur-lg bg-opacity-30 border-b border-gray-200">
+      <div className="max-w-5xl mx-auto px-4">
+        <div className="flex items-center justify-between h-16">
+          <span className="text-2xl text-gray-900 font-semibold">
 
-      {/* Right Items */}
-      <ul class="flex gap-4">
-        <li>
-          <ModeToggle />
-        </li>
-        <li>
-          <SheetDemo />
-        </li>
-      </ul>
+            {/* Left Items */}
+            <ul class="flex gap-4">
+              <li>
+                <Link href="/">
+                  <Button variant="ghost" className="font-bold">
+                    Kody Deda
+                  </Button>
+                </Link>
+              </li>
+              <li>
+                <Link href="/peg-puzzle-classic">
+                  <Button variant="ghost">
+                    Peg Puzzle Classic
+                  </Button>
+                </Link>
+              </li>
+              <li>
+                <Link href="/guitar-tuner">
+                  <Button variant="ghost">
+                    Guitar Tuner
+                  </Button>
+                </Link>
+              </li>
+            </ul>
+          </span>
+          <div className="flex space-x-4 text-gray-900">
+            {/* Right Items */}
+            <ul class="flex gap-4">
+              <li>
+                <ModeToggle />
+              </li>
+              <li>
+                <SheetDemo />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </nav>
   )
 }
