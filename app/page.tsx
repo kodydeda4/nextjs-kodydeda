@@ -123,7 +123,7 @@ type ProfessionalExperienceCardProps = {
   appStoreURL: string
 }
 
-const ProfessionalExperienceCard: React.FC<ExperienceCardProps> = (props) => {
+const ProfessionalExperienceCard: React.FC<ProfessionalExperienceCardProps> = (props) => {
   return (
     <Card className="w-full">
       <CardHeader>
