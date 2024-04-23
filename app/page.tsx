@@ -106,14 +106,40 @@ export default function Home() {
       <div className="max-w-3xl mx-auto px-8 my-8 pt-4 mb-24 px-4">
         <div className="flex flex-col gap-16">
           <div className="flex flex-col gap-4">
-            <div className="flex justify-center w-full">
+
+
+
+            <div className="bg-gradient-to-r from-indigo-500 to-purple-500 w-full rounded-lg h-64 relative">
               <Image
-                src="/avatar.png"
-                width={125}
-                height={125}
-                alt="Screenshots of the dashboard project showing desktop version"
+                src="/avatar-hero.png"
+                alt="Hero image."
+                layout="fill"
+                objectFit="contain"
               />
             </div>
+
+            {/* <div className="flex justify-center w-full"> */}
+            {/*   <Image */}
+            {/*     src="/avatar-hero.png" */}
+            {/*     width={125} */}
+            {/*     height={125} */}
+            {/*     alt="Screenshots of the dashboard project showing desktop version" */}
+            {/*   /> */}
+            {/* </div> */}
+
+
+
+
+
+
+            {/* <div className="flex justify-center w-full"> */}
+            {/*   <Image */}
+            {/*     src="/avatar.png" */}
+            {/*     width={125} */}
+            {/*     height={125} */}
+            {/*     alt="Screenshots of the dashboard project showing desktop version" */}
+            {/*   /> */}
+            {/* </div> */}
             <Header />
           </div>
 
