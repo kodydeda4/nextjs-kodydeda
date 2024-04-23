@@ -38,15 +38,18 @@ import {
 
 export default function Navbar() {
   return (
-    <nav className="sticky top-0 z-10 bg-gray-400 backdrop-filter backdrop-blur-lg bg-opacity-5 border-b">
+    <nav className="sticky top-0 z-10 backdrop-filter backdrop-blur-lg border-b">
       <div className="max-w-4xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
+                <SheetDemo />
+              </NavigationMenuItem>
+              <NavigationMenuItem>
                 <Link href="/" legacyBehavior passHref>
                   <NavigationMenuLink>
-                    <Button variant="ghost">
+                    <Button variant="ghost" className="font-extrabold">
                       Kody Deda
                     </Button>
                   </NavigationMenuLink>
@@ -77,9 +80,6 @@ export default function Navbar() {
               <NavigationMenuItem>
                 <ModeToggle />
               </NavigationMenuItem>
-              <NavigationMenuItem>
-                <SheetDemo />
-              </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
         </div>
@@ -98,7 +98,7 @@ function SheetDemo() {
 
   return (
     <>
-      <Button onClick={handleClick} variant="outline" size="icon">
+      <Button onClick={handleClick} variant="ghost" size="icon">
         <AlignJustify className="h-4 w-4" />
       </Button>
       <Sheet open={open} onOpenChange={setOpen}>
@@ -140,7 +140,7 @@ function ModeToggle() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="icon">
+        <Button variant="ghost" size="icon">
           <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
           <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
           <span className="sr-only">Toggle theme</span>

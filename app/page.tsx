@@ -26,7 +26,7 @@ export default function Home() {
       <div className="flex flex-col gap-8">
         <div className="px-4 gap-8">
           <div className="flex justify-center w-full">
-            <Avatar className="w-32 h-32">
+            <Avatar className="w-32 h-32 mt-8">
               <AvatarImage src="https://live.staticflickr.com/65535/51904519089_c6ef9deaff_o.png" alt="@kodydeda" />
               <AvatarFallback>KD</AvatarFallback>
             </Avatar>
