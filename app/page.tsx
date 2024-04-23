@@ -34,7 +34,7 @@ const apps: PersonalProjectCardProps[] = [
     description: "Game",
     appIconSrc: "/peg-puzzle-classic.png",
     heroSrc: "/peg-puzzle-classic-hero-2.png",
-    appStoreURL: "https://apps.apple.com/us/app/peg-puzzle-classic/id6469359729",
+    appStoreURL: "https://apps.apple.com/us/app/accutune-guitar-tuner/id6472688914",
     githubURL: "https://github.com/kodydeda4/PegPuzzleClassic",
   },
   {
@@ -43,7 +43,7 @@ const apps: PersonalProjectCardProps[] = [
     appIconSrc: "/guitar-tuner.png",
     heroSrc: "/guitar-tuner-hero-2.png",
     appStoreURL: "https://apps.apple.com/us/app/peg-puzzle-classic/id6469359729",
-    githubURL: "https://github.com/kodydeda4/PegPuzzleClassic",
+    githubURL: "https://github.com/kodydeda4/GuitarTuner",
   },
 ]
 
@@ -106,9 +106,6 @@ export default function Home() {
       <div className="max-w-3xl mx-auto px-8 my-8 pt-4 mb-24 px-4">
         <div className="flex flex-col gap-16">
           <div className="flex flex-col gap-4">
-
-
-
             <div className="bg-gradient-to-r from-indigo-500 to-purple-500 w-full rounded-lg h-64 relative">
               <Image
                 src="/avatar-hero.png"
@@ -117,29 +114,6 @@ export default function Home() {
                 objectFit="contain"
               />
             </div>
-
-            {/* <div className="flex justify-center w-full"> */}
-            {/*   <Image */}
-            {/*     src="/avatar-hero.png" */}
-            {/*     width={125} */}
-            {/*     height={125} */}
-            {/*     alt="Screenshots of the dashboard project showing desktop version" */}
-            {/*   /> */}
-            {/* </div> */}
-
-
-
-
-
-
-            {/* <div className="flex justify-center w-full"> */}
-            {/*   <Image */}
-            {/*     src="/avatar.png" */}
-            {/*     width={125} */}
-            {/*     height={125} */}
-            {/*     alt="Screenshots of the dashboard project showing desktop version" */}
-            {/*   /> */}
-            {/* </div> */}
             <Header />
           </div>
 
@@ -307,12 +281,12 @@ const PersonalProjectCard: React.FC<PersonalProjectCardProps> = (props) => {
           </div>
 
           <div className="flex flex-row sm:flex-col pt-6 sm:pt-4 gap-3 w-full">
-            <Link href={props.appStoreURL} className="w-full">
+            <Link href={props.appStoreURL} rel="noopener noreferrer" target="_blank" className="w-full">
               <Button variant="default" className="w-full">
                 <Apple className="mr-2 h-4 w-4" /> App Store
               </Button>
             </Link>
-            <Link href={props.githubURL} className="w-full">
+            <Link href={props.githubURL} rel="noopener noreferrer" target="_blank" className="w-full">
               <Button variant="outline" className="w-full">
                 <Github className="mr-2 h-4 w-4" /> Github
               </Button>
