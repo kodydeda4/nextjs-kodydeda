@@ -14,26 +14,7 @@ import {
 import { FaGithub as Github } from "react-icons/fa";
 import { FaApple as Apple } from "react-icons/fa";
 
-const personalProjects: PersonalProjectCardProps[] = [
-  {
-    title: "Peg Puzzle Classic",
-    description: "Game",
-    appIconSrc: "/peg-puzzle-classic.png",
-    heroSrc: "/peg-puzzle-classic-hero-2.png",
-    appStoreURL: "https://apps.apple.com/us/app/peg-puzzle-classic/id6469359729",
-    githubURL: "https://github.com/kodydeda4/PegPuzzleClassic",
-  },
-  {
-    title: "Guitar Tuner",
-    description: "Music Education",
-    appIconSrc: "/guitar-tuner.png",
-    heroSrc: "/guitar-tuner-hero-2.png",
-    appStoreURL: "https://apps.apple.com/us/app/peg-puzzle-classic/id6469359729",
-    githubURL: "https://github.com/kodydeda4/PegPuzzleClassic",
-  },
-]
-
-const personalExperience: ProfessionalExperienceCardProps[] = [
+const experience: ProfessionalExperienceCardProps[] = [
   {
     title: "Pocket Radar",
     description: "Speed and Video Analysis",
@@ -52,30 +33,60 @@ const personalExperience: ProfessionalExperienceCardProps[] = [
   },
 ]
 
+const apps: PersonalProjectCardProps[] = [
+  {
+    title: "Peg Puzzle Classic",
+    description: "Game",
+    appIconSrc: "/peg-puzzle-classic.png",
+    heroSrc: "/peg-puzzle-classic-hero-2.png",
+    appStoreURL: "https://apps.apple.com/us/app/peg-puzzle-classic/id6469359729",
+    githubURL: "https://github.com/kodydeda4/PegPuzzleClassic",
+  },
+  {
+    title: "Guitar Tuner",
+    description: "Music Education",
+    appIconSrc: "/guitar-tuner.png",
+    heroSrc: "/guitar-tuner-hero-2.png",
+    appStoreURL: "https://apps.apple.com/us/app/peg-puzzle-classic/id6469359729",
+    githubURL: "https://github.com/kodydeda4/PegPuzzleClassic",
+  },
+]
+
+
 const technologies: TechnologyCardProps[] = [
   {
-    title: "swiftui",
-    iconSrc: "/dealerware.png",
+    title: "xcode",
+    iconSrc: "/xcode.png",
     href: "https://www.google.com"
   },
   {
-    title: "swiftui",
-    iconSrc: "/dealerware.png",
+    title: "swift",
+    iconSrc: "/swift.png",
     href: "https://www.google.com"
   },
   {
-    title: "swiftui",
-    iconSrc: "/dealerware.png",
+    title: "composable-architecture",
+    iconSrc: "/pointfree.png",
     href: "https://www.google.com"
   },
   {
-    title: "swiftui",
-    iconSrc: "/dealerware.png",
+    title: "github",
+    iconSrc: "/github.png",
     href: "https://www.google.com"
   },
   {
-    title: "swiftui",
-    iconSrc: "/dealerware.png",
+    title: "slack",
+    iconSrc: "/slack.png",
+    href: "https://www.google.com"
+  },
+  {
+    title: "jira",
+    iconSrc: "/jira.png",
+    href: "https://www.google.com"
+  },
+  {
+    title: "figma",
+    iconSrc: "/figma.png",
     href: "https://www.google.com"
   },
 ]
@@ -116,7 +127,7 @@ export default function Home() {
             description="I've worked on a few apps in my day. Feel free to take a look!"
           />
           <div className="flex flex-col gap-4 w-full">
-            {personalExperience.map((value, index) => (
+            {experience.map((value, index) => (
               <ProfessionalExperienceCard key={index} {...value} />
             ))}
           </div>
@@ -129,7 +140,7 @@ export default function Home() {
             description="I've worked on a few apps in my day. Feel free to take a look!"
           />
           <div className="flex flex-row gap-4 w-full">
-            {personalProjects.map((value, index) => (
+            {apps.map((value, index) => (
               <PersonalProjectCard key={index} {...value} />
             ))}
           </div>
@@ -141,7 +152,7 @@ export default function Home() {
             title="🌎 Technologies & Frameworks"
             description="These are some of my favorite tools."
           />
-          <div className="flex gap-4 w-full">
+          <div className="flex flex-wrap gap-4 w-full">
             {technologies.map((value, index) => (
               <TechnologyCard key={index} {...value} />
             ))}
@@ -312,7 +323,7 @@ type TechnologyCardProps = {
 
 const TechnologyCard: React.FC<TechnologyCardProps> = (props) => {
   return (
-    <Button variant="outline" className="relative p-8">
+    <Button variant="outline" className="relative p-8 w-50 h-50">
       <div className="relative">
         <Image
           src={props.iconSrc}
