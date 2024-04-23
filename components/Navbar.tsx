@@ -38,7 +38,7 @@ import {
 
 export default function Navbar() {
   return (
-    <nav className="sticky top-0 z-10 bg-gray-400 backdrop-filter backdrop-blur-lg bg-opacity-5 border-b border-gray-700">
+    <nav className="sticky top-0 z-10 bg-gray-400 backdrop-filter backdrop-blur-lg bg-opacity-5 border-b">
       <div className="max-w-4xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <NavigationMenu>
