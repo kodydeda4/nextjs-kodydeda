@@ -138,7 +138,7 @@ export default function Home() {
         <div>
           <SectionHeader
             caption="Technology"
-            title="🌎 Technologies"
+            title="🌎 Technologies & Frameworks"
             description="These are some of my favorite tools."
           />
           <div className="flex gap-4 w-full">
