@@ -52,6 +52,49 @@ const personalExperience: ProfessionalExperienceCardProps[] = [
   },
 ]
 
+const technologies: TechnologyCardProps[] = [
+  {
+    title: "swiftui",
+    iconSrc: "/dealerware.png",
+    href: "https://www.google.com"
+  },
+  {
+    title: "swiftui",
+    iconSrc: "/dealerware.png",
+    href: "https://www.google.com"
+  },
+  {
+    title: "swiftui",
+    iconSrc: "/dealerware.png",
+    href: "https://www.google.com"
+  },
+  {
+    title: "swiftui",
+    iconSrc: "/dealerware.png",
+    href: "https://www.google.com"
+  },
+  {
+    title: "swiftui",
+    iconSrc: "/dealerware.png",
+    href: "https://www.google.com"
+  },
+]
+
+const education: EducationCardProps[] = [
+  {
+    title: "Bachelor's of Computer Science",
+    description: "University of North Carolina Wilmington",
+    caption: "Spring 2019 - Fall 2022",
+    iconSrc: "/uncw.png"
+  },
+  {
+    title: "Associate's of Science",
+    description: "Cape Fear Community College",
+    caption: "Spring 2016 - Fall 2018",
+    iconSrc: "/cfcc.png"
+  },
+]
+
 export default function Home() {
   return (
     <main className="max-w-3xl mx-auto px-8 my-8 pt-4 mb-24 px-4">
@@ -88,6 +131,32 @@ export default function Home() {
           <div className="flex flex-row gap-4 w-full">
             {personalProjects.map((value, index) => (
               <PersonalProjectCard key={index} {...value} />
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <SectionHeader
+            caption="Technology"
+            title="🌎 Technologies"
+            description="These are some of my favorite tools."
+          />
+          <div className="flex gap-4 w-full">
+            {technologies.map((value, index) => (
+              <TechnologyCard key={index} {...value} />
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <SectionHeader
+            caption="Education"
+            title="🎓 University Education"
+            description="These are some of my favorite tools."
+          />
+          <div className="flex flex-row gap-4 w-full">
+            {education.map((value, index) => (
+              <EducationCard key={index} {...value} />
             ))}
           </div>
         </div>
@@ -202,7 +271,7 @@ const PersonalProjectCard: React.FC<PersonalProjectCardProps> = (props) => {
           </div>
 
           <div className="flex flex-row justify-start gap-4 pt-6">
-            <div className="justify-start">
+            <div className="justify-start relative">
               <Image
                 src={props.appIconSrc}
                 width={50}
@@ -234,3 +303,62 @@ const PersonalProjectCard: React.FC<PersonalProjectCardProps> = (props) => {
     </Card >
   );
 };
+
+type TechnologyCardProps = {
+  title: string
+  iconSrc: string
+  href: string
+}
+
+const TechnologyCard: React.FC<TechnologyCardProps> = (props) => {
+  return (
+    <Button variant="outline" className="relative p-8">
+      <div className="relative">
+        <Image
+          src={props.iconSrc}
+          width={50}
+          height={50}
+          alt="Hero image"
+          className="rounded-lg"
+        />
+      </div>
+    </Button>
+  )
+}
+
+type EducationCardProps = {
+  title: string
+  description: string
+  caption: string
+  iconSrc: string
+  href: string
+}
+const EducationCard: React.FC<EducationCardProps> = (props) => {
+  return (
+    <Card className="w-full">
+      <CardContent>
+        <div className="w-full">
+          <div className="flex flex-row justify-start gap-4 pt-6">
+            <div className="justify-start relative">
+              <Image
+                src={props.iconSrc}
+                width={50}
+                height={50}
+                alt="Hero image"
+                className="rounded-lg"
+              />
+            </div>
+            <div className="flex flex-col gap-1">
+              <p className="font-semibold line-clamp-1">{props.title}</p>
+              <p className="text-sm line-clamp-1">{props.description}</p>
+              <p className="text-xs text-muted-foreground line-clamp-1">{props.caption}</p>
+            </div>
+          </div>
+
+        </div>
+      </CardContent>
+    </Card >
+  );
+};
+
+
