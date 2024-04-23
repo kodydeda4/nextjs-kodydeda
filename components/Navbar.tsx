@@ -12,7 +12,6 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
-import * as React from "react"
 import { Moon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
 import {
@@ -23,69 +22,127 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { ChevronRight } from "lucide-react"
 import { AlignJustify } from "lucide-react"
-import Link from "next/link";
+import * as React from "react"
+import Link from "next/link"
 
-export default function Navbar() {
+import { cn } from "@/lib/utils"
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu"
+
+const components: { title: string; href: string; description: string }[] = [
+  {
+    title: "Alert Dialog",
+    href: "/docs/primitives/alert-dialog",
+    description:
+      "A modal dialog that interrupts the user with important content and expects a response.",
+  },
+  {
+    title: "Hover Card",
+    href: "/docs/primitives/hover-card",
+    description:
+      "For sighted users to preview content available behind a link.",
+  },
+  {
+    title: "Progress",
+    href: "/docs/primitives/progress",
+    description:
+      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+  },
+  {
+    title: "Scroll-area",
+    href: "/docs/primitives/scroll-area",
+    description: "Visually or semantically separates content.",
+  },
+  {
+    title: "Tabs",
+    href: "/docs/primitives/tabs",
+    description:
+      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+  },
+  {
+    title: "Tooltip",
+    href: "/docs/primitives/tooltip",
+    description:
+      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+  },
+]
+
+export default function NavigationMenuDemo() {
   return (
-    <nav className="sticky top-0 z-10 bg-white backdrop-filter backdrop-blur-lg bg-opacity-30 border-b border-gray-200">
+    <nav className="sticky top-0 z-10 bg-gray-400 backdrop-filter backdrop-blur-lg bg-opacity-30 border-b border-gray-200">
       <div className="max-w-5xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <span className="text-2xl text-gray-900 font-semibold">
-
-            {/* Left Items */}
-            <ul class="flex gap-4">
-              <li>
-                <Link href="/">
-                  <Button variant="ghost" className="font-bold">
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <Link href="/" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     Kody Deda
-                  </Button>
+                  </NavigationMenuLink>
                 </Link>
-              </li>
-              <li>
-                <Link href="/peg-puzzle-classic">
-                  <Button variant="ghost">
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link href="/peg-puzzle-classic" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     Peg Puzzle Classic
-                  </Button>
+                  </NavigationMenuLink>
                 </Link>
-              </li>
-              <li>
-                <Link href="/guitar-tuner">
-                  <Button variant="ghost">
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link href="/guitar-tuner" legacyBehavior passHref>
+                  {/* <NavigationMenuLink className={navigationMenuTriggerStyle()}> */}
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     Guitar Tuner
-                  </Button>
+                  </NavigationMenuLink>
                 </Link>
-              </li>
-            </ul>
-          </span>
-          <div className="flex space-x-4 text-gray-900">
-            <a href="#">Dashboard</a>
-            <a href="#">About</a>
-            <a href="#">Projects</a>
-            <a href="#">Contact</a>
-          </div>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <ModeToggle />
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <SheetDemo />
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
         </div>
       </div>
-    </nav>
+    </nav >
   )
 }
 
-
-export function NavbarFR() {
+const ListItem = React.forwardRef<
+  React.ElementRef<"a">,
+  React.ComponentPropsWithoutRef<"a">
+>(({ className, title, children, ...props }, ref) => {
   return (
-    <nav class="flex justify-between p-4">
-
-      {/* Right Items */}
-      <ul class="flex gap-4">
-        <li>
-          <ModeToggle />
-        </li>
-        <li>
-          <SheetDemo />
-        </li>
-      </ul>
-    </nav>
+    <li>
+      <NavigationMenuLink asChild>
+        <a
+          ref={ref}
+          className={cn(
+            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            className
+          )}
+          {...props}
+        >
+          <div className="text-sm font-medium leading-none">{title}</div>
+          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+            {children}
+          </p>
+        </a>
+      </NavigationMenuLink>
+    </li>
   )
-}
+})
+ListItem.displayName = "ListItem"
+
 
 function SheetDemo() {
   const [open, setOpen] = React.useState(false);
