@@ -19,6 +19,7 @@ const personalProjects: PersonalProjectCardProps[] = [
     title: "Peg Puzzle Classic",
     description: "Game",
     appIconSrc: "/peg-puzzle-classic.png",
+    heroSrc: "/peg-puzzle-classic-hero.png",
     appStoreURL: "https://apps.apple.com/us/app/peg-puzzle-classic/id6469359729",
     githubURL: "https://github.com/kodydeda4/PegPuzzleClassic",
   }
@@ -29,6 +30,7 @@ const personalExperience: ProfessionalExperienceCardProps[] = [
     title: "Pocket Radar",
     description: "Speed and Video Analysis",
     appIconSrc: "/pocket-radar.png",
+    heroSrc: "/pocket-radar-hero.png",
     appStoreURL: "https://apps.apple.com/us/app/pocket-radar-sports/id1576214627",
     responsibilities: "Learned how to write a for-each loop in Python.",
   },
@@ -36,6 +38,7 @@ const personalExperience: ProfessionalExperienceCardProps[] = [
     title: "Dealerware",
     description: "Fleet Management",
     appIconSrc: "/dealerware.png",
+    heroSrc: "/dealerware-hero.png",
     appStoreURL: "https://apps.apple.com/us/app/dealerware/id1168703299",
     responsibilities: "Learned how to write a for-each loop in Python.",
   }
@@ -43,11 +46,19 @@ const personalExperience: ProfessionalExperienceCardProps[] = [
 
 export default function Home() {
   return (
-    <main className="max-w-3xl mx-auto px-4">
+    <main className="max-w-3xl mx-auto px-8 my-8 pt-4 mb-24 px-4">
       <div className="flex flex-col gap-8">
-        <div className="px-4 gap-8">
-          <Header />
+        <div className="flex justify-center w-full">
+          <Image
+            src="/avatar.png"
+            width={125}
+            height={125}
+            alt="Screenshots of the dashboard project showing desktop version"
+          />
+        </div>
+        <Header />
 
+        <div>
           <SectionHeader
             caption="Professional Experience"
             title="🍎 3 Years of Professional Experience"
@@ -58,7 +69,9 @@ export default function Home() {
               <ProfessionalExperienceCard key={index} {...value} />
             ))}
           </div>
+        </div>
 
+        <div>
           <SectionHeader
             caption="Personal Projects"
             title="🛠️ Apps I've Made"
@@ -76,32 +89,19 @@ export default function Home() {
 }
 
 const Header: React.FC = () => (
-  <div>
-    <div className="flex justify-center w-full mt-8">
-      <Image
-        src="/avatar.png"
-        width={125}
-        height={125}
-        alt="Screenshots of the dashboard project showing desktop version"
-        className="rounded-lg"
-      />
-    </div>
-
-    <div className="flex flex-col gap-2 pb-8">
-      <h1 className="text-3xl font-extrabold">
-        {"Hi, I'm Kody Deda"}
-      </h1>
-      <h2 className="text-3xl font-extrabold">
-        Welcome to my portfolio!
-      </h2>
-      <p className="text-xl text-neutral-400">
-        {"This is a description of my software development skills and stuff, especially related to SwiftUI."}
-      </p>
-
-      <div className="flex gap-4">
-        <Button className="w-full">Contact Me</Button>
-        <Button variant="outline" className="w-full">Resume PDF</Button>
-      </div>
+  <div className="flex flex-col">
+    <h1 className="text-3xl font-extrabold">
+      {"Hi, I'm Kody Deda."}
+    </h1>
+    <h2 className="text-3xl font-extrabold pb-2">
+      Welcome to my portfolio!
+    </h2>
+    <p className="text-xl text-neutral-400 pb-4">
+      {"This is a description of my software development skills and stuff, especially related to SwiftUI."}
+    </p>
+    <div className="flex gap-4">
+      <Button className="w-full">Contact Me</Button>
+      <Button variant="outline" className="w-full">Resume PDF</Button>
     </div>
   </div>
 );
@@ -120,6 +120,7 @@ type ProfessionalExperienceCardProps = {
   title: string
   description: string
   appIconSrc: string
+  heroSrc: string
   appStoreURL: string
   responsibilities: string
 }
@@ -162,6 +163,7 @@ type PersonalProjectCardProps = {
   title: string
   description: string
   appIconSrc: string
+  heroSrc: string
   appStoreURL: string
   githubURL: string
 }
@@ -170,37 +172,30 @@ const PersonalProjectCard: React.FC<PersonalProjectCardProps> = (props) => {
   return (
     <Card className="w-full" >
       <CardContent>
-        <p>Hello World</p>
-      </CardContent>
-
-      <CardHeader>
-        <div className="flex gap-4">
+        <div className="pt-6">
           <Image
-            src={props.appIconSrc}
-            width={50}
-            height={50}
+            src={props.heroSrc}
+            width={200}
+            height={200}
             alt="Screenshots of the dashboard project showing desktop version"
             className="rounded-lg"
           />
-          <div className="flex flex-col gap-1">
-            <CardTitle>{props.title}</CardTitle>
-            <CardDescription>{props.description}</CardDescription>
+
+          <div className="flex gap-4">
+            <Image
+              src={props.appIconSrc}
+              width={50}
+              height={50}
+              alt="Screenshots of the dashboard project showing desktop version"
+              className="rounded-lg"
+            />
+            <div className="flex flex-col gap-1">
+              <CardTitle>{props.title}</CardTitle>
+              <CardDescription>{props.description}</CardDescription>
+            </div>
           </div>
         </div>
-      </CardHeader>
-
-      <CardFooter className="flex gap-4">
-        <Link href={props.appStoreURL} className="w-full">
-          <Button variant="default" className="w-full">
-            <Apple className="mr-2 h-4 w-4" /> App Store
-          </Button>
-        </Link>
-        <Link href={props.githubURL} className="w-full">
-          <Button variant="outline" className="w-full">
-            <Github className="mr-2 h-4 w-4" /> Github
-          </Button>
-        </Link>
-      </CardFooter>
+      </CardContent>
     </Card >
   );
 };
