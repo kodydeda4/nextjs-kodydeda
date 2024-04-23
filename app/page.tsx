@@ -102,72 +102,75 @@ const education: EducationCardProps[] = [
 
 export default function Home() {
   return (
-    <main className="max-w-3xl mx-auto px-8 my-8 pt-4 mb-24 px-4">
-      <div className="flex flex-col gap-16">
-        <div className="flex flex-col gap-4">
-          <div className="flex justify-center w-full">
-            <Image
-              src="/avatar.png"
-              width={125}
-              height={125}
-              alt="Screenshots of the dashboard project showing desktop version"
+    <main>
+      <div className="max-w-3xl mx-auto px-8 my-8 pt-4 mb-24 px-4">
+        <div className="flex flex-col gap-16">
+          <div className="flex flex-col gap-4">
+            <div className="flex justify-center w-full">
+              <Image
+                src="/avatar.png"
+                width={125}
+                height={125}
+                alt="Screenshots of the dashboard project showing desktop version"
+              />
+            </div>
+            <Header />
+          </div>
+
+          <div>
+            <SectionHeader
+              caption="Professional Experience"
+              title="📖 3 Years of Professional Experience"
+              description="I've worked on a few apps in my day. Feel free to take a look!"
             />
+            <div className="flex flex-col gap-4 w-full">
+              {experience.map((value, index) => (
+                <ProfessionalExperienceCard key={index} {...value} />
+              ))}
+            </div>
           </div>
-          <Header />
-        </div>
 
-        <div>
-          <SectionHeader
-            caption="Professional Experience"
-            title="📖 3 Years of Professional Experience"
-            description="I've worked on a few apps in my day. Feel free to take a look!"
-          />
-          <div className="flex flex-col gap-4 w-full">
-            {experience.map((value, index) => (
-              <ProfessionalExperienceCard key={index} {...value} />
-            ))}
+          <div>
+            <SectionHeader
+              caption="Personal Projects"
+              title="🛠️ Apps I've Made"
+              description="I've worked on a few apps in my day. Feel free to take a look!"
+            />
+            <div className="flex flex-col sm:flex-row gap-4 w-full">
+              {apps.map((value, index) => (
+                <PersonalProjectCard key={index} {...value} />
+              ))}
+            </div>
           </div>
-        </div>
 
-        <div>
-          <SectionHeader
-            caption="Personal Projects"
-            title="🛠️ Apps I've Made"
-            description="I've worked on a few apps in my day. Feel free to take a look!"
-          />
-          <div className="flex flex-col sm:flex-row gap-4 w-full">
-            {apps.map((value, index) => (
-              <PersonalProjectCard key={index} {...value} />
-            ))}
+          <div>
+            <SectionHeader
+              caption="Technology"
+              title="🌎 Technologies & Frameworks"
+              description="These are some of my favorite tools."
+            />
+            <div className="flex flex-wrap gap-4 w-full">
+              {technologies.map((value, index) => (
+                <TechnologyCard key={index} {...value} />
+              ))}
+            </div>
           </div>
-        </div>
 
-        <div>
-          <SectionHeader
-            caption="Technology"
-            title="🌎 Technologies & Frameworks"
-            description="These are some of my favorite tools."
-          />
-          <div className="flex flex-wrap gap-4 w-full">
-            {technologies.map((value, index) => (
-              <TechnologyCard key={index} {...value} />
-            ))}
-          </div>
-        </div>
-
-        <div>
-          <SectionHeader
-            caption="Education"
-            title="🎓 University Education"
-            description="These are some of my favorite tools."
-          />
-          <div className="flex flex-row gap-4 w-full">
-            {education.map((value, index) => (
-              <EducationCard key={index} {...value} />
-            ))}
+          <div>
+            <SectionHeader
+              caption="Education"
+              title="🎓 University Education"
+              description="These are some of my favorite tools."
+            />
+            <div className="flex flex-row gap-4 w-full">
+              {education.map((value, index) => (
+                <EducationCard key={index} {...value} />
+              ))}
+            </div>
           </div>
         </div>
       </div>
+      <CTA />
     </main>
   );
 }
@@ -353,3 +356,19 @@ const EducationCard: React.FC<EducationCardProps> = (props) => {
 };
 
 
+const CTA: React.FC = () => (
+  <div className="flex flex-col w-full bg-neutral-50 bg-opacity-5 relative">
+    <div className="max-w-3xl mx-auto px-8 my-8 pt-4 mb-24 px-4 pb-8 w-full">
+      <h2 className="text-3xl font-extrabold pb-2">
+        Contact Me!
+      </h2>
+      <p className="text-xl text-muted-foreground pb-4">
+        {"Let's start writing some code."}
+      </p>
+      <div className="flex gap-4">
+        <Button className="w-full">Contact Me</Button>
+        <Button variant="outline" className="w-full">Resume PDF</Button>
+      </div>
+    </div>
+  </div>
+);
