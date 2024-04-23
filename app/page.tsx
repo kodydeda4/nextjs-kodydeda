@@ -236,13 +236,13 @@ const ProfessionalExperienceCard: React.FC<ProfessionalExperienceCardProps> = (p
         <p>{props.responsibilities}</p>
       </CardContent>
 
-      <CardFooter className="flex gap-4">
-        {/* <Link href={props.appStoreURL} className="w-full"> */}
-        {/*   <Button variant="default" className="w-full"> */}
-        {/*     <Apple className="mr-2 h-4 w-4" /> App Store */}
-        {/*   </Button> */}
-        {/* </Link> */}
-      </CardFooter>
+      {/* <CardFooter className="flex gap-4"> */}
+      {/* <Link href={props.appStoreURL} className="w-full"> */}
+      {/*   <Button variant="default" className="w-full"> */}
+      {/*     <Apple className="mr-2 h-4 w-4" /> App Store */}
+      {/*   </Button> */}
+      {/* </Link> */}
+      {/* </CardFooter> */}
     </Card>
   );
 };
