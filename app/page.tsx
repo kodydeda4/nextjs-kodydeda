@@ -237,20 +237,6 @@ const ProfessionalExperienceCard: React.FC<ProfessionalExperienceCardProps> = (p
           </div>
 
           <p className="border-t pt-4">{props.responsibilities}</p>
-
-          {/* <div className="flex gap-4"> */}
-          {/*   <Image */}
-          {/*     src={props.appIconSrc} */}
-          {/*     width={50} */}
-          {/*     height={50} */}
-          {/*     alt="Screenshots of the dashboard project showing desktop version" */}
-          {/*     className="rounded-lg" */}
-          {/*   /> */}
-          {/*   <div className="flex flex-col gap-1"> */}
-          {/*     <CardTitle>{props.title}</CardTitle> */}
-          {/*     <CardDescription>{props.description}</CardDescription> */}
-          {/*   </div> */}
-          {/* </div> */}
         </div>
       </CardContent>
     </Card>
@@ -271,16 +257,6 @@ const PersonalProjectCard: React.FC<PersonalProjectCardProps> = (props) => {
     <Card className="w-full">
       <CardContent>
         <div className="pt-6 w-full">
-
-          {/* <div className="bg-gradient-to-r from-indigo-500 to-purple-500 w-full rounded-lg h-20"> */}
-          {/*   <Image */}
-          {/*     src={props.heroSrc} */}
-          {/*     width={200} */}
-          {/*     height={200} */}
-          {/*     alt="Hero image" */}
-          {/*     className="w-full object-scale-down h-200 w-200" */}
-          {/*   /> */}
-          {/* </div> */}
 
           <div className="bg-gradient-to-r from-indigo-500 to-purple-500 w-full rounded-lg h-64 relative">
             <Image

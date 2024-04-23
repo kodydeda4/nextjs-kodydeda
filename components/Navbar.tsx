@@ -28,6 +28,8 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu"
+import { FaGithub as Github } from "react-icons/fa";
+import { FaLinkedinIn as LinkedIn } from "react-icons/fa";
 
 export default function Navbar() {
   return (
@@ -36,9 +38,11 @@ export default function Navbar() {
         < div className="flex items-center justify-between h-16" >
           <NavigationMenu>
             <NavigationMenuList>
-              <NavigationMenuItem>
-                <SheetDemo />
-              </NavigationMenuItem>
+
+              {/* <NavigationMenuItem> */}
+              {/*   <SheetDemo /> */}
+              {/* </NavigationMenuItem> */}
+
               <NavigationMenuItem>
                 <Link href="/" legacyBehavior passHref>
                   <NavigationMenuLink>
@@ -48,31 +52,58 @@ export default function Navbar() {
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
+
               <NavigationMenuItem>
                 <Link href="/guitar-tuner" legacyBehavior passHref>
                   <NavigationMenuLink>
-                    <Button variant="ghost">
+                    <Button variant="ghost" className="text-muted-foreground">
                       Guitar Tuner
                     </Button>
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
+
               <NavigationMenuItem>
                 <Link href="/peg-puzzle-classic" legacyBehavior passHref>
                   <NavigationMenuLink>
-                    <Button variant="ghost">
+                    <Button variant="ghost" className="text-muted-foreground">
                       Peg Puzzle Classic
                     </Button>
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
+
             </NavigationMenuList>
           </NavigationMenu>
           <NavigationMenu>
             <NavigationMenuList>
+
               <NavigationMenuItem>
-                <ModeToggle />
+                <Link href="https://www.linkedin.com/in/kodydeda4/" rel="noopener noreferrer" target="_blank">
+                  <NavigationMenuLink>
+                    <Button variant="ghost" size="icon">
+                      <LinkedIn className="h-[1.2rem] w-[1.2rem]" />
+                    </Button>
+                  </NavigationMenuLink>
+                </Link>
               </NavigationMenuItem>
+
+
+              <NavigationMenuItem>
+                <Link href="https://github.com/kodydeda4" rel="noopener noreferrer" target="_blank">
+                  <NavigationMenuLink>
+                    <Button variant="ghost" size="icon">
+                      <Github className="h-[1.2rem] w-[1.2rem]" />
+                    </Button>
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+
+
+              {/* <NavigationMenuItem> */}
+              {/*   <ModeToggle /> */}
+              {/* </NavigationMenuItem> */}
+
             </NavigationMenuList>
           </NavigationMenu>
         </div >
