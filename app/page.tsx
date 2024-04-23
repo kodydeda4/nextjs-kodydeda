@@ -22,7 +22,15 @@ const personalProjects: PersonalProjectCardProps[] = [
     heroSrc: "/peg-puzzle-classic-hero.png",
     appStoreURL: "https://apps.apple.com/us/app/peg-puzzle-classic/id6469359729",
     githubURL: "https://github.com/kodydeda4/PegPuzzleClassic",
-  }
+  },
+  {
+    title: "Guitar Tuner",
+    description: "Music Education",
+    appIconSrc: "/guitar-tuner.png",
+    heroSrc: "/guitar-tuner-hero.png",
+    appStoreURL: "https://apps.apple.com/us/app/peg-puzzle-classic/id6469359729",
+    githubURL: "https://github.com/kodydeda4/PegPuzzleClassic",
+  },
 ]
 
 const personalExperience: ProfessionalExperienceCardProps[] = [
@@ -41,7 +49,7 @@ const personalExperience: ProfessionalExperienceCardProps[] = [
     heroSrc: "/dealerware-hero.png",
     appStoreURL: "https://apps.apple.com/us/app/dealerware/id1168703299",
     responsibilities: "Learned how to write a for-each loop in Python.",
-  }
+  },
 ]
 
 export default function Home() {
