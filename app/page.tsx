@@ -53,8 +53,22 @@ export default function Home() {
             title="🍎 3 Years of Professional Experience"
             description="I've worked on a few apps in my day. Feel free to take a look!"
           />
-          <ExperienceCard />
-
+          <div className="flex flex-col gap-4">
+            <ExperienceCard
+              title="Peg Puzzle Classic"
+              description="Game"
+              appIconSrc="/peg-puzzle-classic.png"
+              appStoreURL="https://apps.apple.com/us/app/peg-puzzle-classic/id6469359729"
+              githubURL="https://github.com/kodydeda4/PegPuzzleClassic"
+            />
+            <ExperienceCard
+              title="Guitar Tuner"
+              description="Music Education"
+              appIconSrc="/guitar-tuner.png"
+              appStoreURL="https://apps.apple.com/us/app/accutune-guitar-tuner/id6472688914"
+              githubURL="https://github.com/kodydeda4/GuitarTuner"
+            />
+          </div>
           <div className="flex flex-col gap-2 py-4">
             {Array(50).fill(1).map((_) => (
               <CardView />
@@ -76,32 +90,58 @@ const SectionHeader: React.FC<{ caption: string; title: string; description: str
   );
 };
 
-function ExperienceCard() {
-  return (
-    <Card>
-      <CardHeader>
-        <CardTitle>Peg Puzzle Classic</CardTitle>
-        <CardDescription>Game</CardDescription>
-      </CardHeader>
-      <CardContent>
-        <p>Content goes here</p>
-      </CardContent>
-      <CardFooter className="flex gap-4">
+
+type ExperienceCardProps = {
+  title: string
+  description: string
+  appIconSrc: string
+  appStoreURL: string
+  githubURL: string
+}
+
+const ExperienceCard = ({ ...props }: ExperienceCardProps) => (
+  <Card>
+    <CardContent>
+      <p>content</p>
+    </CardContent>
+
+    <CardHeader>
+      <div className="flex gap-4">
+        <Image
+          src={props.appIconSrc}
+          width={50}
+          height={50}
+          alt="Screenshots of the dashboard project showing desktop version"
+          className="rounded-lg"
+        />
+        <div className="flex flex-col gap-1">
+          <CardTitle>{props.title}</CardTitle>
+          <CardDescription>{props.description}</CardDescription>
+        </div>
+      </div>
+    </CardHeader>
+
+
+    <CardFooter className="flex gap-4">
+      <Link href={props.appStoreURL} className="w-full">
         <Button variant="default" className="w-full">
           <Apple className="mr-2 h-4 w-4" /> App Store
         </Button>
+      </Link>
+      <Link href={props.githubURL} className="w-full">
         <Button variant="outline" className="w-full">
           <Github className="mr-2 h-4 w-4" /> Github
         </Button>
-      </CardFooter>
-    </Card>
-  )
-}
+      </Link>
+    </CardFooter>
+  </Card>
+)
 
 function CardView() {
   return (
     <Card>
       <CardHeader>
+
         <CardTitle>Title</CardTitle>
         <CardDescription>Description</CardDescription>
       </CardHeader>
