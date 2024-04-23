@@ -1,15 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import * as React from "react"
-
 import { Button } from "@/components/ui/button"
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
 } from "@/components/ui/card"
 import { FaGithub as Github } from "react-icons/fa";
 import { FaApple as Apple } from "react-icons/fa";
@@ -51,7 +46,6 @@ const apps: PersonalProjectCardProps[] = [
     githubURL: "https://github.com/kodydeda4/PegPuzzleClassic",
   },
 ]
-
 
 const technologies: TechnologyCardProps[] = [
   {
@@ -274,7 +268,7 @@ const PersonalProjectCard: React.FC<PersonalProjectCardProps> = (props) => {
                 width={50}
                 height={50}
                 alt="Hero image"
-                className="rounded-lg"
+                className="border rounded-lg"
               />
             </div>
             <div className="flex flex-col gap-1">
@@ -342,7 +336,7 @@ const EducationCard: React.FC<EducationCardProps> = (props) => {
                 width={50}
                 height={50}
                 alt="Hero image"
-                className="rounded-lg"
+                className="border rounded-lg"
               />
             </div>
             <div className="flex flex-col gap-1">
