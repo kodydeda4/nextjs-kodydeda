@@ -55,7 +55,7 @@ const personalExperience: ProfessionalExperienceCardProps[] = [
 export default function Home() {
   return (
     <main className="max-w-3xl mx-auto px-8 my-8 pt-4 mb-24 px-4">
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-12">
         <div className="flex justify-center w-full">
           <Image
             src="/avatar.png"
@@ -69,7 +69,7 @@ export default function Home() {
         <div>
           <SectionHeader
             caption="Professional Experience"
-            title="🍎 3 Years of Professional Experience"
+            title="📖 3 Years of Professional Experience"
             description="I've worked on a few apps in my day. Feel free to take a look!"
           />
           <div className="flex flex-col gap-4 w-full">
@@ -85,7 +85,7 @@ export default function Home() {
             title="🛠️ Apps I've Made"
             description="I've worked on a few apps in my day. Feel free to take a look!"
           />
-          <div className="flex flex-col sm:flex-row gap-4 w-full">
+          <div className="flex flex-row gap-4 w-full">
             {personalProjects.map((value, index) => (
               <PersonalProjectCard key={index} {...value} />
             ))}
@@ -157,11 +157,11 @@ const ProfessionalExperienceCard: React.FC<ProfessionalExperienceCardProps> = (p
       </CardContent>
 
       <CardFooter className="flex gap-4">
-        <Link href={props.appStoreURL} className="w-full">
-          <Button variant="default" className="w-full">
-            <Apple className="mr-2 h-4 w-4" /> App Store
-          </Button>
-        </Link>
+        {/* <Link href={props.appStoreURL} className="w-full"> */}
+        {/*   <Button variant="default" className="w-full"> */}
+        {/*     <Apple className="mr-2 h-4 w-4" /> App Store */}
+        {/*   </Button> */}
+        {/* </Link> */}
       </CardFooter>
     </Card>
   );
@@ -181,12 +181,22 @@ const PersonalProjectCard: React.FC<PersonalProjectCardProps> = (props) => {
     <Card className="w-full">
       <CardContent>
         <div className="pt-6 w-full">
-          <div className="bg-gradient-to-r from-indigo-500 to-purple-500 w-full rounded-lg">
+
+          {/* <div className="bg-gradient-to-r from-indigo-500 to-purple-500 w-full rounded-lg h-20"> */}
+          {/*   <Image */}
+          {/*     src={props.heroSrc} */}
+          {/*     width={200} */}
+          {/*     height={200} */}
+          {/*     alt="Hero image" */}
+          {/*     className="w-full object-scale-down h-200 w-200" */}
+          {/*   /> */}
+          {/* </div> */}
+
+          <div className="bg-gradient-to-r from-indigo-500 to-purple-500 w-full rounded-lg h-64 relative">
             <Image
               src={props.heroSrc}
-              width={200}
-              height={200}
-              alt="Hero image"
+              alt="Hero image."
+              layout="fill"
               objectFit="contain"
             />
           </div>
@@ -203,7 +213,7 @@ const PersonalProjectCard: React.FC<PersonalProjectCardProps> = (props) => {
             </div>
             <div className="flex flex-col gap-1">
               <p className="font-semibold line-clamp-1">{props.title}</p>
-              <CardDescription>{props.description}</CardDescription>
+              <p className="text-sm text-muted-foreground line-clamp-1">{props.description}</p>
             </div>
           </div>
 
