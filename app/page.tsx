@@ -90,20 +90,22 @@ const education: EducationCardProps[] = [
     title: "Bachelor's of Computer Science",
     description: "University of North Carolina Wilmington",
     caption: "Spring 2019 - Fall 2022",
-    iconSrc: "/uncw.png"
+    iconSrc: "/uncw.png",
+    href: "https://uncw.edu/",
   },
   {
     title: "Associate's of Science",
     description: "Cape Fear Community College",
     caption: "Spring 2016 - Fall 2018",
-    iconSrc: "/cfcc.png"
+    iconSrc: "/cfcc.png",
+    href: "https://cfcc.edu/",
   },
 ]
 
 export default function Home() {
   return (
     <main>
-      <div className="max-w-3xl mx-auto px-8 my-8 pt-4 mb-24 px-4">
+      <div className="max-w-3xl mx-auto px-12 my-8 pt-4 mb-24">
         <div className="flex flex-col gap-16">
           <div className="flex flex-col gap-4">
             <div className="bg-gradient-to-r from-indigo-500 to-purple-500 w-full rounded-lg h-64 relative">
@@ -358,7 +360,7 @@ const EducationCard: React.FC<EducationCardProps> = (props) => {
 
 const CTA: React.FC = () => (
   <div className="flex flex-col w-full bg-neutral-50 bg-opacity-5 relative">
-    <div className="max-w-3xl mx-auto px-8 my-8 pt-4 mb-24 px-4 pb-8 w-full">
+    <div className="max-w-3xl mx-auto px-12 my-8 pt-4 mb-24 pb-8 w-full">
       <h2 className="text-3xl font-extrabold pb-2">
         Contact Me!
       </h2>
