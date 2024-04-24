@@ -35,13 +35,13 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-10 backdrop-filter backdrop-blur-lg border-b bg-white bg-opacity-70 dark:bg-background dark:bg-opacity-80">
       <div className="max-w-4xl mx-auto px-4">
-        < div className="flex items-center justify-between h-16" >
+        <div className="flex items-center justify-between h-16">
           <NavigationMenu>
             <NavigationMenuList>
 
-              {/* <NavigationMenuItem> */}
-              {/*   <SheetDemo /> */}
-              {/* </NavigationMenuItem> */}
+              <NavigationMenuItem className="sm:hidden">
+                <SheetDemo />
+              </NavigationMenuItem>
 
               <NavigationMenuItem>
                 <Link href="/" legacyBehavior passHref>
@@ -53,7 +53,7 @@ export default function Navbar() {
                 </Link>
               </NavigationMenuItem>
 
-              <NavigationMenuItem>
+              <NavigationMenuItem className="hidden sm:block">
                 <Link href="/guitar-tuner" legacyBehavior passHref>
                   <NavigationMenuLink>
                     <Button variant="ghost" className="text-muted-foreground">
@@ -63,7 +63,7 @@ export default function Navbar() {
                 </Link>
               </NavigationMenuItem>
 
-              <NavigationMenuItem>
+              <NavigationMenuItem className="hidden sm:block">
                 <Link href="/peg-puzzle-classic" legacyBehavior passHref>
                   <NavigationMenuLink>
                     <Button variant="ghost" className="text-muted-foreground">

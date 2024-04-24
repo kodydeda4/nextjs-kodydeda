@@ -105,7 +105,7 @@ const education: EducationCardProps[] = [
 export default function Home() {
   return (
     <main>
-      <div className="max-w-3xl mx-auto px-12 my-8 pt-4 mb-24">
+      <div className="max-w-3xl mx-auto px-6 sm:px-12 my-8 pt-4 mb-24">
         <div className="flex flex-col gap-16">
           <div className="flex flex-col gap-4">
             <div className="bg-gradient-to-r from-indigo-500 to-purple-500 w-full rounded-lg h-64 relative">
