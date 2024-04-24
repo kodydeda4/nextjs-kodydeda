@@ -29,15 +29,15 @@ export default function Page() {
   return (
     <div className="flex flex-row gap-4 p-4">
 
-      <ul class="flex">
-        <li class="mr-6">
+      <ul className="flex">
+        <li className="mr-6">
           <Link href="/peg-puzzle-classic">
             <Button variant="ghost">
               Peg Puzzle Classic
             </Button>
           </Link>
         </li>
-        <li class="mr-6">
+        <li className="mr-6">
           <Link href="/guitar-tuner">
             <Button variant="ghost">
               Guitar Tuner
@@ -98,7 +98,7 @@ function SheetDemo() {
 }
 
 
-export function ModeToggle() {
+function ModeToggle() {
   const { setTheme } = useTheme()
 
   return (
