@@ -1,8 +1,8 @@
 import AppSection from "@/components/AppSection";
 import CTA from "@/components/CTA";
 import EducationSection from "@/components/EducationSection";
-import Header from "@/components/Header";
 import ExperienceSection from "@/components/ExperienceSection";
+import Header from "@/components/Header";
 import TechnologySection from "@/components/TechnologySection";
 
 export default function Home() {

@@ -10,6 +10,7 @@ export type Experience = {
 export type App = {
   title: string
   description: string
+  features: string[]
   srcAppIcon: string
   srcHero: string
   urlAppStore: string
@@ -66,6 +67,11 @@ export const apps: App[] = [
   {
     title: "Peg Puzzle Classic",
     description: "Game",
+    features: [
+        "Single-player puzzle challenge using a triangular board with 15 holes.",
+        "Jump pegs over each other to remove them, aiming to leave only one peg.",
+        "Modern design for a timeless classic.",
+    ],
     srcAppIcon: "/peg-puzzle-classic.png",
     srcHero: "/peg-puzzle-classic-hero-2.png",
     urlAppStore: "https://apps.apple.com/us/app/peg-puzzle-classic/id6469359729",
@@ -74,6 +80,11 @@ export const apps: App[] = [
   },
   {
     title: "Guitar Tuner",
+    features: [
+      "Multiple tuning options including standard and drop tunings.",
+      "Ability to tune different instruments such as guitar or bass.",
+      "Clean, easy-to-read user interface with intuitive navigation."  
+    ],
     description: "Music Education",
     srcAppIcon: "/guitar-tuner.png",
     srcHero: "/guitar-tuner-hero-2.png",

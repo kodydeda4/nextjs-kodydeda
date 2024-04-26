@@ -6,7 +6,7 @@ import { FaGithub as Github } from "react-icons/fa";
 import { FaApple as Apple } from "react-icons/fa";
 import { App } from "@/constants/types";
 
-export default function Page(props: App) {
+const AppLandingPage: React.FC<App> = (props) => {
   return (
     <main>
       <div className="max-w-3xl mx-auto px-6 sm:px-12 my-8 pt-4 mb-24">
@@ -73,3 +73,5 @@ export default function Page(props: App) {
     </main>
   );
 }
+
+export default AppLandingPage
