@@ -1,12 +1,13 @@
 'use client'
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
+import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-} from "@/components/ui/navigation-menu"
+} from "@/components/ui/navigation-menu";
+import { RESUME } from "@/lib/data";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -16,10 +17,10 @@ export default function Footer() {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <Link href="https://github.com/kodydeda4/nextjs-kodydeda" rel="noopener noreferrer" target="_blank">
+                <Link href={RESUME.urlWebsite} rel="noopener noreferrer" target="_blank">
                   <NavigationMenuLink>
                     <Button variant="ghost">
-                      <p>&copy; {new Date().getFullYear()} Kody Deda.</p>
+                      <p>&copy; {new Date().getFullYear()} {RESUME.name}.</p>
                     </Button>
                   </NavigationMenuLink>
                 </Link>
