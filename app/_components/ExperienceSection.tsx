@@ -14,7 +14,7 @@ export default function ExperienceSection() {
       <SectionHeader
         caption="Professional Experience"
         title="📖 3 Years of Professional Experience"
-        description="I've worked on a few apps in my day. Feel free to take a look!"
+        description="iOS developer by trade."
       />
       <div className="flex flex-col gap-4 w-full">
         {RESUME.experience.map((value, index) => (

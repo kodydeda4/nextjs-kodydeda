@@ -17,9 +17,9 @@ export default function AppSection() {
       <SectionHeader
         caption="Personal Projects"
         title="🛠️ Apps I've Made"
-        description="I've worked on a few apps in my day. Feel free to take a look!"
+        description="My personal work featured on the AppStore."
       />
-      <div className="flex flex-col gap-4 w-full">
+      <div className="flex flex-col sm:flex-row gap-4 w-full">
         {RESUME.apps.map((value, index) => (
           <AppCard key={index} {...value} />
         ))}

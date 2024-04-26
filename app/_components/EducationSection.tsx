@@ -14,9 +14,9 @@ export default function EducationSection() {
       <SectionHeader
         caption="Education"
         title="🎓 University Education"
-        description="These are some of my favorite tools."
+        description="Computer Science"
       />
-      <div className="flex flex-row gap-4 w-full">        
+      <div className="flex flex-row gap-4 w-full">
         {RESUME.education.map((value, index) => (
           <EducationCard key={index} {...value} />
         ))}
