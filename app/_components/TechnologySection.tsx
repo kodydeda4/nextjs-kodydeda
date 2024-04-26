@@ -13,7 +13,7 @@ export default function TechnologySection() {
         title="🌎 Technologies & Frameworks"
         description="These are some of my favorite tools."
       />
-      <div className="flex flex-wrap gap-4 w-full pt-4">
+      <div className="flex flex-wrap gap-4 w-full">
         {RESUME.technologies.map((value, index) => (
           <TechnologyCard key={index} {...value} />
         ))}
