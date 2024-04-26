@@ -6,11 +6,11 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu"
+import { App, RESUME } from "@/constants/types"
 import Link from "next/link"
 import { FaGithub as Github, FaLinkedinIn as LinkedIn } from "react-icons/fa"
 import ModeToggle from "./ModeToggle"
 import SheetView from "./SheetView"
-import { App, RESUME } from "@/constants/types"
 
 export default function Navbar() {
   return (

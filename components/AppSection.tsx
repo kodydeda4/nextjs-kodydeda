@@ -4,12 +4,11 @@ import {
   Card,
   CardContent,
 } from "@/components/ui/card";
-import { App, apps } from "@/constants/types";
+import { App, RESUME } from "@/constants/types";
 import Image from "next/image";
 import Link from "next/link";
 import * as React from "react";
 import { FaApple as Apple, FaGithub as Github } from "react-icons/fa";
-import { RESUME } from "@/constants/types";
 
 export default function AppSection() {
   return (

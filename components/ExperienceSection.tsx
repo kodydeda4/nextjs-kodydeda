@@ -9,7 +9,7 @@ import * as React from "react";
 
 export default function ExperienceSection() {
   return (
-    <div>
+    <>
       <SectionHeader
         caption="Professional Experience"
         title="📖 3 Years of Professional Experience"
@@ -20,7 +20,7 @@ export default function ExperienceSection() {
           <ExperienceCard key={index} {...value} />
         ))}
       </div>
-    </div>
+    </>
   )
 }
 

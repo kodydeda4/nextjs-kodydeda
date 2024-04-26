@@ -1,10 +1,9 @@
+import { Button } from "@/components/ui/button";
+import { App } from "@/constants/types";
 import Image from "next/image";
 import Link from "next/link";
-import * as React from "react"
-import { Button } from "@/components/ui/button"
-import { FaGithub as Github } from "react-icons/fa";
-import { FaApple as Apple } from "react-icons/fa";
-import { App } from "@/constants/types";
+import * as React from "react";
+import { FaApple as Apple, FaGithub as Github } from "react-icons/fa";
 
 const AppLandingPage: React.FC<App> = (props) => {
   return (

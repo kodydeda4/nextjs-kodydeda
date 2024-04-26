@@ -5,11 +5,10 @@ import {
   SheetClose,
   SheetContent
 } from "@/components/ui/sheet"
+import { App, RESUME } from "@/constants/types"
 import { AlignJustify } from "lucide-react"
 import Link from "next/link"
 import * as React from "react"
-import { App } from "@/constants/types"
-import { RESUME } from "@/constants/types";
 
 export default function SheetView() {
   const [open, setOpen] = React.useState(false);

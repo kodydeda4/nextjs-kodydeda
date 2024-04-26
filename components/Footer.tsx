@@ -1,13 +1,13 @@
 'use client'
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-} from "@/components/ui/navigation-menu"
-import Link from "next/link"
+} from "@/components/ui/navigation-menu";
 import { RESUME } from "@/constants/types";
+import Link from "next/link";
 
 export default function Footer() {
   return (
