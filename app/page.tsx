@@ -98,7 +98,9 @@ const Header: React.FC = () => (
     </p>
     <div className="flex gap-4">
       <Button className="w-full">Contact Me</Button>
-      <Button variant="outline" className="w-full">Resume PDF</Button>
+      <Link href="/resume.pdf" download rel="noopener noreferrer" target="_blank" className="w-full">
+        <Button variant="outline" className="w-full">Resume PDF</Button>
+      </Link>
     </div>
   </div>
 );
@@ -236,7 +238,7 @@ const EducationCard: React.FC<EducationCardProps> = (props) => {
 
 
 const CTA: React.FC = () => (
-  <div className="flex flex-col w-full bg-neutral-50 bg-opacity-5 relative">
+  <div className="flex flex-col w-full bg-neutral-500 bg-opacity-5 relative">
     <div className="max-w-3xl mx-auto px-12 my-8 pt-4 mb-24 pb-8 w-full">
       <h2 className="text-3xl font-extrabold pb-2">
         Contact Me!
@@ -246,7 +248,9 @@ const CTA: React.FC = () => (
       </p>
       <div className="flex gap-4">
         <Button className="w-full">Contact Me</Button>
-        <Button variant="outline" className="w-full">Resume PDF</Button>
+        <Link href="/resume.pdf" download rel="noopener noreferrer" target="_blank" className="w-full">
+          <Button variant="outline" className="w-full">Resume PDF</Button>
+        </Link>
       </div>
     </div>
   </div>
