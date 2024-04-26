@@ -15,23 +15,24 @@ import AppProjects from "@/components/AppProjects";
 import Technologies from "@/components/Technologies";
 import Education from "@/components/Education";
 import Header from "@/components/Header";
-import CTA from "@/components/CTA";
 
-export default function Home() {
+export default function CTA() {
   return (
-    <main>
-      <div className="max-w-3xl mx-auto px-6 sm:px-12 my-8 pt-4 mb-24">
-        <div className="flex flex-col gap-16">
-          <Header />
-          <ProfessionalExperience />
-          <AppProjects />
-          <Technologies />
-          <Education />
+    <div className="flex flex-col w-full bg-neutral-500 bg-opacity-5 relative">
+      <div className="max-w-3xl mx-auto px-12 my-8 pt-4 mb-24 pb-8 w-full">
+        <h2 className="text-3xl font-extrabold pb-2">
+          Contact Me!
+        </h2>
+        <p className="text-xl text-muted-foreground pb-4">
+          {"Let's start writing some code."}
+        </p>
+        <div className="flex gap-4">
+          <Button className="w-full">Contact Me</Button>
+          <Link href="/resume.pdf" download rel="noopener noreferrer" target="_blank" className="w-full">
+            <Button variant="outline" className="w-full">Resume PDF</Button>
+          </Link>
         </div>
       </div>
-      <CTA />
-    </main>
+    </div>
   );
 }
-
-
