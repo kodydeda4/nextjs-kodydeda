@@ -10,18 +10,18 @@ import * as React from "react";
 
 export default function EducationSection() {
   return (
-    <>
+    <div>
       <SectionHeader
         caption="Education"
         title="🎓 University Education"
         description="These are some of my favorite tools."
       />
-      <div className="flex flex-row gap-4 w-full">
+      <div className="flex flex-row gap-4 w-full pt-4">        
         {RESUME.education.map((value, index) => (
           <EducationCard key={index} {...value} />
         ))}
       </div>
-    </>
+    </div>
   )
 }
 

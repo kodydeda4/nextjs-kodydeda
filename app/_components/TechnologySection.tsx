@@ -7,18 +7,18 @@ import * as React from "react";
 
 export default function TechnologySection() {
   return (
-    <>
+    <div>
       <SectionHeader
         caption="Technology"
         title="🌎 Technologies & Frameworks"
         description="These are some of my favorite tools."
       />
-      <div className="flex flex-wrap gap-4 w-full">
+      <div className="flex flex-wrap gap-4 w-full pt-4">
         {RESUME.technologies.map((value, index) => (
           <TechnologyCard key={index} {...value} />
         ))}
       </div>
-    </>
+    </div>
   )
 }
 

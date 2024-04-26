@@ -13,18 +13,18 @@ import { FaApple as Apple, FaGithub as Github } from "react-icons/fa";
 
 export default function AppSection() {
   return (
-    <>
+    <div>
       <SectionHeader
         caption="Personal Projects"
         title="🛠️ Apps I've Made"
         description="I've worked on a few apps in my day. Feel free to take a look!"
       />
-      <div className="flex flex-col sm:flex-row gap-4 w-full">
+      <div className="flex flex-col gap-4 w-full pt-4">
         {RESUME.apps.map((value, index) => (
           <AppCard key={index} {...value} />
         ))}
       </div>
-    </>
+    </div>
   )
 }
 

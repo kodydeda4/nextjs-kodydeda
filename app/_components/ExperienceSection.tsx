@@ -10,18 +10,18 @@ import * as React from "react";
 
 export default function ExperienceSection() {
   return (
-    <>
+    <div>
       <SectionHeader
         caption="Professional Experience"
         title="📖 3 Years of Professional Experience"
         description="I've worked on a few apps in my day. Feel free to take a look!"
       />
-      <div className="flex flex-col gap-4 w-full">
+      <div className="flex flex-col gap-4 w-full pt-4">
         {RESUME.experience.map((value, index) => (
           <ExperienceCard key={index} {...value} />
         ))}
       </div>
-    </>
+    </div>
   )
 }
 

@@ -16,7 +16,7 @@ export default function Header() {
       </div>
       <div className="flex flex-col">
         <h1 className="text-3xl font-extrabold">
-          Hi, I&apos;m ${RESUME.name}
+          Hi, I&apos;m {RESUME.name}
         </h1>
         <h2 className="text-3xl font-extrabold pb-2">
           Welcome to my portfolio!
