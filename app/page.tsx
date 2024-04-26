@@ -8,99 +8,7 @@ import {
 } from "@/components/ui/card"
 import { FaGithub as Github } from "react-icons/fa";
 import { FaApple as Apple } from "react-icons/fa";
-
-const experience: ProfessionalExperienceCardProps[] = [
-  {
-    title: "Pocket Radar",
-    description: "Speed and Video Analysis",
-    appIconSrc: "/pocket-radar.png",
-    heroSrc: "/pocket-radar-hero.png",
-    appStoreURL: "https://apps.apple.com/us/app/pocket-radar-sports/id1576214627",
-    responsibilities: "Learned how to write a for-each loop in Python.",
-  },
-  {
-    title: "Dealerware",
-    description: "Fleet Management",
-    appIconSrc: "/dealerware.png",
-    heroSrc: "/dealerware-hero.png",
-    appStoreURL: "https://apps.apple.com/us/app/dealerware/id1168703299",
-    responsibilities: "Learned how to write a for-each loop in Python.",
-  },
-]
-
-const apps: AppCardProps[] = [
-  {
-    title: "Peg Puzzle Classic",
-    description: "Game",
-    appIconSrc: "/peg-puzzle-classic.png",
-    heroSrc: "/peg-puzzle-classic-hero-2.png",
-    appStoreURL: "https://apps.apple.com/us/app/peg-puzzle-classic/id6469359729",
-    githubURL: "https://github.com/kodydeda4/PegPuzzleClassic",
-  },
-  {
-    title: "Guitar Tuner",
-    description: "Music Education",
-    appIconSrc: "/guitar-tuner.png",
-    heroSrc: "/guitar-tuner-hero-2.png",
-    appStoreURL: "https://apps.apple.com/us/app/accutune-guitar-tuner/id6472688914",
-    githubURL: "https://github.com/kodydeda4/GuitarTuner",
-  },
-]
-
-const technologies: TechnologyCardProps[] = [
-  {
-    title: "xcode",
-    iconSrc: "/xcode.png",
-    href: "https://www.google.com"
-  },
-  {
-    title: "swift",
-    iconSrc: "/swift.png",
-    href: "https://www.google.com"
-  },
-  {
-    title: "composable-architecture",
-    iconSrc: "/pointfree.png",
-    href: "https://www.google.com"
-  },
-  {
-    title: "github",
-    iconSrc: "/github.png",
-    href: "https://www.google.com"
-  },
-  {
-    title: "slack",
-    iconSrc: "/slack.png",
-    href: "https://www.google.com"
-  },
-  {
-    title: "jira",
-    iconSrc: "/jira.png",
-    href: "https://www.google.com"
-  },
-  {
-    title: "figma",
-    iconSrc: "/figma.png",
-    href: "https://www.google.com"
-  },
-]
-
-const education: EducationCardProps[] = [
-  {
-    title: "Bachelor's of Computer Science",
-    description: "University of North Carolina Wilmington",
-    caption: "Spring 2019 - Fall 2022",
-    iconSrc: "/uncw.png",
-    href: "https://uncw.edu/",
-  },
-  {
-    title: "Associate's of Science",
-    description: "Cape Fear Community College",
-    caption: "Spring 2016 - Fall 2018",
-    iconSrc: "/cfcc.png",
-    href: "https://cfcc.edu/",
-  },
-]
+import { ProfessionalExperienceCardProps, AppCardProps, TechnologyCardProps, EducationCardProps, experience, apps, technologies, education } from "@/constants/types";
 
 export default function Home() {
   return (
@@ -205,15 +113,6 @@ const SectionHeader: React.FC<{ caption: string; title: string; description: str
   );
 };
 
-type ProfessionalExperienceCardProps = {
-  title: string
-  description: string
-  appIconSrc: string
-  heroSrc: string
-  appStoreURL: string
-  responsibilities: string
-}
-
 const ProfessionalExperienceCard: React.FC<ProfessionalExperienceCardProps> = (props) => {
   return (
     <Card className="w-full">
@@ -241,15 +140,6 @@ const ProfessionalExperienceCard: React.FC<ProfessionalExperienceCardProps> = (p
     </Card>
   );
 };
-
-type AppCardProps = {
-  title: string
-  description: string
-  appIconSrc: string
-  heroSrc: string
-  appStoreURL: string
-  githubURL: string
-}
 
 const AppCard: React.FC<AppCardProps> = (props) => {
   return (
@@ -300,12 +190,6 @@ const AppCard: React.FC<AppCardProps> = (props) => {
   );
 };
 
-type TechnologyCardProps = {
-  title: string
-  iconSrc: string
-  href: string
-}
-
 const TechnologyCard: React.FC<TechnologyCardProps> = (props) => {
   return (
     <Button variant="outline" className="relative p-8 w-50 h-50">
@@ -322,13 +206,6 @@ const TechnologyCard: React.FC<TechnologyCardProps> = (props) => {
   )
 }
 
-type EducationCardProps = {
-  title: string
-  description: string
-  caption: string
-  iconSrc: string
-  href: string
-}
 const EducationCard: React.FC<EducationCardProps> = (props) => {
   return (
     <Card className="w-full">
