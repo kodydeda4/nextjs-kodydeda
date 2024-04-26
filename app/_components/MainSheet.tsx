@@ -26,7 +26,7 @@ export default function MainSheet() {
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetContent side="left">
           <SheetClose asChild>
-            <Link href={"/"}><p className="font-bold">{"Kody Deda"}</p></Link>
+            <Link href={"/"}><p className="font-bold">{RESUME.name}</p></Link>
           </SheetClose>
           <p className="font-bold pt-6 gap-1">My Apps</p>
           <div className="text-muted-foreground">

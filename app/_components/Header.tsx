@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
+import { RESUME } from "@/lib/data";
 
 export default function Header() {
   return (
@@ -15,7 +16,7 @@ export default function Header() {
       </div>
       <div className="flex flex-col">
         <h1 className="text-3xl font-extrabold">
-          {"Hi, I'm Kody Deda."}
+          Hi, I&apos;m ${RESUME.name}
         </h1>
         <h2 className="text-3xl font-extrabold pb-2">
           Welcome to my portfolio!
@@ -25,7 +26,7 @@ export default function Header() {
         </p>
         <div className="flex gap-4">
           <Button className="w-full">Contact Me</Button>
-          <Link href="/resume.pdf" download rel="noopener noreferrer" target="_blank" className="w-full">
+          <Link href={RESUME.urlResume} download rel="noopener noreferrer" target="_blank" className="w-full">
             <Button variant="outline" className="w-full">Resume PDF</Button>
           </Link>
         </div>

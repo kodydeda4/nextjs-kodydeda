@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { RESUME } from "@/lib/data";
 
 export default function CTA() {
   return (
@@ -13,7 +14,7 @@ export default function CTA() {
         </p>
         <div className="flex gap-4">
           <Button className="w-full">Contact Me</Button>
-          <Link href="/resume.pdf" download rel="noopener noreferrer" target="_blank" className="w-full">
+          <Link href={RESUME.urlResume} download rel="noopener noreferrer" target="_blank" className="w-full">
             <Button variant="outline" className="w-full">Resume PDF</Button>
           </Link>
         </div>
