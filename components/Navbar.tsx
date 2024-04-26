@@ -1,27 +1,16 @@
 'use client'
 import { Button } from "@/components/ui/button"
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu"
-import {
-  Sheet,
-  SheetClose,
-  SheetContent
-} from "@/components/ui/sheet"
-import { AlignJustify, Moon, Sun } from "lucide-react"
-import { useTheme } from "next-themes"
 import Link from "next/link"
-import * as React from "react"
 import { FaGithub as Github, FaLinkedinIn as LinkedIn } from "react-icons/fa"
+import ModeToggle from "./ModeToggle"
+import SheetView from "./SheetView"
+import { App, RESUME } from "@/constants/types"
 
 export default function Navbar() {
   return (
@@ -30,68 +19,17 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           <NavigationMenu>
             <NavigationMenuList>
-
-              <NavigationMenuItem className="sm:hidden">
-                <SheetView />
-              </NavigationMenuItem>
-
-              <NavigationMenuItem>
-                <Link href="/" legacyBehavior passHref>
-                  <NavigationMenuLink>
-                    <Button variant="ghost" className="font-extrabold">
-                      Kody Deda
-                    </Button>
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
-
-              <NavigationMenuItem className="hidden sm:block">
-                <Link href="/guitar-tuner" legacyBehavior passHref>
-                  <NavigationMenuLink>
-                    <Button variant="ghost" className="text-muted-foreground">
-                      Guitar Tuner
-                    </Button>
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
-
-              <NavigationMenuItem className="hidden sm:block">
-                <Link href="/peg-puzzle-classic" legacyBehavior passHref>
-                  <NavigationMenuLink>
-                    <Button variant="ghost" className="text-muted-foreground">
-                      Peg Puzzle Classic
-                    </Button>
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
-
+              <SheetButton />
+              <HomeLink />
+              {RESUME.apps.map((value, index) => (
+                <AppLink key={index} {...value} />
+              ))}
             </NavigationMenuList>
           </NavigationMenu>
           <NavigationMenu>
             <NavigationMenuList>
-
-              <NavigationMenuItem>
-                <Link href="https://www.linkedin.com/in/kodydeda4/" rel="noopener noreferrer" target="_blank">
-                  <NavigationMenuLink>
-                    <Button variant="ghost" size="icon">
-                      <LinkedIn className="h-[1.2rem] w-[1.2rem]" />
-                    </Button>
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
-
-
-              <NavigationMenuItem>
-                <Link href="https://github.com/kodydeda4" rel="noopener noreferrer" target="_blank">
-                  <NavigationMenuLink>
-                    <Button variant="ghost" size="icon">
-                      <Github className="h-[1.2rem] w-[1.2rem]" />
-                    </Button>
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
-
-
+              <GithubLink />
+              <LinkedInLink />
               <NavigationMenuItem>
                 <ModeToggle />
               </NavigationMenuItem>
@@ -104,62 +42,67 @@ export default function Navbar() {
   )
 }
 
-
-function SheetView() {
-  const [open, setOpen] = React.useState(false);
-
-  function handleClick() {
-    setOpen(!open)
-  }
-
+const SheetButton: React.FC = () => {
   return (
-    <>
-      <Button onClick={handleClick} variant="ghost" size="icon">
-        <AlignJustify className="h-4 w-4" />
-      </Button>
-      <Sheet open={open} onOpenChange={setOpen}>
-        <SheetContent side="left">
-          <SheetClose asChild>
-            <Link href={"/"}><p className="font-bold">{"Kody Deda"}</p></Link>
-          </SheetClose>
-          <p className="font-bold pt-6 gap-1">My Apps</p>
-          <div className="text-muted-foreground">
-            <SheetClose asChild>
-              <Link href={"/peg-puzzle-classic"}><p>{"Peg Puzzle Classic"}</p></Link>
-            </SheetClose>
-            <SheetClose asChild>
-              <Link href={"/guitar-tuner"}><p>{"Guitar Tuner"}</p></Link>
-            </SheetClose>
-          </div>
-        </SheetContent>
-      </Sheet>
-    </>
+    <NavigationMenuItem className="sm:hidden">
+      <SheetView />
+    </NavigationMenuItem>
   )
 }
 
-function ModeToggle() {
-  const { setTheme } = useTheme()
-
+const HomeLink: React.FC = () => {
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="icon">
-          <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-          <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-          <span className="sr-only">Toggle theme</span>
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme("light")}>
-          Light
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("dark")}>
-          Dark
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("system")}>
-          System
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
+    <NavigationMenuItem>
+      <Link href="/" legacyBehavior passHref>
+        <NavigationMenuLink>
+          <Button variant="ghost" className="font-extrabold">
+            {RESUME.name}
+          </Button>
+        </NavigationMenuLink>
+      </Link>
+    </NavigationMenuItem>
+  )
+}
+
+const AppLink: React.FC<App> = (props) => {
+  return (
+    <NavigationMenuItem className="hidden sm:block">
+      <Link href={props.urlLocal} legacyBehavior passHref>
+        <NavigationMenuLink>
+          <Button variant="ghost" className="text-muted-foreground">
+            {props.title}
+          </Button>
+        </NavigationMenuLink>
+      </Link>
+    </NavigationMenuItem>
+  )
+}
+
+const GithubLink: React.FC = () => {
+  return (
+    <NavigationMenuItem>
+      <Link href={RESUME.urlGithub} rel="noopener noreferrer" target="_blank">
+        <NavigationMenuLink>
+          <Button variant="ghost" size="icon">
+            <Github className="h-[1.2rem] w-[1.2rem]" />
+          </Button>
+        </NavigationMenuLink>
+      </Link>
+    </NavigationMenuItem>
+
+  )
+}
+
+const LinkedInLink: React.FC = () => {
+  return (
+    <NavigationMenuItem>
+      <Link href={RESUME.urlLinkedIn} rel="noopener noreferrer" target="_blank">
+        <NavigationMenuLink>
+          <Button variant="ghost" size="icon">
+            <LinkedIn className="h-[1.2rem] w-[1.2rem]" />
+          </Button>
+        </NavigationMenuLink>
+      </Link>
+    </NavigationMenuItem>
   )
 }

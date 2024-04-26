@@ -7,6 +7,7 @@ import {
   NavigationMenuList,
 } from "@/components/ui/navigation-menu"
 import Link from "next/link"
+import { RESUME } from "@/constants/types";
 
 export default function Footer() {
   return (
@@ -16,10 +17,10 @@ export default function Footer() {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <Link href="https://github.com/kodydeda4/nextjs-kodydeda" rel="noopener noreferrer" target="_blank">
+                <Link href={RESUME.urlWebsite} rel="noopener noreferrer" target="_blank">
                   <NavigationMenuLink>
                     <Button variant="ghost">
-                      <p>&copy; {new Date().getFullYear()} Kody Deda.</p>
+                      <p>&copy; {new Date().getFullYear()} {RESUME.name}.</p>
                     </Button>
                   </NavigationMenuLink>
                 </Link>

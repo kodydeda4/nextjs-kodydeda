@@ -4,13 +4,14 @@ import {
   Card,
   CardContent,
 } from "@/components/ui/card";
-import { AppCardProps, apps } from "@/constants/types";
+import { App, apps } from "@/constants/types";
 import Image from "next/image";
 import Link from "next/link";
 import * as React from "react";
 import { FaApple as Apple, FaGithub as Github } from "react-icons/fa";
+import { RESUME } from "@/constants/types";
 
-export default function AppProjects() {
+export default function AppSection() {
   return (
     <div>
       <SectionHeader
@@ -19,7 +20,7 @@ export default function AppProjects() {
         description="I've worked on a few apps in my day. Feel free to take a look!"
       />
       <div className="flex flex-col sm:flex-row gap-4 w-full">
-        {apps.map((value, index) => (
+        {RESUME.apps.map((value, index) => (
           <AppCard key={index} {...value} />
         ))}
       </div>
@@ -27,7 +28,7 @@ export default function AppProjects() {
   )
 }
 
-const AppCard: React.FC<AppCardProps> = (props) => {
+const AppCard: React.FC<App> = (props) => {
   return (
     <Card className="w-full">
       <CardContent>
@@ -35,7 +36,7 @@ const AppCard: React.FC<AppCardProps> = (props) => {
 
           <div className="bg-gradient-to-r from-indigo-500 to-purple-500 w-full rounded-lg h-64 relative">
             <Image
-              src={props.heroSrc}
+              src={props.srcHero}
               alt="Hero image."
               layout="fill"
               objectFit="contain"
@@ -45,7 +46,7 @@ const AppCard: React.FC<AppCardProps> = (props) => {
           <div className="flex flex-row justify-start gap-4 pt-6">
             <div className="justify-start relative">
               <Image
-                src={props.appIconSrc}
+                src={props.srcAppIcon}
                 width={50}
                 height={50}
                 alt="Hero image"
@@ -59,12 +60,12 @@ const AppCard: React.FC<AppCardProps> = (props) => {
           </div>
 
           <div className="flex flex-row sm:flex-col pt-6 sm:pt-4 gap-3 w-full">
-            <Link href={props.appStoreURL} rel="noopener noreferrer" target="_blank" className="w-full">
+            <Link href={props.urlAppStore} rel="noopener noreferrer" target="_blank" className="w-full">
               <Button variant="default" className="w-full">
                 <Apple className="mr-2 h-4 w-4" /> App Store
               </Button>
             </Link>
-            <Link href={props.githubURL} rel="noopener noreferrer" target="_blank" className="w-full">
+            <Link href={props.urlGithub} rel="noopener noreferrer" target="_blank" className="w-full">
               <Button variant="outline" className="w-full">
                 <Github className="mr-2 h-4 w-4" /> Github
               </Button>

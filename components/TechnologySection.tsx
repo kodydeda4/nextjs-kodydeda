@@ -1,10 +1,10 @@
 import SectionHeader from "@/components/SectionHeader";
 import { Button } from "@/components/ui/button";
-import { TechnologyCardProps, technologies } from "@/constants/types";
+import { RESUME, Technology } from "@/constants/types";
 import Image from "next/image";
 import * as React from "react";
 
-export default function Technologies() {
+export default function TechnologySection() {
   return (
     <div>
       <SectionHeader
@@ -13,7 +13,7 @@ export default function Technologies() {
         description="These are some of my favorite tools."
       />
       <div className="flex flex-wrap gap-4 w-full">
-        {technologies.map((value, index) => (
+        {RESUME.technologies.map((value, index) => (
           <TechnologyCard key={index} {...value} />
         ))}
       </div>
@@ -21,12 +21,12 @@ export default function Technologies() {
   )
 }
 
-const TechnologyCard: React.FC<TechnologyCardProps> = (props) => {
+const TechnologyCard: React.FC<Technology> = (props) => {
   return (
     <Button variant="outline" className="relative p-8 w-50 h-50">
       <div className="relative">
         <Image
-          src={props.iconSrc}
+          src={props.srcIcon}
           width={50}
           height={50}
           alt="Hero image"
