@@ -1,4 +1,4 @@
-import SectionHeader from "@/components/SectionHeader";
+import SectionHeader from "@/app/_components/SectionHeader";
 import { Button } from "@/components/ui/button";
 import {
   Card,

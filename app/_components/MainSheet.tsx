@@ -10,7 +10,7 @@ import { AlignJustify } from "lucide-react"
 import Link from "next/link"
 import * as React from "react"
 
-export default function SheetView() {
+export default function AppSheet() {
   const [open, setOpen] = React.useState(false);
 
   function handleClick() {

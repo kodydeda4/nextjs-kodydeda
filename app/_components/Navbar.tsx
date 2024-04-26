@@ -1,16 +1,23 @@
 'use client'
 import { Button } from "@/components/ui/button"
 import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu"
 import { App, RESUME } from "@/constants/types"
+import { Moon, Sun } from "lucide-react"
+import { useTheme } from "next-themes"
 import Link from "next/link"
 import { FaGithub as Github, FaLinkedinIn as LinkedIn } from "react-icons/fa"
-import ModeToggle from "./ModeToggle"
-import SheetView from "./SheetView"
+import MainSheet from "./MainSheet"
 
 export default function Navbar() {
   return (
@@ -45,7 +52,7 @@ export default function Navbar() {
 const SheetButton: React.FC = () => {
   return (
     <NavigationMenuItem className="sm:hidden">
-      <SheetView />
+      <MainSheet />
     </NavigationMenuItem>
   )
 }
@@ -104,5 +111,32 @@ const LinkedInLink: React.FC = () => {
         </NavigationMenuLink>
       </Link>
     </NavigationMenuItem>
+  )
+}
+
+const ModeToggle: React.FC = () => {
+  const { setTheme } = useTheme()
+
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant="ghost" size="icon">
+          <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+          <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+          <span className="sr-only">Toggle theme</span>
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end">
+        <DropdownMenuItem onClick={() => setTheme("light")}>
+          Light
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setTheme("dark")}>
+          Dark
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setTheme("system")}>
+          System
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
   )
 }

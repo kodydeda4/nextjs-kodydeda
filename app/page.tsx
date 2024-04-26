@@ -1,9 +1,9 @@
-import AppSection from "@/components/AppSection";
-import CTA from "@/components/CTA";
-import EducationSection from "@/components/EducationSection";
-import ExperienceSection from "@/components/ExperienceSection";
-import Header from "@/components/Header";
-import TechnologySection from "@/components/TechnologySection";
+import AppSection from "@/app/_components/AppSection";
+import CTA from "@/app/_components/CTA";
+import EducationSection from "@/app/_components/EducationSection";
+import ExperienceSection from "@/app/_components/ExperienceSection";
+import Header from "@/app/_components/Header";
+import TechnologySection from "@/app/_components/TechnologySection";
 
 export default function Home() {
   return (
