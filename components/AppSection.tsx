@@ -13,7 +13,7 @@ import { RESUME } from "@/constants/types";
 
 export default function AppSection() {
   return (
-    <div>
+    <>
       <SectionHeader
         caption="Personal Projects"
         title="🛠️ Apps I've Made"
@@ -24,7 +24,7 @@ export default function AppSection() {
           <AppCard key={index} {...value} />
         ))}
       </div>
-    </div>
+    </>
   )
 }
 

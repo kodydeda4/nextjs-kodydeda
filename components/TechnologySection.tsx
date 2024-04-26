@@ -6,7 +6,7 @@ import * as React from "react";
 
 export default function TechnologySection() {
   return (
-    <div>
+    <>
       <SectionHeader
         caption="Technology"
         title="🌎 Technologies & Frameworks"
@@ -17,7 +17,7 @@ export default function TechnologySection() {
           <TechnologyCard key={index} {...value} />
         ))}
       </div>
-    </div>
+    </>
   )
 }
 
