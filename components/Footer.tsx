@@ -16,7 +16,7 @@ export default function Footer() {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <Link href="/" legacyBehavior passHref>
+                <Link href="https://github.com/kodydeda4/nextjs-kodydeda" rel="noopener noreferrer" target="_blank">
                   <NavigationMenuLink>
                     <Button variant="ghost">
                       <p>&copy; {new Date().getFullYear()} Kody Deda.</p>
