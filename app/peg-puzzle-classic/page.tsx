@@ -14,7 +14,7 @@ export default function Page() {
     <main>
       <div className="max-w-3xl mx-auto px-6 sm:px-12 my-8 pt-4 mb-24">
         <div className="flex flex-col gap-16">
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col">
 
             {/* Image */}
             <div className="bg-gradient-to-r from-indigo-500 to-purple-500 w-full rounded-lg h-64 relative">
@@ -28,7 +28,6 @@ export default function Page() {
 
             {/* Header */}
             <div className="flex flex-row justify-start gap-3 pt-6">
-
               <div className="justify-start relative">
                 <Image
                   src={"/peg-puzzle-classic.png"}
@@ -38,7 +37,6 @@ export default function Page() {
                   className="border rounded-xl"
                 />
               </div>
-
               <div className="flex flex-col gap-0">
                 <h1 className="text-xl font-extrabold">
                   Peg Puzzle Classic
@@ -49,10 +47,29 @@ export default function Page() {
               </div>
             </div>
 
-            <div className="flex gap-4">
-              <Button className="w-full">Contact Me</Button>
-              <Button variant="outline" className="w-full">Resume PDF</Button>
+            {/* Buttons */}
+            <div className="flex flex-row gap-4 w-full">
+              <Link href={"https://www.google.com"} rel="noopener noreferrer" target="_blank" className="w-full">
+                <Button variant="default" className="w-full">
+                  <Apple className="mr-2 h-4 w-4" /> App Store
+                </Button>
+              </Link>
+              <Link href={"https://www.google.com"} rel="noopener noreferrer" target="_blank" className="w-full">
+                <Button variant="outline" className="w-full">
+                  <Github className="mr-2 h-4 w-4" /> Github
+                </Button>
+              </Link>
             </div>
+
+            <h2 className="text-2xl font-extrabold pt-8">
+              Features
+            </h2>
+
+            <ul className="w-full">
+              <li>• Does something super cool that's really awesome man.</li>
+              <li>• Does something super cool that's really awesome man.</li>
+              <li>• Does something super cool that's really awesome man.</li>
+            </ul>
 
           </div>
         </div>
