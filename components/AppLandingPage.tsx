@@ -2,10 +2,9 @@ import { Button } from "@/components/ui/button";
 import { App } from "@/constants/types";
 import Image from "next/image";
 import Link from "next/link";
-import * as React from "react";
 import { FaApple as Apple, FaGithub as Github } from "react-icons/fa";
 
-const AppLandingPage: React.FC<App> = (props) => {
+export default function AppLandingPage(props: App) {
   return (
     <main>
       <div className="max-w-3xl mx-auto px-6 sm:px-12 my-8 pt-4 mb-24">
@@ -72,5 +71,3 @@ const AppLandingPage: React.FC<App> = (props) => {
     </main>
   );
 }
-
-export default AppLandingPage

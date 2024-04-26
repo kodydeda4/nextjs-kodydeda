@@ -1,16 +1,17 @@
 'use client'
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import {
   Sheet,
   SheetClose,
   SheetContent
-} from "@/components/ui/sheet"
-import { App, RESUME } from "@/constants/types"
-import { AlignJustify } from "lucide-react"
-import Link from "next/link"
-import * as React from "react"
+} from "@/components/ui/sheet";
+import { RESUME } from "@/constants/data";
+import { App } from "@/constants/types";
+import { AlignJustify } from "lucide-react";
+import Link from "next/link";
+import * as React from "react";
 
-export default function AppSheet() {
+export default function MainSheet() {
   const [open, setOpen] = React.useState(false);
 
   function handleClick() {

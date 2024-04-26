@@ -1,6 +1,6 @@
 import Footer from "@/app/_components/Footer";
 import Navbar from "@/app/_components/Navbar";
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";

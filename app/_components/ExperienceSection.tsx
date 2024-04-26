@@ -3,7 +3,8 @@ import {
   Card,
   CardContent,
 } from "@/components/ui/card";
-import { Experience, RESUME } from "@/constants/types";
+import { RESUME } from "@/constants/data";
+import { Experience } from "@/constants/types";
 import Image from "next/image";
 import * as React from "react";
 

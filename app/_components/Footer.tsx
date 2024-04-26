@@ -6,7 +6,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import { RESUME } from "@/constants/types";
+import { RESUME } from "@/constants/data";
 import Link from "next/link";
 
 export default function Footer() {

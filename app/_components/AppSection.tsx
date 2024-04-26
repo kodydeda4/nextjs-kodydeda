@@ -4,7 +4,9 @@ import {
   Card,
   CardContent,
 } from "@/components/ui/card";
-import { App, RESUME } from "@/constants/types";
+import { RESUME } from "@/constants/data";
+import { App } from "@/constants/types";
+
 import Image from "next/image";
 import Link from "next/link";
 import * as React from "react";
