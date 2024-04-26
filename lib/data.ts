@@ -2,6 +2,11 @@ import { Resume } from "./definitions"
 
 export const RESUME: Resume = {
   name: "Kody Deda",
+  email: "kodydeda4@gmail.com",
+  urlResume: "/resume.pdf",
+  urlGithub: "https://github.com/kodydeda4",
+  urlLinkedIn: "https://www.linkedin.com/in/kodydeda4/",
+  urlWebsite: "https://github.com/kodydeda4/nextjs-kodydeda",
   experience: [
     {
       title: "Pocket Radar",
@@ -9,7 +14,13 @@ export const RESUME: Resume = {
       srcIcon: "/pocket-radar.png",
       srcHero: "/pocket-radar-hero.png",
       urlAppStore: "https://apps.apple.com/us/app/pocket-radar-sports/id1576214627",
-      responsibilities: "Learned how to write a for-each loop in Python.",
+      responsibilities: [
+        "Lead development of new features and bug-fixes within the iOS application.",
+        "Helped implement a new premium subscription service using StoreKit.",
+        "Developed early-access-program and slow motion features for premium users.",
+        "Added test coverage for over 40 features using ComposableArchitecture.",
+        "Migrated the app towards the new Swift concurrency patterns, such as AsyncStreams and Async/Await.",      
+      ]
     },
     {
       title: "Dealerware",
@@ -17,7 +28,13 @@ export const RESUME: Resume = {
       srcIcon: "/dealerware.png",
       srcHero: "/dealerware-hero.png",
       urlAppStore: "https://apps.apple.com/us/app/dealerware/id1168703299",
-      responsibilities: "Learned how to write a for-each loop in Python.",
+      responsibilities: [
+        "Helped maintain and solve bugs on a legacy UIKit / MVC codebase, using Storyboards and Code.",
+        "Worked with a diverse team of designers, engineers, and product managers to develop mobile application features.",
+        "Actively participated in team meetings, code reviews, and all other processes regarding Agile development.",
+        "Scheduled, planned, and tracked sprints using team-management software like JIRA, Confluence, and Slack.",
+        "Maintained version-control and continuous-integration pipelines with Github and CircleCI.",        
+      ]
     },
   ],
   apps: [
@@ -102,9 +119,5 @@ export const RESUME: Resume = {
       srcIcon: "/cfcc.png",
       href: "https://cfcc.edu/",
     },
-  ],
-  urlGithub: "https://github.com/kodydeda4",
-  urlLinkedIn: "https://www.linkedin.com/in/kodydeda4/",
-  urlWebsite: "https://github.com/kodydeda4/nextjs-kodydeda",
-  urlResume: "/resume.pdf"
+  ]
 }

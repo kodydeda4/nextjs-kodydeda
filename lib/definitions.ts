@@ -4,7 +4,7 @@ export type Experience = {
   srcIcon: string
   srcHero: string
   urlAppStore: string
-  responsibilities: string
+  responsibilities: string[]
 }
 
 export type App = {
@@ -34,12 +34,13 @@ export type Education = {
 
 export type Resume = {
   name: string
+  email: string
+  urlResume: string
+  urlGithub: string
+  urlLinkedIn: string
+  urlWebsite: string
   experience: Experience[]
   apps: App[]
   technologies: Technology[]
   education: Education[] 
-  urlGithub: string
-  urlLinkedIn: string
-  urlWebsite: string
-  urlResume: string
 }

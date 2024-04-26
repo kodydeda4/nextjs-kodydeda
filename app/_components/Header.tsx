@@ -25,7 +25,9 @@ export default function Header() {
           {"This is a description of my software development skills and stuff, especially related to SwiftUI."}
         </p>
         <div className="flex gap-4">
-          <Button className="w-full">Contact Me</Button>
+          <Link href={`mailto:${RESUME.email}`} className="w-full">
+            <Button className="w-full">Contact Me</Button>
+          </Link>
           <Link href={RESUME.urlResume} download rel="noopener noreferrer" target="_blank" className="w-full">
             <Button variant="outline" className="w-full">Resume PDF</Button>
           </Link>
