@@ -100,9 +100,9 @@ export default function Navbar() {
               </NavigationMenuItem>
 
 
-              {/* <NavigationMenuItem> */}
-              {/*   <ModeToggle /> */}
-              {/* </NavigationMenuItem> */}
+              <NavigationMenuItem>
+                <ModeToggle />
+              </NavigationMenuItem>
 
             </NavigationMenuList>
           </NavigationMenu>
@@ -127,31 +127,18 @@ function SheetView() {
       </Button>
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetContent side="left">
-          <SheetHeader>
-            <SheetTitle>Edit profile</SheetTitle>
-            <SheetDescription>
-              {"Make changes to your profile here. Click save when you're done."}
-            </SheetDescription>
-          </SheetHeader>
-          <div className="grid gap-4 py-4">
-            <div className="grid grid-cols-4 items-center gap-4">
-              <Label htmlFor="name" className="text-right">
-                Name
-              </Label>
-              <Input id="name" value="Pedro Duarte" className="col-span-3" />
-            </div>
-            <div className="grid grid-cols-4 items-center gap-4">
-              <Label htmlFor="username" className="text-right">
-                Username
-              </Label>
-              <Input id="username" value="@peduarte" className="col-span-3" />
-            </div>
-          </div>
-          <SheetFooter>
+          <SheetClose asChild>
+            <Link href={"/"}><p className="font-bold">{"Kody Deda"}</p></Link>
+          </SheetClose>
+          <p className="font-bold pt-6 gap-1">My Apps</p>
+          <div className="text-muted-foreground">
             <SheetClose asChild>
-              <Button type="submit">Save changes</Button>
+              <Link href={"/peg-puzzle-classic"}><p>{"Peg Puzzle Classic"}</p></Link>
             </SheetClose>
-          </SheetFooter>
+            <SheetClose asChild>
+              <Link href={"/guitar-tuner"}><p>{"Guitar Tuner"}</p></Link>
+            </SheetClose>
+          </div>
         </SheetContent>
       </Sheet>
     </>
