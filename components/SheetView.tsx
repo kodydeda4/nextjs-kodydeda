@@ -1,12 +1,6 @@
 'use client'
 import { Button } from "@/components/ui/button"
 import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-} from "@/components/ui/navigation-menu"
-import {
   Sheet,
   SheetClose,
   SheetContent
@@ -14,8 +8,8 @@ import {
 import { AlignJustify } from "lucide-react"
 import Link from "next/link"
 import * as React from "react"
-import { FaGithub as Github, FaLinkedinIn as LinkedIn } from "react-icons/fa"
-import ModeToggle from "./ModeToggle"
+import { App } from "@/constants/types"
+import { RESUME } from "@/constants/types";
 
 export default function SheetView() {
   const [open, setOpen] = React.useState(false);
@@ -36,12 +30,10 @@ export default function SheetView() {
           </SheetClose>
           <p className="font-bold pt-6 gap-1">My Apps</p>
           <div className="text-muted-foreground">
-            <SheetClose asChild>
-              <Link href={"/peg-puzzle-classic"}><p>{"Peg Puzzle Classic"}</p></Link>
-            </SheetClose>
-            <SheetClose asChild>
-              <Link href={"/guitar-tuner"}><p>{"Guitar Tuner"}</p></Link>
-            </SheetClose>
+
+            {RESUME.apps.map((value, index) => (
+              <AppLink key={index} {...value} />
+            ))}
           </div>
         </SheetContent>
       </Sheet>
@@ -49,3 +41,10 @@ export default function SheetView() {
   )
 }
 
+const AppLink: React.FC<App> = (props) => {
+  return (
+    <SheetClose asChild>
+      <Link href={props.urlLocal}><p>{props.title}</p></Link>
+    </SheetClose>
+  )
+}
