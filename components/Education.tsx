@@ -1,15 +1,11 @@
-import Image from "next/image";
-import Link from "next/link";
-import * as React from "react"
-import { Button } from "@/components/ui/button"
+import SectionHeader from "@/components/SectionHeader";
 import {
   Card,
   CardContent,
-} from "@/components/ui/card"
-import { FaGithub as Github } from "react-icons/fa";
-import { FaApple as Apple } from "react-icons/fa";
-import { ProfessionalExperienceCardProps, AppCardProps, TechnologyCardProps, EducationCardProps, experience, apps, technologies, education } from "@/constants/types";
-import SectionHeader from "@/components/SectionHeader";
+} from "@/components/ui/card";
+import { EducationCardProps, education } from "@/constants/types";
+import Image from "next/image";
+import * as React from "react";
 
 export default function Education() {
   return (

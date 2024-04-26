@@ -1,35 +1,27 @@
 'use client'
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import {
-  Sheet,
-  SheetClose,
-  SheetContent,
-  SheetDescription,
-  SheetFooter,
-  SheetHeader,
-  SheetTitle,
-} from "@/components/ui/sheet"
-import { Moon, Sun } from "lucide-react"
-import { useTheme } from "next-themes"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { AlignJustify } from "lucide-react"
-import * as React from "react"
-import Link from "next/link"
 import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu"
-import { FaGithub as Github } from "react-icons/fa";
-import { FaLinkedinIn as LinkedIn } from "react-icons/fa";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent
+} from "@/components/ui/sheet"
+import { AlignJustify, Moon, Sun } from "lucide-react"
+import { useTheme } from "next-themes"
+import Link from "next/link"
+import * as React from "react"
+import { FaGithub as Github, FaLinkedinIn as LinkedIn } from "react-icons/fa"
 
 export default function Navbar() {
   return (

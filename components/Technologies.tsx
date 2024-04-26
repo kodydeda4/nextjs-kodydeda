@@ -1,15 +1,8 @@
-import Image from "next/image";
-import Link from "next/link";
-import * as React from "react"
-import { Button } from "@/components/ui/button"
-import {
-  Card,
-  CardContent,
-} from "@/components/ui/card"
-import { FaGithub as Github } from "react-icons/fa";
-import { FaApple as Apple } from "react-icons/fa";
-import { ProfessionalExperienceCardProps, AppCardProps, TechnologyCardProps, EducationCardProps, experience, apps, technologies, education } from "@/constants/types";
 import SectionHeader from "@/components/SectionHeader";
+import { Button } from "@/components/ui/button";
+import { TechnologyCardProps, technologies } from "@/constants/types";
+import Image from "next/image";
+import * as React from "react";
 
 export default function Technologies() {
   return (
