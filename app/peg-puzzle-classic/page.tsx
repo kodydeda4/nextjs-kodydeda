@@ -1,14 +1,62 @@
+import Image from "next/image";
+import Link from "next/link";
+import * as React from "react"
+import { Button } from "@/components/ui/button"
+import {
+  Card,
+  CardContent,
+} from "@/components/ui/card"
+import { FaGithub as Github } from "react-icons/fa";
+import { FaApple as Apple } from "react-icons/fa";
+
 export default function Page() {
   return (
     <main>
       <div className="max-w-3xl mx-auto px-6 sm:px-12 my-8 pt-4 mb-24">
-        <div className="flex flex-col gap-12">
-          <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-            Peg Puzzle Classic
-          </h1>
+        <div className="flex flex-col gap-16">
+          <div className="flex flex-col gap-4">
+
+            {/* Image */}
+            <div className="bg-gradient-to-r from-indigo-500 to-purple-500 w-full rounded-lg h-64 relative">
+              <Image
+                src="/peg-puzzle-classic-hero-2.png"
+                alt="Hero image."
+                layout="fill"
+                objectFit="contain"
+              />
+            </div>
+
+            {/* Header */}
+            <div className="flex flex-row justify-start gap-3 pt-6">
+
+              <div className="justify-start relative">
+                <Image
+                  src={"/peg-puzzle-classic.png"}
+                  width={50}
+                  height={50}
+                  alt="Hero image"
+                  className="border rounded-xl"
+                />
+              </div>
+
+              <div className="flex flex-col gap-0">
+                <h1 className="text-xl font-extrabold">
+                  Peg Puzzle Classic
+                </h1>
+                <p className="text-muted-foreground pb-4">
+                  {"A realy cool game."}
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-4">
+              <Button className="w-full">Contact Me</Button>
+              <Button variant="outline" className="w-full">Resume PDF</Button>
+            </div>
+
+          </div>
         </div>
       </div>
     </main>
   );
 }
-

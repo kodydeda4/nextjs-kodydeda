@@ -28,7 +28,7 @@ const experience: ProfessionalExperienceCardProps[] = [
   },
 ]
 
-const apps: PersonalProjectCardProps[] = [
+const apps: AppCardProps[] = [
   {
     title: "Peg Puzzle Classic",
     description: "Game",
@@ -140,7 +140,7 @@ export default function Home() {
             />
             <div className="flex flex-col sm:flex-row gap-4 w-full">
               {apps.map((value, index) => (
-                <PersonalProjectCard key={index} {...value} />
+                <AppCard key={index} {...value} />
               ))}
             </div>
           </div>
@@ -242,7 +242,7 @@ const ProfessionalExperienceCard: React.FC<ProfessionalExperienceCardProps> = (p
   );
 };
 
-type PersonalProjectCardProps = {
+type AppCardProps = {
   title: string
   description: string
   appIconSrc: string
@@ -251,7 +251,7 @@ type PersonalProjectCardProps = {
   githubURL: string
 }
 
-const PersonalProjectCard: React.FC<PersonalProjectCardProps> = (props) => {
+const AppCard: React.FC<AppCardProps> = (props) => {
   return (
     <Card className="w-full">
       <CardContent>
