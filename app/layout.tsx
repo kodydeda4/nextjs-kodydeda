@@ -1,12 +1,10 @@
-import './/globals.css'
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
+import { ThemeProvider } from "@/components/theme-provider";
+import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import Link from "next/link";
-import { Inter as FontSans } from "next/font/google"
-import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
-import { ThemeProvider } from "@/components/theme-provider"
-import Navbar from "@/components/Navbar"
-import Footer from "@/components/Footer"
+import { Inter as FontSans } from "next/font/google";
+import './/globals.css';
 
 export const metadata: Metadata = {
   title: "Kody Deda",
