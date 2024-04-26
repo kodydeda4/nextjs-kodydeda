@@ -40,7 +40,7 @@ export default function Navbar() {
             <NavigationMenuList>
 
               <NavigationMenuItem className="sm:hidden">
-                <SheetDemo />
+                <SheetView />
               </NavigationMenuItem>
 
               <NavigationMenuItem>
@@ -113,7 +113,7 @@ export default function Navbar() {
 }
 
 
-function SheetDemo() {
+function SheetView() {
   const [open, setOpen] = React.useState(false);
 
   function handleClick() {
