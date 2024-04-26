@@ -1,7 +1,7 @@
 import SectionHeader from "@/app/_components/SectionHeader";
 import { Button } from "@/components/ui/button";
-import { RESUME } from "@/constants/data";
-import { Technology } from "@/constants/types";
+import { RESUME } from "@/lib/data";
+import { Technology } from "@/lib/definitions";
 import Image from "next/image";
 import * as React from "react";
 

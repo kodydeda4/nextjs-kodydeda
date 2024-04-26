@@ -12,8 +12,8 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu"
-import { RESUME } from "@/constants/data"
-import { App } from "@/constants/types"
+import { RESUME } from "@/lib/data"
+import { App } from "@/lib/definitions"
 import { Moon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
 import Link from "next/link"

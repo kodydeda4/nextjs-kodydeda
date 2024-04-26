@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { App } from "@/constants/types";
+import { App } from "@/lib/definitions";
 import Image from "next/image";
 import Link from "next/link";
 import { FaApple as Apple, FaGithub as Github } from "react-icons/fa";

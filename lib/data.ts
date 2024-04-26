@@ -1,4 +1,4 @@
-import { Resume } from "@/constants/types";
+import { Resume } from "./definitions"
 
 export const RESUME: Resume = {
   name: "Kody Deda",

@@ -3,8 +3,8 @@ import {
   Card,
   CardContent,
 } from "@/components/ui/card";
-import { RESUME } from "@/constants/data";
-import { Education } from "@/constants/types";
+import { RESUME } from "@/lib/data";
+import { Education } from "@/lib/definitions";
 import Image from "next/image";
 import * as React from "react";
 

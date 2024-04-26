@@ -1,5 +1,5 @@
 import AppLandingPage from "@/components/AppLandingPage";
-import { RESUME } from "@/constants/data";
+import { RESUME } from "@/lib/data";
 
 export default function Page() {
   <AppLandingPage {...RESUME.apps[1]}/>
