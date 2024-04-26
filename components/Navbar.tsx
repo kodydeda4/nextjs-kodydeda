@@ -126,7 +126,7 @@ function SheetView() {
         <AlignJustify className="h-4 w-4" />
       </Button>
       <Sheet open={open} onOpenChange={setOpen}>
-        <SheetContent>
+        <SheetContent side="left">
           <SheetHeader>
             <SheetTitle>Edit profile</SheetTitle>
             <SheetDescription>
