@@ -8,7 +8,7 @@ import TechnologySection from "@/app/_components/TechnologySection";
 export default function Home() {
   return (
     <main>
-      <div className="max-w-3xl mx-auto px-6 sm:px-12 my-8 pt-4 mb-24">
+      <div className="max-w-3xl mx-auto px-6 sm:px-12 my-8 mb-24">
         <div className="flex flex-col gap-16">
           <Header />
           <div className="flex flex-col gap-24">

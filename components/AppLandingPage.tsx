@@ -7,7 +7,7 @@ import { FaApple as Apple, FaGithub as Github } from "react-icons/fa";
 export default function AppLandingPage(props: App) {
   return (
     <main>
-      <div className="max-w-3xl mx-auto px-6 sm:px-12 my-8 pt-4 mb-24">
+      <div className="max-w-3xl mx-auto px-6 sm:px-12 my-8 mb-24">
         <div className="flex flex-col gap-16">
           <div className="flex flex-col">
 
