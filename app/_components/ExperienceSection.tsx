@@ -30,7 +30,7 @@ const ExperienceCard: React.FC<Experience> = (props) => {
     <Card className="w-full">
       <CardContent>
         <div className="w-full">
-          <div className="flex flex-row justify-start gap-4 pt-6 pb-2">
+          <div className="flex flex-row justify-start gap-4 pt-6 pb-3">
             <div className="relative">
               <Image
                 src={props.srcIcon}
@@ -47,7 +47,7 @@ const ExperienceCard: React.FC<Experience> = (props) => {
             </div>
           </div>
 
-          <ul className="list-disc border-t pt-2 px-4 w-full">
+          <ul className="list-disc border-t pt-3 px-4 w-full">
             {props.responsibilities.map((value, index) => (
               <li key={index}>{value}</li>
             ))}
