@@ -6,7 +6,7 @@ import { RESUME } from "@/lib/data";
 export default function Header() {
   return (
     <div className="flex flex-col gap-4">
-      <div className="bg-gradient-to-r from-indigo-500 to-purple-500 w-full rounded-lg h-64 relative">
+      <div className="bg-black w-full rounded-lg h-64 relative">
         <Image
           src="/avatar-hero.png"
           alt="Hero image."
