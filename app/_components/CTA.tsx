@@ -5,7 +5,7 @@ import { RESUME } from "@/lib/data";
 export default function CTA() {
   return (
     <div className="flex flex-col w-full bg-neutral-500 bg-opacity-5 relative">
-      <div className="max-w-3xl mx-auto px-12 my-8 pt-4 mb-24 pb-8 w-full">
+      <div className="max-w-3xl mx-auto px-6 sm:px-12 my-8 pt-4 mb-24 w-full">
         <h2 className="text-3xl font-extrabold pb-2">
           Contact Me!
         </h2>
