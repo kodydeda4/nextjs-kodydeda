@@ -46,9 +46,9 @@ const ExperienceCard: React.FC<Experience> = (props) => {
             </div>
           </div>
 
-          <ul className="border-t pt-4 w-full">
+          <ul className="list-disc border-t pt-4 px-4 w-full">
             {props.responsibilities.map((value, index) => (
-              <li key={index}>• {value}</li>
+              <li key={index}>{value}</li>
             ))}
           </ul>
         </div>

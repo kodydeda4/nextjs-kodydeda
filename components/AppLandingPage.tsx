@@ -57,12 +57,12 @@ export default function AppLandingPage(props: App) {
             </div>
 
             {/* Features */}
-            <h2 className="text-2xl font-extrabold pt-8">
+            <h2 className="text-2xl font-extrabold pt-8 pb-2">
               Features
             </h2>
-            <ul className="w-full">
+            <ul className="list-disc w-full px-4 text-base">
               {props.features.map((value, index) => (
-                <li key={index}>• {value}</li>
+                <li key={index}>{value}</li>
               ))}
             </ul>
           </div>
