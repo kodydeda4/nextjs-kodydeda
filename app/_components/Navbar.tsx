@@ -24,7 +24,7 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-10 backdrop-filter backdrop-blur-lg border-b bg-white bg-opacity-70 dark:bg-background dark:bg-opacity-80">
       <div className="max-w-4xl mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-14">
           <NavigationMenu>
             <NavigationMenuList>
               <SheetButton />
