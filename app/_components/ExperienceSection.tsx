@@ -29,24 +29,25 @@ const ExperienceCard: React.FC<Experience> = (props) => {
   return (
     <Card className="w-full">
       <CardContent>
-        <div className="flex flex-col gap-4">
-          <div className="flex flex-row justify-start gap-4 pt-6">
-            <div className="justify-start relative">
+        <div className="w-full">
+          <div className="flex flex-row justify-start gap-4 pt-6 pb-2">
+            <div className="relative">
               <Image
                 src={props.srcIcon}
                 width={50}
                 height={50}
                 alt="Hero image"
-                className="rounded-lg"
+                className="border rounded-lg"
               />
             </div>
             <div className="flex flex-col gap-1">
               <p className="font-semibold line-clamp-1">{props.title}</p>
-              <p className="text-sm text-muted-foreground line-clamp-1">{props.description}</p>
+              <p className="text-sm line-clamp-1">{props.description}</p>
+              <p className="text-xs text-muted-foreground line-clamp-1">{props.caption}</p>
             </div>
           </div>
 
-          <ul className="list-disc border-t pt-4 px-4 w-full">
+          <ul className="list-disc border-t pt-2 px-4 w-full">
             {props.responsibilities.map((value, index) => (
               <li key={index}>{value}</li>
             ))}

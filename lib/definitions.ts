@@ -1,6 +1,7 @@
 export type Experience = {
   title: string
   description: string
+  caption: string
   srcIcon: string
   srcHero: string
   urlAppStore: string
@@ -42,5 +43,5 @@ export type Resume = {
   experience: Experience[]
   apps: App[]
   technologies: Technology[]
-  education: Education[] 
+  education: Education[]
 }
