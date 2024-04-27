@@ -22,7 +22,7 @@ export default function Header() {
           Welcome to my Portfolio!
         </h2>
         <p className="text-xl text-muted-foreground pb-4">
-          {" iOS Developer, NC Remote"}
+          {" iOS Developer, US Remote"}
         </p>
         <div className="flex gap-4">
           <Link href={`mailto:${RESUME.email}`} className="w-full">
