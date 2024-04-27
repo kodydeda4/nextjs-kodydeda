@@ -6,7 +6,7 @@ import { RESUME } from "@/lib/data";
 export default function Header() {
   return (
     <div className="flex flex-col gap-4">
-      <div className="bg-gradient-to-r from-indigo-500 to-purple-500 w-full rounded-lg h-64 relative">
+      <div className="bg-black w-full rounded-lg h-64 relative">
         <Image
           src="/avatar-hero.png"
           alt="Hero image."
@@ -16,13 +16,13 @@ export default function Header() {
       </div>
       <div className="flex flex-col">
         <h1 className="text-3xl font-extrabold">
-          Hi, I&apos;m {RESUME.name}
+          Hi, I&apos;m {RESUME.name}.
         </h1>
         <h2 className="text-3xl font-extrabold pb-2">
-          Welcome to my portfolio!
+          Welcome to my Portfolio!
         </h2>
         <p className="text-xl text-muted-foreground pb-4">
-          {"Remote iOS Developer based in Wilmington, North Carolina."}
+          {" iOS Developer, Wilmington, North Carolina"}
         </p>
         <div className="flex gap-4">
           <Link href={`mailto:${RESUME.email}`} className="w-full">

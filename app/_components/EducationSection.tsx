@@ -14,7 +14,7 @@ export default function EducationSection() {
       <SectionHeader
         caption="Education"
         title="🎓 University Education"
-        description="Computer Science"
+        description="Bachelor's of Computer Science"
       />
       <div className="flex flex-col gap-4 w-full">
         {RESUME.education.map((value, index) => (
