@@ -19,7 +19,7 @@ export const RESUME: Resume = {
         "Helped implement a new premium subscription service using StoreKit.",
         "Developed early-access-program and slow motion features for premium users.",
         "Added test coverage for over 40 features using ComposableArchitecture.",
-        "Migrated the app towards the new Swift concurrency patterns, such as AsyncStreams and Async/Await.",      
+        "Migrated the app towards the new Swift concurrency patterns, such as AsyncStreams and Async/Await.",
       ]
     },
     {
@@ -33,7 +33,7 @@ export const RESUME: Resume = {
         "Worked with a diverse team of designers, engineers, and product managers to develop mobile application features.",
         "Actively participated in team meetings, code reviews, and all other processes regarding Agile development.",
         "Scheduled, planned, and tracked sprints using team-management software like JIRA, Confluence, and Slack.",
-        "Maintained version-control and continuous-integration pipelines with Github and CircleCI.",        
+        "Maintained version-control and continuous-integration pipelines with Github and CircleCI.",
       ]
     },
   ],
@@ -42,9 +42,9 @@ export const RESUME: Resume = {
       title: "Peg Puzzle Classic",
       description: "Game",
       features: [
-          "Single-player puzzle challenge using a triangular board with 15 holes.",
-          "Jump pegs over each other to remove them, aiming to leave only one peg.",
-          "Modern design for a timeless classic.",
+        "Single-player puzzle challenge using a triangular board with 15 holes.",
+        "Jump pegs over each other to remove them, aiming to leave only one peg.",
+        "Modern design for a timeless classic.",
       ],
       srcAppIcon: "/peg-puzzle-classic.png",
       srcHero: "/peg-puzzle-classic-hero-2.png",
@@ -57,7 +57,7 @@ export const RESUME: Resume = {
       features: [
         "Multiple tuning options including standard and drop tunings.",
         "Ability to tune different instruments such as guitar or bass.",
-        "Clean, easy-to-read user interface with intuitive navigation."  
+        "Clean, easy-to-read user interface with intuitive navigation."
       ],
       description: "Music Education",
       srcAppIcon: "/guitar-tuner.png",
@@ -76,6 +76,11 @@ export const RESUME: Resume = {
     {
       title: "swift",
       srcIcon: "/swift.png",
+      href: "https://www.google.com"
+    },
+    {
+      title: "swift-ui",
+      srcIcon: "/swiftui.png",
       href: "https://www.google.com"
     },
     {

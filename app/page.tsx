@@ -11,10 +11,12 @@ export default function Home() {
       <div className="max-w-3xl mx-auto px-6 sm:px-12 my-8 pt-4 mb-24">
         <div className="flex flex-col gap-16">
           <Header />
-          <ExperienceSection />
-          <AppSection />
-          <TechnologySection />
-          <EducationSection />
+          <div className="flex flex-col gap-24">
+            <ExperienceSection />
+            <AppSection />
+            <TechnologySection />
+            <EducationSection />
+          </div>
         </div>
       </div>
       <CTA />
