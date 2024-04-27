@@ -11,7 +11,7 @@ export default function Home() {
       <div className="max-w-3xl mx-auto px-6 sm:px-12 my-8 mb-24">
         <div className="flex flex-col gap-16">
           <Header />
-          <div className="flex flex-col gap-24">
+          <div className="flex flex-col gap-12">
             <ExperienceSection />
             <AppSection />
             <TechnologySection />
