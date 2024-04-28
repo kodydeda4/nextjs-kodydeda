@@ -2,7 +2,7 @@ import AppSection from "@/app/_components/AppSection";
 import CTA from "@/app/_components/CTA";
 import EducationSection from "@/app/_components/EducationSection";
 import ExperienceSection from "@/app/_components/ExperienceSection";
-import Header from "@/app/_components/Header";
+import Hero from "@/app/_components/Hero";
 import TechnologySection from "@/app/_components/TechnologySection";
 
 export default function Home() {
@@ -10,11 +10,11 @@ export default function Home() {
     <main>
       <div className="max-w-3xl mx-auto px-6 sm:px-12 my-8 mb-24">
         <div className="flex flex-col gap-16">
-          <Header />
+          <Hero />
           <div className="flex flex-col gap-12">
+            <TechnologySection />
             <ExperienceSection />
             <AppSection />
-            <TechnologySection />
             <EducationSection />
           </div>
         </div>
@@ -23,5 +23,3 @@ export default function Home() {
     </main>
   );
 }
-
-

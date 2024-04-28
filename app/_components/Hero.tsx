@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { RESUME } from "@/lib/data";
 
-export default function Header() {
+export default function Hero() {
   return (
     <div className="flex flex-col gap-4">
       <div className="bg-black w-full rounded-lg h-64 relative">
