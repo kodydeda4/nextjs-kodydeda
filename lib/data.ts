@@ -77,7 +77,7 @@ export const RESUME: Resume = {
     },
     {
       title: "swift",
-      srcIcon: "/swift.png",
+      srcIcon: "/swift-2.png",
       href: "https://www.google.com"
     },
     {

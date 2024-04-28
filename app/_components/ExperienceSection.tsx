@@ -1,41 +1,68 @@
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/app/_components/AccordionKody";
 import SectionHeader from "@/app/_components/SectionHeader";
 import {
-  Card,
-  CardContent,
-} from "@/components/ui/card";
+  Table,
+  TableBody,
+  TableCell,
+  TableRow,
+} from "@/components/ui/table";
 import { RESUME } from "@/lib/data";
 import { Experience } from "@/lib/definitions";
 import Image from "next/image";
 import * as React from "react";
+
 
 export default function ExperienceSection() {
   return (
     <div>
       <SectionHeader
         caption="Professional Experience"
-        title="📖 3 Years of Professional Experience"
+        title="📖 3 Years of Experience"
         description="Industry experience building enterprise software."
       />
-      <div className="flex flex-col gap-4 w-full">
-        {RESUME.experience.map((value, index) => (
-          <ExperienceCard key={index} {...value} />
-        ))}
+      <TableView />
+    </div>
+  )
+}
+
+function TableView() {
+  return (
+    <div className="w-full">
+      <div className="rounded-md border">
+        <Table>
+          <TableBody>
+            {RESUME.experience.map((value, index) => (
+              <TableRow key={index}>
+                <TableCell>
+                  <ExperienceCard key={index} {...value} />
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
       </div>
     </div>
   )
 }
 
 const ExperienceCard: React.FC<Experience> = (props) => {
+  const size = 40
+
   return (
-    <Card className="w-full">
-      <CardContent>
-        <div className="w-full">
-          <div className="flex flex-row justify-start gap-4 pt-6 pb-3">
+    <Accordion type="single" collapsible className="w-full">
+      <AccordionItem value="item-1">
+        <AccordionTrigger>
+          <div className="flex flex-row justify-start gap-4 text-left">
             <div className="relative">
               <Image
                 src={props.srcIcon}
-                width={50}
-                height={50}
+                width={size}
+                height={size}
                 alt="Hero image"
                 className="border rounded-lg"
               />
@@ -47,13 +74,16 @@ const ExperienceCard: React.FC<Experience> = (props) => {
             </div>
           </div>
 
+        </AccordionTrigger>
+        <AccordionContent>
           <ul className="list-disc border-t pt-3 px-4 w-full">
             {props.responsibilities.map((value, index) => (
               <li key={index}>{value}</li>
             ))}
           </ul>
-        </div>
-      </CardContent>
-    </Card>
-  );
-};
+        </AccordionContent>
+      </AccordionItem>
+    </Accordion>
+  )
+}
+

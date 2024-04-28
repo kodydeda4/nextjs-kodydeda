@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import { RESUME } from "@/lib/data";
+import Link from "next/link";
 
 export default function CTA() {
   return (

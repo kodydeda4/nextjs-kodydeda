@@ -13,7 +13,7 @@ export default function TechnologySection() {
         title="🌎 Technologies & Frameworks"
         description="These are some of my favorite tools."
       />
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-4 sm:grid-cols-8 gap-4 border rounded-xl p-2">
         {RESUME.technologies.map((value, index) => (
           <TechnologyCard key={index} {...value} />
         ))}
@@ -26,7 +26,7 @@ const TechnologyCard: React.FC<Technology> = (props) => {
   const size = 40
 
   return (
-    <Button variant="outline" className="relative p-3 w-full h-full">
+    <Button variant="ghost" className="relative p-3 w-full h-full">
       <div className="relative">
         <Image
           src={props.srcIcon}
