@@ -3,6 +3,9 @@ import { Resume } from "./definitions"
 export const RESUME: Resume = {
   name: "Kody Deda",
   email: "kodydeda4@gmail.com",
+  profession: " iOS Developer",
+  description: "Developer with a focus on building great-looking software experiences, application architecture, and all things Swift.",
+  srcHero: "/avatar-hero.png",
   urlResume: "/resume.pdf",
   urlGithub: "https://github.com/kodydeda4",
   urlLinkedIn: "https://www.linkedin.com/in/kodydeda4/",

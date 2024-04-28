@@ -36,6 +36,9 @@ export type Education = {
 export type Resume = {
   name: string
   email: string
+  profession: string
+  description: string
+  srcHero: string
   urlResume: string
   urlGithub: string
   urlLinkedIn: string
