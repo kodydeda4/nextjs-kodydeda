@@ -1,3 +1,5 @@
+"use client"
+
 import SectionHeader from "@/app/_components/SectionHeader";
 import { Button } from "@/components/ui/button";
 import {
@@ -11,15 +13,37 @@ import Image from "next/image";
 import Link from "next/link";
 import * as React from "react";
 import { FaApple as Apple, FaGithub as Github } from "react-icons/fa";
+
+import { ArrowUpDown, ChevronDown, MoreHorizontal } from "lucide-react"
+
+import { Checkbox } from "@/components/ui/checkbox"
 import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
+  DropdownMenu,
+  DropdownMenuCheckboxItem,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import { Input } from "@/components/ui/input"
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table"
+
 
 export default function AppSection() {
+  return (
+    <AppSectionOLD />
+  )
+}
+
+function AppSectionOLD() {
   return (
     <Card className="w-full">
       <CardTitle className="p-6">
@@ -30,13 +54,29 @@ export default function AppSection() {
         />
       </CardTitle>
       <CardContent>
-        <div className="flex flex-col gap-8 w-full">
-          {RESUME.apps.map((value, index) => (
-            <AppCard key={index} {...value} />
-          ))}
-        </div>
+        <TableView />
       </CardContent>
     </Card >
+  )
+}
+
+function TableView() {
+  return (
+    <div className="w-full">
+      <div className="rounded-md border">
+        <Table>
+          <TableBody>
+            {RESUME.apps.map((value, index) => (
+              <TableRow key={index}>
+                <TableCell>
+                  <AppCard key={index} {...value} />
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </div>
+    </div>
   )
 }
 

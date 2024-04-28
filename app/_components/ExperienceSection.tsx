@@ -13,7 +13,14 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion"
+} from "@/app/_components/AccordionKody";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableRow,
+} from "@/components/ui/table"
+
 
 export default function ExperienceSection() {
   return (
@@ -26,13 +33,29 @@ export default function ExperienceSection() {
         />
       </CardTitle>
       <CardContent>
-        <div className="flex flex-col gap-2 w-full">
-          {RESUME.experience.map((value, index) => (
-            <ExperienceCard key={index} {...value} />
-          ))}
-        </div>
+        <TableView />
       </CardContent>
     </Card>
+  )
+}
+
+function TableView() {
+  return (
+    <div className="w-full">
+      <div className="rounded-md border">
+        <Table>
+          <TableBody>
+            {RESUME.experience.map((value, index) => (
+              <TableRow key={index}>
+                <TableCell>
+                  <ExperienceCard key={index} {...value} />
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </div>
+    </div>
   )
 }
 
