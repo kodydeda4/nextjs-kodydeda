@@ -24,18 +24,14 @@ import {
 
 export default function ExperienceSection() {
   return (
-    <Card className="w-full">
-      <CardTitle className="px-6 pt-6 pb-4">
-        <SectionHeader
-          caption="Professional Experience"
-          title="📖 3 Years of Experience"
-          description="Industry experience building enterprise software."
-        />
-      </CardTitle>
-      <CardContent>
-        <TableView />
-      </CardContent>
-    </Card>
+    <div>
+      <SectionHeader
+        caption="Professional Experience"
+        title="📖 3 Years of Experience"
+        description="Industry experience building enterprise software."
+      />
+      <TableView />
+    </div>
   )
 }
 

@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <main>
       <div className="max-w-3xl mx-auto px-6 sm:px-12 my-8 mb-16">
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-16">
           <Hero />
           <ExperienceSection />
           <AppSection />

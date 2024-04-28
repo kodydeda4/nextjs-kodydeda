@@ -30,18 +30,14 @@ import {
 
 export default function EducationSection() {
   return (
-    <Card className="w-full">
-      <CardTitle className="p-6">
-        <SectionHeader
-          caption="Education"
-          title="🎓 University Education"
-          description="Bachelor's of Computer Science"
-        />
-      </CardTitle>
-      <CardContent>
-      <TableView/>
-      </CardContent>
-    </Card >
+    <div>
+      <SectionHeader
+        caption="Education"
+        title="🎓 University Education"
+        description="Bachelor's of Computer Science"
+      />
+      <TableView />
+    </div>
   )
 }
 
@@ -57,13 +53,13 @@ function TableView() {
                   <EducationCard key={index} {...value} />
                 </TableCell>
               </TableRow>
-              ))}             
-          </TableBody>     
+            ))}
+          </TableBody>
         </Table >
-      </div >     
-    </div >     
-  )  
-  }
+      </div >
+    </div >
+  )
+}
 
 const EducationCard: React.FC<Education> = (props) => {
   return (
@@ -81,7 +77,7 @@ const EducationCard: React.FC<Education> = (props) => {
         <div className="flex flex-col gap-1">
           <p className="font-semibold line-clamp-1">{props.title}</p>
           <p className="text-sm line-clamp-1">{props.description}</p>
-          <p className="text-xs text-muted-foreground line-clamp-1">{props.caption}</p>     
+          <p className="text-xs text-muted-foreground line-clamp-1">{props.caption}</p>
         </div>
       </div>
     </div>

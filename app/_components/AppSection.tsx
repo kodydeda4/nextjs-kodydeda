@@ -45,18 +45,14 @@ export default function AppSection() {
 
 function AppSectionOLD() {
   return (
-    <Card className="w-full">
-      <CardTitle className="p-6">
-        <SectionHeader
-          caption="Personal Projects"
-          title="🛠️ Apps I've Made"
-          description="My personal work featured on the AppStore."
-        />
-      </CardTitle>
-      <CardContent>
-        <TableView />
-      </CardContent>
-    </Card >
+    <div>
+      <SectionHeader
+        caption="Personal Projects"
+        title="🛠️ Apps I've Made"
+        description="My personal work featured on the AppStore."
+      />
+      <TableView />
+    </div>
   )
 }
 
