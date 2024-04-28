@@ -14,7 +14,7 @@ export default function TechnologySection() {
         title="🌎 Technologies & Frameworks"
         description="These are some of my favorite tools."
       />
-      <div className="grid grid-cols-4 sm:grid-cols-8 gap-4 border rounded-xl">
+      <div className="grid grid-cols-4 sm:grid-cols-8 gap-4 border rounded-xl p-2">
         {RESUME.technologies.map((value, index) => (
           <TechnologyCard key={index} {...value} />
         ))}
