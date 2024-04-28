@@ -43,24 +43,23 @@ const AppCard: React.FC<App> = (props) => {
             />
           </div>
 
-    <div className="w-full pt-6">
-      <div className="flex flex-row justify-start gap-4">
-        <div className="justify-start relative">
-          <Image
-            src={props.srcAppIcon}
-            width={40}
-            height={40}
-            alt="Hero image"
-            className="rounded-lg border"
-          />
-        </div>
-        <div className="flex flex-col gap-1">
-          <p className="font-semibold line-clamp-1">{props.title}</p>
-          <p className="text-sm line-clamp-1">{props.description}</p>
-          <p className="text-xs text-muted-foreground line-clamp-1">{props.caption}</p>
-        </div>
-      </div>
-    </div>
+          <div className="w-full pt-6">
+            <div className="flex flex-row justify-start gap-4">
+              <div className="justify-start relative">
+                <Image
+                  src={props.srcAppIcon}
+                  width={40}
+                  height={40}
+                  alt="Hero image"
+                  className="rounded-lg border"
+                />
+              </div>
+              <div className="flex flex-col gap-1">
+                <p className="font-semibold line-clamp-1">{props.title}</p>
+                <p className="text-sm line-clamp-1">{props.description}</p>
+              </div>
+            </div>
+          </div>
 
           <div className="flex flex-row pt-4 gap-3 w-full" >
             <Link href={props.urlAppStore} rel="noopener noreferrer" target="_blank" className="w-full">
