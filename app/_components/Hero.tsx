@@ -1,9 +1,7 @@
 import { Button } from "@/components/ui/button";
+import { RESUME } from "@/lib/data";
 import Image from "next/image";
 import Link from "next/link";
-import { RESUME } from "@/lib/data";
-import { Badge } from "@/components/ui/badge"
-import { IoLocationOutline } from "react-icons/io5";
 
 export default function Hero() {
   return (

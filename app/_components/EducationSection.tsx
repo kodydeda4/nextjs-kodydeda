@@ -1,32 +1,14 @@
 import SectionHeader from "@/app/_components/SectionHeader";
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardTitle,
-} from "@/components/ui/card";
-import { RESUME } from "@/lib/data";
-import { Education } from "@/lib/definitions";
-import Image from "next/image";
-import * as React from "react";
-import {
-  DropdownMenu,
-  DropdownMenuCheckboxItem,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { Input } from "@/components/ui/input"
 import {
   Table,
   TableBody,
   TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table"
+  TableRow
+} from "@/components/ui/table";
+import { RESUME } from "@/lib/data";
+import { Education } from "@/lib/definitions";
+import Image from "next/image";
+import * as React from "react";
 
 export default function EducationSection() {
   return (

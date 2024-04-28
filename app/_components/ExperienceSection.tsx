@@ -1,25 +1,20 @@
-import SectionHeader from "@/app/_components/SectionHeader";
-import {
-  Card,
-  CardTitle,
-  CardContent,
-} from "@/components/ui/card";
-import { RESUME } from "@/lib/data";
-import { Experience } from "@/lib/definitions";
-import Image from "next/image";
-import * as React from "react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/app/_components/AccordionKody";
+import SectionHeader from "@/app/_components/SectionHeader";
 import {
   Table,
   TableBody,
   TableCell,
   TableRow,
-} from "@/components/ui/table"
+} from "@/components/ui/table";
+import { RESUME } from "@/lib/data";
+import { Experience } from "@/lib/definitions";
+import Image from "next/image";
+import * as React from "react";
 
 
 export default function ExperienceSection() {

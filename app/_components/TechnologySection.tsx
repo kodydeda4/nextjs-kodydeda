@@ -1,6 +1,5 @@
 import SectionHeader from "@/app/_components/SectionHeader";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { RESUME } from "@/lib/data";
 import { Technology } from "@/lib/definitions";
 import Image from "next/image";
