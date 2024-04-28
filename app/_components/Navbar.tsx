@@ -61,10 +61,11 @@ const SheetButton: React.FC = () => {
 const HomeLink: React.FC = () => {
   return (
     <NavigationMenuItem>
+      {/* <NavigationMenuItem className="hidden sm:block"> */}
       <Link href="/" legacyBehavior passHref>
         <NavigationMenuLink>
           <Button variant="ghost" className="font-extrabold">
-            {RESUME.name}
+            Home
           </Button>
         </NavigationMenuLink>
       </Link>

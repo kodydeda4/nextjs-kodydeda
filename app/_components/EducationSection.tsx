@@ -43,7 +43,7 @@ const EducationCard: React.FC<Education> = (props) => {
             width={40}
             height={40}
             alt="Hero image"
-            className="rounded-full border"
+            className="rounded-lg border"
           />
         </div>
         <div className="flex flex-col gap-1">
