@@ -8,7 +8,7 @@ export default function Hero() {
     <div className="flex flex-col gap-4">
       <div className="bg-black w-full rounded-lg h-64 relative">
         <Image
-          src="/avatar-hero.png"
+          src={RESUME.srcHero}
           alt="Hero image."
           layout="fill"
           objectFit="contain"
@@ -16,14 +16,13 @@ export default function Hero() {
       </div>
       <div className="flex flex-col">
         <h1 className="text-2xl font-extrabold">
-          {/* Hi, I&apos;m {RESUME.name}. */}
           {RESUME.name}
         </h1>
         <h2 className="text-lg pb-2">
-          {" iOS Developer"}
+          {RESUME.profession}
         </h2>
         <p className="text pb-4">
-          {"Developer with a focus on building great-looking software experiences, application architecture, and all things Swift."}
+          {RESUME.description}
         </p>
         <div className="flex gap-4">
           <Link href={`mailto:${RESUME.email}`} className="w-full">
@@ -37,5 +36,6 @@ export default function Hero() {
     </div >
   );
 }
+
 
 
