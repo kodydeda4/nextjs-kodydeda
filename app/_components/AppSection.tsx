@@ -1,10 +1,7 @@
-"use client"
-
 import SectionHeader from "@/app/_components/SectionHeader";
 import { Button } from "@/components/ui/button";
 import {
   Card,
-  CardTitle,
   CardContent,
 } from "@/components/ui/card";
 import { RESUME } from "@/lib/data";
@@ -14,36 +11,7 @@ import Link from "next/link";
 import * as React from "react";
 import { FaApple as Apple, FaGithub as Github } from "react-icons/fa";
 
-import { ArrowUpDown, ChevronDown, MoreHorizontal } from "lucide-react"
-
-import { Checkbox } from "@/components/ui/checkbox"
-import {
-  DropdownMenu,
-  DropdownMenuCheckboxItem,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { Input } from "@/components/ui/input"
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table"
-
-
 export default function AppSection() {
-  return (
-    <AppSectionOLD />
-  )
-}
-
-function AppSectionOLD() {
   return (
     <div>
       <SectionHeader
@@ -51,26 +19,10 @@ function AppSectionOLD() {
         title="🛠️ Apps I've Made"
         description="My personal work featured on the AppStore."
       />
-      <TableView />
-    </div>
-  )
-}
-
-function TableView() {
-  return (
-    <div className="w-full">
-      <div className="rounded-md border">
-        <Table>
-          <TableBody>
-            {RESUME.apps.map((value, index) => (
-              <TableRow key={index}>
-                <TableCell>
-                  <AppCard key={index} {...value} />
-                </TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
+      <div className="flex flex-col sm:flex-row gap-4 w-full">
+        {RESUME.apps.map((value, index) => (
+          <AppCard key={index} {...value} />
+        ))}
       </div>
     </div>
   )
@@ -78,32 +30,50 @@ function TableView() {
 
 const AppCard: React.FC<App> = (props) => {
   return (
-    <div className="flex flex-row gap-4">
-      <div className="relative">
-        <Image
-          src={props.srcAppIcon}
-          width={40}
-          height={40}
-          alt="Hero image"
-          className="rounded-lg border"
-        />
-      </div>
-      <div className="flex flex-col gap-1">
-        <p className="font-semibold line-clamp-1">{props.title}</p>
-        <p className="text-sm line-clamp-1">{props.description}</p>
-      </div>
+    <Card className="w-full">
+      <CardContent>
+        <div className="pt-6 w-full">
 
-      {/* <Link href={props.urlGithub} rel="noopener noreferrer" target="_blank"> */}
-      {/*   <Button variant="outline"> */}
-      {/*     <Github className="mr-2 h-4 w-4" /> Github */}
-      {/*   </Button> */}
-      {/* </Link> */}
-      {/* <Link href={props.urlAppStore} rel="noopener noreferrer" target="_blank"> */}
-      {/*   <Button variant="default"> */}
-      {/*     <Apple className="mr-2 h-4 w-4" /> App Store */}
-      {/*   </Button> */}
-      {/* </Link> */}
-    </div>
+          <div className="bg-gradient-to-r from-indigo-500 to-purple-500 w-full rounded-lg h-64 relative">
+            <Image
+              src={props.srcHero}
+              alt="Hero image."
+              layout="fill"
+              objectFit="contain"
+            />
+          </div>
+
+          <div className="flex flex-row justify-start gap-4 pt-6">
+            <div className="justify-start relative">
+              <Image
+                src={props.srcAppIcon}
+                width={50}
+                height={50}
+                alt="Hero image"
+                className="border rounded-lg"
+              />
+            </div>
+            <div className="flex flex-col gap-1">
+              <p className="font-semibold line-clamp-1">{props.title}</p>
+              <p className="text-sm text-muted-foreground line-clamp-1">{props.description}</p>
+            </div>
+          </div>
+
+          <div className="flex flex-row sm:flex-col pt-6 sm:pt-4 gap-3 w-full">
+            <Link href={props.urlAppStore} rel="noopener noreferrer" target="_blank" className="w-full">
+              <Button variant="default" className="w-full">
+                <Apple className="mr-2 h-4 w-4" /> App Store
+              </Button>
+            </Link>
+            <Link href={props.urlGithub} rel="noopener noreferrer" target="_blank" className="w-full">
+              <Button variant="outline" className="w-full">
+                <Github className="mr-2 h-4 w-4" /> Github
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </CardContent>
+    </Card >
   );
 };
 
