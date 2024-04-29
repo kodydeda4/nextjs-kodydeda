@@ -4,7 +4,7 @@ import {
   TableBody,
   TableCell,
   TableRow
-} from "@/components/ui/table";
+} from "@/app/_components/TableKody";
 import { RESUME } from "@/lib/data";
 import { Education } from "@/lib/definitions";
 import Image from "next/image";

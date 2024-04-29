@@ -26,16 +26,14 @@ const TechnologyCard: React.FC<Technology> = (props) => {
   const size = 40
 
   return (
-    <Button variant="ghost" className="relative p-3 w-full h-full">
-      <div className="relative">
-        <Image
-          src={props.srcIcon}
-          width={size}
-          height={size}
-          alt="Hero image"
-          className="rounded-lg"
-        />
-      </div>
-    </Button>
+    <div className="flex relative items-center justify-center p-3 w-full h-full">
+      <Image
+        src={props.srcIcon}
+        width={size}
+        height={size}
+        alt="Hero image"
+        className="rounded-lg"
+      />
+    </div>
   )
 }
