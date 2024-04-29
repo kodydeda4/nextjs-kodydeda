@@ -54,7 +54,7 @@ export const RESUME: Resume = {
       srcAppIcon: "/peg-puzzle-classic.png",
       srcHero: "/peg-puzzle-classic-hero-2.png",
       urlAppStore: "https://apps.apple.com/us/app/peg-puzzle-classic/id6469359729",
-      urlGithub: "https://github.com/kodydeda4/PegPuzzleClassic",
+      urlGithub: "https://github.com/kodydeda4/swiftui-peg-puzzle-classic",
       urlLocal: "/peg-puzzle-classic"
     },
     {
@@ -68,7 +68,7 @@ export const RESUME: Resume = {
       srcAppIcon: "/guitar-tuner.png",
       srcHero: "/guitar-tuner-hero-2.png",
       urlAppStore: "https://apps.apple.com/us/app/accutune-guitar-tuner/id6472688914",
-      urlGithub: "https://github.com/kodydeda4/GuitarTuner",
+      urlGithub: "https://github.com/kodydeda4/swiftui-guitar-tuner",
       urlLocal: "/guitar-tuner"
     },
   ],
