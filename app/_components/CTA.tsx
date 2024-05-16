@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function CTA() {
   return (
     <div className="flex flex-col w-full bg-neutral-500 bg-opacity-5 relative border-t">
-      <div className="max-w-3xl mx-auto px-6 sm:px-12 my-8 py-4 mb-24 w-full">
+      <div className="max-w-3xl mx-auto px-6 sm:px-12 my-8 py-4 pb-10 mb-24 w-full">
         <h2 className="text-2xl font-extrabold pb-2">
           Contact Me!
         </h2>

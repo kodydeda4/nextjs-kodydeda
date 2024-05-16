@@ -20,6 +20,12 @@ import Link from "next/link"
 import { FaGithub as Github, FaLinkedinIn as LinkedIn } from "react-icons/fa"
 import MainSheet from "./MainSheet"
 
+type NavLink = {
+  title: string
+  description: string
+  href: string
+}
+
 export default function Navbar() {
   return (
     <nav className="sticky top-0 z-10 backdrop-filter backdrop-blur-lg border-b bg-white bg-opacity-70 dark:bg-background dark:bg-opacity-80">
