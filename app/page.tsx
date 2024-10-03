@@ -14,7 +14,7 @@ export default function Home() {
           <ExperienceSection />
           <AppSection />
           <EducationSection />
-          <TechnologySection />
+          {/* <TechnologySection /> */}
         </div>
       </div>
       <CTA />
