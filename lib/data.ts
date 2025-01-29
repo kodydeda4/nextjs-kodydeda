@@ -5,7 +5,7 @@ export const RESUME: Resume = {
   email: "kodydeda4@gmail.com",
   profession: " iOS Developer",
   description: "Developer with a focus on building great-looking software experiences, application architecture, and all things Swift.",
-  srcHero: "/avatar-bg.gif",
+  srcHero: "/avatar-hero.png",
   srcAvatar: "/avatar.jpeg",
   urlResume: "/resume.pdf",
   urlGithub: "https://github.com/kodydeda4",
