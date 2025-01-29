@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <div className="flex flex-col gap-4">
       <ProfileHeader/>
-      <div className="flex flex-col px-6 pt-12">
+      <div className="flex flex-col px-6 pt-14">
         <h1 className="text-2xl font-extrabold">
           {RESUME.name}
         </h1>
@@ -34,12 +34,12 @@ export default function Hero() {
 function ProfileHeader() {
   return (
     <div
-      className="relative h-48 w-full bg-cover bg-center  h-64 relative border-b"
+      className="relative h-48 w-full bg-cover bg-center  h-56 relative border-b"
       style={{ backgroundImage: `url(${RESUME.srcHero})` }}
     >
       {/* Position the avatar on top of the background */}
       <div className="absolute bottom-0 left-4 translate-y-1/2">
-        <Avatar className="w-24 h-24 border">
+        <Avatar className="w-28 h-28 border">
           {/* <AvatarImage src={RESUME.srcAvatar} alt="User avatar" /> */}
           <AvatarImage src={RESUME.srcAvatar} alt="User avatar" />
           <AvatarFallback></AvatarFallback>
