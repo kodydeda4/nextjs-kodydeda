@@ -9,10 +9,10 @@ export default function Hero() {
     <div className="flex flex-col gap-4">
       <ProfileHeader/>
       <div className="flex flex-col px-6 pt-14">
-        <h1 className="text-2xl font-extrabold">
+        <h1 className="text-2xl font-bold">
           {RESUME.name}
         </h1>
-        <h2 className="text-lg pb-2">
+        <h2 className="text-lg font-semibold pb-2">
           {RESUME.profession}
         </h2>
         <p className="text pb-4 text-muted-foreground">
@@ -35,8 +35,7 @@ function ProfileHeader() {
   return (
     <div
       className="relative h-48 w-full bg-cover bg-center h-40 sm:h-60 border-b"
-      // style={{ backgroundImage: `url(${RESUME.srcHero})` }}
-      style={{ backgroundImage: `url('/avatar-bg.gif')` }}
+      style={{ backgroundImage: `url(${RESUME.srcHero})` }}
     >
       {/* Position the avatar on top of the background */}
       <div className="absolute bottom-0 left-4 translate-y-1/2">
