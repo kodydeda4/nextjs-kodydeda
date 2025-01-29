@@ -15,7 +15,7 @@ export default function Hero() {
         <h2 className="text-lg pb-2">
           {RESUME.profession}
         </h2>
-        <p className="text pb-4">
+        <p className="text pb-4 text-muted-foreground">
           {RESUME.description}
         </p>
         <div className="flex gap-4">
