@@ -39,6 +39,7 @@ export type Resume = {
   profession: string
   description: string
   srcHero: string
+  srcAvatar: string
   urlResume: string
   urlGithub: string
   urlLinkedIn: string

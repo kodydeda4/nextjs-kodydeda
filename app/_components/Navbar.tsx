@@ -35,9 +35,6 @@ export default function Navbar() {
             <NavigationMenuList>
               <SheetButton />
               <HomeLink />
-              {RESUME.apps.map((value, index) => (
-                <AppLink key={index} {...value} />
-              ))}
             </NavigationMenuList>
           </NavigationMenu>
           <NavigationMenu>
