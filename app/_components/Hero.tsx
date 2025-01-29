@@ -2,19 +2,13 @@ import { Button } from "@/components/ui/button";
 import { RESUME } from "@/lib/data";
 import Image from "next/image";
 import Link from "next/link";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 
 export default function Hero() {
   return (
     <div className="flex flex-col gap-4">
-      <div className="bg-black w-full rounded-lg h-64 relative">
-        <Image
-          src={RESUME.srcHero}
-          alt="Hero image."
-          layout="fill"
-          objectFit="contain"
-        />
-      </div>
-      <div className="flex flex-col">
+      <ProfileHeader/>
+      <div className="flex flex-col px-6 pt-12">
         <h1 className="text-2xl font-extrabold">
           {RESUME.name}
         </h1>
@@ -37,5 +31,20 @@ export default function Hero() {
   );
 }
 
-
-
+function ProfileHeader() {
+  return (
+    <div
+      className="relative h-48 w-full bg-cover bg-center  h-64 relative border-b"
+      style={{ backgroundImage: `url(${RESUME.srcHero})` }}
+    >
+      {/* Position the avatar on top of the background */}
+      <div className="absolute bottom-0 left-4 translate-y-1/2">
+        <Avatar className="w-24 h-24 border">
+          {/* <AvatarImage src={RESUME.srcAvatar} alt="User avatar" /> */}
+          <AvatarImage src={RESUME.srcAvatar} alt="User avatar" />
+          <AvatarFallback></AvatarFallback>
+        </Avatar>
+      </div>
+    </div>
+  )
+}
