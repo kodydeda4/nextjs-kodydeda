@@ -34,7 +34,7 @@ export default function Hero() {
 function ProfileHeader() {
   return (
     <div
-      className="relative h-48 w-full bg-cover bg-center  h-56 relative border-b"
+      className="relative h-48 w-full bg-cover bg-center h-40 sm:h-60 border-b"
       style={{ backgroundImage: `url(${RESUME.srcHero})` }}
     >
       {/* Position the avatar on top of the background */}
