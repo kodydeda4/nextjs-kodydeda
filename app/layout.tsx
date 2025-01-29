@@ -35,14 +35,14 @@ export default function RootLayout({
         <meta property="og:url" content="https://kodydeda.vercel.app/" />
         <meta property="og:title" content="Kody Deda" />
         <meta property="og:description" content=" iOS Developer" />
-        <meta property="og:image" content="/metadata.gif" />
+        <meta property="og:image" content="/metadata.png" />
 
         {/* <!-- Twitter --> */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://kodydeda.vercel.app/" />
         <meta property="twitter:title" content="Kody Deda" />
         <meta property="twitter:description" content=" iOS Developer" />
-        <meta property="twitter:image" content="/metadata.gif" />
+        <meta property="twitter:image" content="/metadata.png" />
       </head>
       <body
         className={cn(
