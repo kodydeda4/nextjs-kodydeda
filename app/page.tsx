@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main>
       <div className="max-w-2xl mx-auto">
-        <div className="flex flex-col gap-8 border-l border-r">
+        <div className="flex flex-col gap-8 lg:border-l sm:border-r">
           <div className="pb-8 border-b">
             <Hero />
           </div>
