@@ -35,7 +35,7 @@ function ProfileHeader() {
   return (
     <div
       className="relative h-48 w-full bg-cover bg-center h-40 sm:h-60 border-b"
-      style={{ backgroundImage: `url(${RESUME.srcHero})` }}
+      style={{ backgroundImage: `url('/avatar-hero.png')` }}
     >
       {/* Position the avatar on top of the background */}
       <div className="absolute bottom-0 left-4 translate-y-1/2">
