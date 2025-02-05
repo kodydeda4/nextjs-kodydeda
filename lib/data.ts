@@ -56,9 +56,7 @@ export const RESUME: Resume = {
       srcHero: "/idd-camera-hero.png",
       urlAppStore: "https://apps.apple.com/us/app/idd-camera/id6740935223",
       urlGithub: "https://github.com/kodydeda4/swift-camera-app",
-      urlLocal: "/idd-camera",
-      gradientStart: "yellow-500",
-      gradientEnd: "orange-500"
+      urlLocal: "/idd-camera"
     },
     {
       title: "Peg Puzzle Classic",
@@ -72,9 +70,7 @@ export const RESUME: Resume = {
       srcHero: "/peg-puzzle-classic-hero-2.png",
       urlAppStore: "https://apps.apple.com/us/app/peg-puzzle-classic/id6469359729",
       urlGithub: "https://github.com/kodydeda4/swiftui-peg-puzzle-classic",
-      urlLocal: "/peg-puzzle-classic",
-      gradientStart: "indigo-500",
-      gradientEnd: "purple-500"
+      urlLocal: "/peg-puzzle-classic"
     },
     {
       title: "Guitar Tuner",
@@ -88,9 +84,7 @@ export const RESUME: Resume = {
       srcHero: "/guitar-tuner-hero-2.png",
       urlAppStore: "https://apps.apple.com/us/app/accutune-guitar-tuner/id6472688914",
       urlGithub: "https://github.com/kodydeda4/swiftui-guitar-tuner",
-      urlLocal: "/guitar-tuner",
-      gradientStart: "indigo-500",
-      gradientEnd: "blue-500"
+      urlLocal: "/guitar-tuner"
     },
   ],
   technologies: [
