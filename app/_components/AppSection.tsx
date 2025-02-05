@@ -28,13 +28,18 @@ export default function AppSection() {
   )
 }
 
+const gradients = {
+  "IDD Camera": "from-yellow-500 to-orange-500",
+  "Peg Puzzle Classic": "from-indigo-500 to-purple-500",
+  "Guitar Tuner": "from-blue-700 to-indigo-500",
+};
+
 const AppCard: React.FC<App> = (props) => {
   return (
     <Card className="w-full">
       <CardContent>
         <div className="pt-6 w-full">
-
-          <div className={`bg-gradient-to-r from-${props.gradientStart} to-${props.gradientEnd} w-full rounded-lg h-64 relative`}>
+          <div className={`bg-gradient-to-r ${gradients[`${props.title}`] || "from-gray-500 to-gray-700"} w-full rounded-lg h-64 relative`}>
             <Image
               src={props.srcHero}
               alt="Hero image."
@@ -56,7 +61,7 @@ const AppCard: React.FC<App> = (props) => {
               </div>
               <div className="flex flex-col gap-1">
                 <p className="font-semibold line-clamp-1">{props.title}</p>
-                <p className="text-sm line-clamp-1">{props.description}</p>
+                <p className="text-sm text-muted-foreground line-clamp-1">{props.description}</p>
               </div>
             </div>
           </div>

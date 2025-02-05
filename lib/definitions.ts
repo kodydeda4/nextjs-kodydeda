@@ -17,8 +17,6 @@ export type App = {
   urlAppStore: string
   urlGithub: string
   urlLocal: string
-  gradientStart: string
-  gradientEnd: string
 }
 
 export type Technology = {
