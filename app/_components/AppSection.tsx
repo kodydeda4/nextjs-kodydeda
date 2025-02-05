@@ -34,7 +34,7 @@ const AppCard: React.FC<App> = (props) => {
       <CardContent>
         <div className="pt-6 w-full">
 
-          <div className="bg-gradient-to-r from-indigo-500 to-purple-500 w-full rounded-lg h-64 relative">
+          <div className={`bg-gradient-to-r from-${props.gradientStart} to-${props.gradientEnd} w-full rounded-lg h-64 relative`}>
             <Image
               src={props.srcHero}
               alt="Hero image."
