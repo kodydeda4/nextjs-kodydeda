@@ -28,7 +28,7 @@ export default function AppSection() {
   )
 }
 
-const gradients = {
+const gradients: Record<string, string> = {
   "IDD Camera": "from-yellow-500 to-orange-500",
   "Peg Puzzle Classic": "from-indigo-500 to-purple-500",
   "Guitar Tuner": "from-blue-700 to-indigo-500",
