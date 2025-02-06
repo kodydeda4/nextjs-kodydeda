@@ -14,12 +14,10 @@ import {
   NavigationMenuList
 } from "@/components/ui/navigation-menu";
 import { RESUME } from "@/lib/data";
-import { App } from "@/lib/definitions";
-import { ChevronRight, Moon, Sun } from "lucide-react";
+import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { FaGithub as Github, FaLinkedinIn as LinkedIn } from "react-icons/fa";
-import MainSheet from "./MainSheet";
 
 export default function Hero() {
   return (
