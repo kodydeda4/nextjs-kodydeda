@@ -20,11 +20,11 @@ export const RESUME: Resume = {
       srcHero: "/pocket-radar-hero.png",
       urlAppStore: "https://apps.apple.com/us/app/pocket-radar-sports/id1576214627",
       responsibilities: [
-        "Lead development of new features and bug-fixes within the iOS application.",
-        "Helped implement a new premium subscription service using StoreKit.",
-        "Developed early-access-program and slow motion features for premium users.",
+        "Developed and launched new mobile features using SwiftUI & AVFoundation.",
+        "Maintained existing Camera, VideoPlayer, Bluetooth, Database features.",
         "Added test coverage for over 40 features using ComposableArchitecture.",
-        "Migrated the app towards the new Swift concurrency patterns, such as AsyncStreams and Async/Await.",
+        "Modularized parts of the app using SPM packages.",
+        "Simplified asynchronous logic with swift concurrency patterns like AsyncStreams & Async/Await."
       ]
     },
     {
@@ -35,11 +35,11 @@ export const RESUME: Resume = {
       srcHero: "/dealerware-hero.png",
       urlAppStore: "https://apps.apple.com/us/app/dealerware/id1168703299",
       responsibilities: [
-        "Helped maintain and solve bugs on a legacy UIKit / MVC codebase, using Storyboards and Code.",
-        "Worked with a diverse team of designers, engineers, and product managers to develop mobile application features.",
-        "Actively participated in team meetings, code reviews, and all other processes regarding Agile development.",
-        "Scheduled, planned, and tracked sprints using team-management software like JIRA, Confluence, and Slack.",
-        "Maintained version-control and continuous-integration pipelines with Github and CircleCI.",
+        "Developed and launched new mobile features using UIKit, MVC & Storyboards.",
+        "Utilized CI/CD pipelines with GitHub, Fastlane, and CircleCI.",
+        "Managed sprint planning and tracking using JIRA and Confluence.",
+        "Worked in collaboration with designers, engineers, and product managers.",
+        "Actively participated in Agile development processes, including daily stand-ups, sprint planning, and code reviews.",
       ]
     },
   ],
