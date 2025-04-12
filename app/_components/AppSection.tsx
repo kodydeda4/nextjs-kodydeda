@@ -16,8 +16,8 @@ export default function AppSection() {
     <div>
       <SectionHeader
         caption="Personal Projects"
-        title="🛠️ Apps I've Made"
-        description="My personal work featured on the AppStore."
+        title="🛠️ iOS Apps I've Published"
+        description="Apps I’ve designed, developed, and shipped to the App Store."
       />
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
         {RESUME.apps.map((value, index) => (

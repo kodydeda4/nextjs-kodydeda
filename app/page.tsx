@@ -16,13 +16,13 @@ export default function Home() {
             <Hero />
           </div>
           <div className="pb-8 px-6 border-b">
-            <ExperienceSection />
-          </div>
-          <div className="pb-8 px-6 border-b">
             <AppSection />
           </div>
           <div className="pb-8 px-6 border-b">
             <CommunityAndWorkshopsSection />
+          </div>
+          <div className="pb-8 px-6 border-b">
+            <ExperienceSection />
           </div>
           <div className="px-6">
             <EducationSection />
