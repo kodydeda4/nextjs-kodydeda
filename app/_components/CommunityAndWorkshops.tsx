@@ -77,9 +77,9 @@ const UNCWWorkshopCard: React.FC = () => {
     <Card className="w-full">
       <CardContent>
         <div className="pt-6 w-full">
-          <div className={`bg-gradient-to-r from-teal-300 to-teal-400 || "from-gray-500 to-gray-700"} w-full rounded-lg h-64 relative`}>
+          <div className={`bg-gradient-to-r from-gray-800 to-gray-700 || "from-gray-500 to-gray-700"} w-full rounded-lg h-64 relative`}>
             <Image
-              src={"/swift-icon.png"}
+              src={"/uncw-software-engineering.png"}
               alt="Hero image."
               layout="fill"
               objectFit="contain"
@@ -90,7 +90,7 @@ const UNCWWorkshopCard: React.FC = () => {
             <div className="flex flex-row justify-start gap-4">
               <div className="justify-start relative">
                 <Image
-                  src={"/uncw.png"}
+                  src={"/uncw-logo-software.png"}
                   width={40}
                   height={40}
                   alt="Hero image"

@@ -141,7 +141,7 @@ export const RESUME: Resume = {
       title: "Bachelor's of Computer Science",
       description: "University of North Carolina Wilmington",
       caption: "Spring 2019 - Fall 2022",
-      srcIcon: "/uncw.png",
+      srcIcon: "/uncw-logo-software.png",
       href: "https://uncw.edu/",
     },
     {
