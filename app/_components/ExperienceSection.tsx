@@ -22,7 +22,7 @@ export default function ExperienceSection() {
     <div>
       <SectionHeader
         caption="Professional Experience"
-        title="📖 3 Years of Experience"
+        title="📖 4 Years of Experience"
         description="Industry experience building enterprise software."
       />
       <TableView />
