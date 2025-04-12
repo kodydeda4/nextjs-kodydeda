@@ -20,11 +20,17 @@ export const RESUME: Resume = {
       srcHero: "/pocket-radar-hero.png",
       urlAppStore: "https://apps.apple.com/us/app/pocket-radar-sports/id1576214627",
       responsibilities: [
-        "Developed and launched new mobile features using SwiftUI & AVFoundation.",
-        "Maintained existing Camera, VideoPlayer, Bluetooth, Database features.",
-        "Added test coverage for over 40 features using ComposableArchitecture.",
-        "Modularized parts of the app using SPM packages.",
-        "Simplified asynchronous logic with swift concurrency patterns like AsyncStreams & Async/Await."
+        "Designed and developed an internal Swift Package Manager (SPM) package to modularize the company’s production iOS app and improve long-term maintainability",
+        "Introduced feature-based modules to enforce separation of concerns and define clearer dependency boundaries",
+        "Built a scalable REST API layer with dev/prod environment support, structured logging, and custom error handling",
+        "Developed a centralized permissions manager for camera, microphone, bluetooth, and photo library access",
+        "Implemented a performant and testable SQLite persistence layer using GRDB, designed to support feature isolation and provide mock data for SwiftUI previews",
+        "Extracted a shared Design System module with reusable SwiftUI components, consistent typography, and button styles",
+        "Created a standalone camera module for capturing and exporting video using AVFoundation and PhotoKit",
+        "Implemented a custom video player with modular overlay controls, integrated cleanly across the app",
+        "Translated core business logic from Combine to async/await for improved readability and modern concurrency",
+        "Integrated an async-compatible Text-to-Speech utility for non-blocking voice feedback throughout the app",
+        "Migrated over 40 production features to The Composable Architecture (TCA) with full test coverage across reducers and side effects"
       ]
     },
     {
@@ -35,11 +41,12 @@ export const RESUME: Resume = {
       srcHero: "/dealerware-hero.png",
       urlAppStore: "https://apps.apple.com/us/app/dealerware/id1168703299",
       responsibilities: [
-        "Developed and launched new mobile features using UIKit, MVC & Storyboards.",
-        "Utilized CI/CD pipelines with GitHub, Fastlane, and CircleCI.",
-        "Managed sprint planning and tracking using JIRA and Confluence.",
-        "Worked in collaboration with designers, engineers, and product managers.",
-        "Actively participated in Agile development processes, including daily stand-ups, sprint planning, and code reviews.",
+        "Developed and launched production mobile features using UIKit, MVC, and Storyboards, contributing to a mobility platform used by major automotive brands",
+        "Collaborated closely with designers, backend engineers, and product managers to implement smooth UI and API integrations",
+        "Utilized CI/CD pipelines with GitHub, Fastlane, and CircleCI to automate builds and streamline delivery",
+        "Actively participated in Agile development: sprint planning, daily standups, retrospectives, and code reviews",
+        "Managed sprint tracking and documentation using JIRA and Confluence to ensure team alignment and project visibility",
+        "Helped onboard new developers and contributed to knowledge-sharing sessions and code reviews to maintain a healthy engineering culture"
       ]
     },
   ],
