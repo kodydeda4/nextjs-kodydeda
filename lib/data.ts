@@ -8,7 +8,7 @@ export const RESUME: Resume = {
     "Developer with a focus on building great-looking software experiences, application architecture, and all things Swift.",
   srcHero: "/avatar-hero-2.gif",
   srcAvatar: "/avatar.jpeg",
-  urlResume: "https://rxresu.me/kodydeda4/kody-deda-ios-developer-resume",
+  urlResume: "https://rxresu.me/kodydeda4/kody-deda-resume",
   urlGithub: "https://github.com/kodydeda4",
   urlLinkedIn: "https://www.linkedin.com/in/kodydeda4/",
   urlWebsite: "https://github.com/kodydeda4/nextjs-kodydeda",
