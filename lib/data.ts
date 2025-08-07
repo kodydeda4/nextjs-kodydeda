@@ -14,9 +14,21 @@ export const RESUME: Resume = {
   urlWebsite: "https://github.com/kodydeda4/nextjs-kodydeda",
   experience: [
     {
+      title: "Foresight Cares",
+      description: "AI-Powered Health Assessments",
+      caption: "May 2025 - Present",
+      srcIcon: "/fsc.jpeg",
+      srcHero: "/pocket-radar-hero.png",
+      urlAppStore:
+        "https://www.google.com",
+      responsibilities: [
+        ""
+      ],
+    },
+    {
       title: "Pocket Radar",
       description: "Speed and Video Analysis",
-      caption: "May 2022 - Present",
+      caption: "May 2022 - Apr 2025",
       srcIcon: "/pocket-radar.png",
       srcHero: "/pocket-radar-hero.png",
       urlAppStore:
