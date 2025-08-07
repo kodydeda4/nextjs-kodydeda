@@ -19,10 +19,14 @@ export const RESUME: Resume = {
       caption: "May 2025 - Present",
       srcIcon: "/fsc.jpeg",
       srcHero: "/pocket-radar-hero.png",
-      urlAppStore:
-        "https://www.google.com",
+      urlAppStore: "https://www.google.com",
       responsibilities: [
-        ""
+        "Developed customer-facing features using SwiftUI and The Composable Architecture (TCA)",
+        "Created architectural diagrams to document unidirectional data flow and feature composition patterns",
+        "Built a scalable AWS AppSync GraphQL layer with support for unit testing.",
+        "Implemented skeleton loading states to improve perceived performance in information-dense views",
+        "Integrated Google Analytics across 40+ production features for usage tracking and product insights",
+        "Added support for Apple accessibility features to enhance usability for elderly users",
       ],
     },
     {
