@@ -21,8 +21,8 @@ export const RESUME: Resume = {
       srcHero: "/pocket-radar-hero.png",
       urlAppStore: "https://www.google.com",
       responsibilities: [
-        "Developed customer-facing features using SwiftUI and The Composable Architecture (TCA)",
-        "Created architectural diagrams to document unidirectional data flow and feature composition patterns",
+        "Developed customer-facing features using SwiftUI and The Composable Architecture",
+        "Created architectural diagrams to document unidirectional data flow and feature composition",
         "Built a scalable AWS AppSync GraphQL layer with support for unit testing.",
         "Implemented skeleton loading states to improve perceived performance in information-dense views",
         "Integrated Google Analytics across 40+ production features for usage tracking and product insights",
