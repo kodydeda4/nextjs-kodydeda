@@ -3,7 +3,7 @@ import { Resume } from "./definitions";
 export const RESUME: Resume = {
   name: "Kody Deda",
   email: "kodydeda4@gmail.com",
-  profession: " iOS Developer",
+  profession: " Senior iOS Developer",
   description:
     "Developer with a focus on building great-looking software experiences, application architecture, and all things Swift.",
   srcHero: "/avatar-hero-2.gif",
@@ -21,7 +21,7 @@ export const RESUME: Resume = {
       srcHero: "/pocket-radar-hero.png",
       urlAppStore: "https://www.google.com",
       responsibilities: [
-        "Developed customer-facing features using SwiftUI and The Composable Architecture",
+        "Developed customer-facing features using SwiftUI and The Composable Architecture"
         "Created architectural diagrams to document unidirectional data flow and feature composition",
         "Built a scalable AWS AppSync GraphQL layer with support for unit testing.",
         "Implemented skeleton loading states to improve perceived performance in information-dense views",
