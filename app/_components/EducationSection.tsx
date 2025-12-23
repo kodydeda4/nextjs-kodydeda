@@ -59,7 +59,7 @@ const EducationCard: React.FC<Education> = (props) => {
         <div className="flex flex-col gap-1">
           <p className="font-semibold line-clamp-1">{props.title}</p>
           <p className="text-sm line-clamp-1">{props.description}</p>
-          <p className="text-xs text-muted-foreground line-clamp-1">{props.caption}</p>
+          {/* <p className="text-xs text-muted-foreground line-clamp-1">{props.caption}</p> */}
         </div>
       </div>
     </div>

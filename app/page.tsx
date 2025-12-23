@@ -19,14 +19,14 @@ export default function Home() {
             <AppSection />
           </div>
           <div className="pb-8 px-6 border-b">
-            <CommunityAndWorkshopsSection />
-          </div>
-          <div className="pb-8 px-6 border-b">
             <ExperienceSection />
           </div>
           <div className="px-6">
             <EducationSection />
           </div>
+          {/* <div className="pb-8 px-6 border-b">
+            <CommunityAndWorkshopsSection />
+          </div> */}
           <CTA />
           {/* <TechnologySection /> */}
         </div>
