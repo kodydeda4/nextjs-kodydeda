@@ -76,6 +76,14 @@ export const RESUME: Resume = {
     //   urlGithub: "https://github.com/kodydeda4/swift-camera-app",
     //   urlLocal: "/idd-camera"
     // },
+
+
+    // Deda Habit Tracker
+    // https://apps.apple.com/us/app/deda-habit-tracker/id6758132419
+    //
+    // Offline FM
+    // https://apps.apple.com/us/app/offline-fm/id6753773356
+
     {
       title: "Peg Puzzle Classic",
       description: "Game",
