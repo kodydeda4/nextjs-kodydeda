@@ -34,7 +34,7 @@ export const RESUME: Resume = {
       description: "Speed and Video Analysis",
       caption: "May 2022 - Apr 2025",
       srcIcon: "/pocket-radar.png",
-      srcHero: "/pocket-radar-hero.png",
+      srcHero: "/pocket-radar-hero.jpg",
       urlAppStore:
         "https://apps.apple.com/us/app/pocket-radar-sports/id1576214627",
       responsibilities: [
