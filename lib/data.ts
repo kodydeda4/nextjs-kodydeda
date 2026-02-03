@@ -17,7 +17,7 @@ export const RESUME: Resume = {
       title: "Foresight Cares",
       description: "AI-Powered Health Assessments",
       caption: "May 2025 - Present",
-      srcIcon: "/fsc.jpeg",
+      srcIcon: "/fsc.jpg",
       srcHero: "/pocket-radar-hero.png",
       urlAppStore: "https://www.google.com",
       responsibilities: [
