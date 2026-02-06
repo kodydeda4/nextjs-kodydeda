@@ -48,7 +48,7 @@ export const RESUME: Resume = {
     {
       title: "Dealerware",
       description: "Fleet Management",
-      caption: "November 2020 - March 2022", //"July 2021 - March 2022", <- real dates lol
+      caption: "April 2020 - March 2022", //"July 2021 - March 2022", <- real dates lol
       srcIcon: "/dealerware.png",
       srcHero: "/dealerware-hero.png",
       urlAppStore: "https://apps.apple.com/us/app/dealerware/id1168703299",
